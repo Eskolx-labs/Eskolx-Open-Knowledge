@@ -42,7 +42,7 @@ views:
 filters:
   and:
     - type == "concept"
-    - publish-status == "published"
+    - note["publish-status"] == "published"
 views:
   - type: table
     name: Recently Published Knowledge
@@ -50,7 +50,6 @@ views:
       - updated
       - area
       - file.name
-    direction: DESC
 ```
 
 ## Recently Published
@@ -58,7 +57,7 @@ views:
 ```base
 filters:
   and:
-    - publish-status == "published"
+    - note["publish-status"] == "published"
 views:
   - type: table
     name: Recently Published
@@ -66,7 +65,6 @@ views:
       - updated
       - file.folder
       - type
-    direction: DESC
 ```
 
 ## Open PRs Awaiting Review
@@ -84,7 +82,6 @@ views:
     name: Lounge
     order:
       - file.mtime
-    direction: DESC
 ```
 
 ## Contribute

@@ -286,6 +286,8 @@
       "command": true,
       "captureTo": "00 Home/Community Inbox.md",
       "captureToActiveFile": false,
+      "captureToCanvasNodeId": "",
+      "activeFileWritePosition": "cursor",
       "createFileIfItDoesntExist": {
         "enabled": true,
         "createWithTemplate": false,
@@ -299,34 +301,58 @@
         "enabled": true,
         "after": "## Quick Captures",
         "insertAtEnd": false,
+        "considerSubsections": false,
         "createIfNotFound": true,
+        "createIfNotFoundLocation": "top",
+        "inline": false,
+        "replaceExisting": false,
+        "blankLineAfterMatchMode": "auto",
+        "promptHeading": false
+      },
+      "insertBefore": {
+        "enabled": false,
+        "before": "",
+        "createIfNotFound": false,
         "createIfNotFoundLocation": "top"
+      },
+      "newLineCapture": {
+        "enabled": false,
+        "direction": "below"
       },
       "prepend": false,
       "task": false,
       "openFile": false,
-      "openFileInNewTab": false
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "templater": {
+        "afterCapture": "none"
+      }
     },
     {
       "name": "Open Home",
       "id": "d8e3b2f1-000b-4000-8000-00000000000b",
       "type": "Macro",
       "command": true,
-      "macros": [
-        {
-          "id": "d8e3b2f1-000c-4000-8000-00000000000c",
-          "name": "Open Home",
-          "commands": [
-            {
-              "type": "OpenFile",
-              "id": "d8e3b2f1-000d-4000-8000-00000000000d",
-              "name": "Open Home.md",
-              "path": "00 Home/Home.md"
-            }
-          ],
-          "runOnStartup": false
-        }
-      ]
+      "macro": {
+        "id": "d8e3b2f1-000c-4000-8000-00000000000c",
+        "name": "Open Home",
+        "commands": [
+          {
+            "type": "OpenFile",
+            "id": "d8e3b2f1-000d-4000-8000-00000000000d",
+            "name": "Open file: 00 Home/Home.md",
+            "filePath": "00 Home/Home.md",
+            "openInNewTab": false,
+            "location": "tab",
+            "focus": true
+          }
+        ]
+      },
+      "runOnStartup": false
     }
   ]
 }
