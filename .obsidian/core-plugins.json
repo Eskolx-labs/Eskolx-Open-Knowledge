@@ -20,5 +20,14 @@
   "workspaces": true,
   "canvas": true,
   "properties": true,
-  "bases": true
+  "bases": true,
+  "footnotes": false,
+  "markdown-importer": false,
+  "zk-prefixer": false,
+  "random-note": false,
+  "slides": false,
+  "audio-recorder": false,
+  "publish": false,
+  "sync": true,
+  "webviewer": false
 }
