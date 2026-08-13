@@ -1,0 +1,28 @@
+---
+type: meeting
+date: <% tp.date.now("YYYY-MM-DD") %>
+participants: 
+status: completed
+publish-status: draft
+---
+
+# Meeting — <% tp.file.title.replace(/^Meeting — \d{4}-\d{2}-\d{2} ?/, "") %>
+
+## Participants
+
+## Agenda
+
+## Discussion
+
+## Decisions
+
+- [[]]
+
+## Actions
+
+- [ ] 
+
+## Open Questions
+
+## Follow-up
+

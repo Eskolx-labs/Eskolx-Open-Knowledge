@@ -1,0 +1,15 @@
+{
+  "baseFontSize": 16,
+  "theme": "obsidian",
+  "cssTheme": "",
+  "accentColor": "#6E3B68",
+  "interfaceFontFamily": "JetBrainsMono Nerd Font",
+  "textFontFamily": "JetBrainsMono Nerd Font",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "translucency": false,
+  "showViewHeader": true,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "eskolx-open"
+  ]
+}

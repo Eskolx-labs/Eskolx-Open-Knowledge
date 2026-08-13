@@ -1,0 +1,332 @@
+{
+  "choices": [
+    {
+      "name": "New Project",
+      "id": "d8e3b2f1-0001-4000-8000-000000000001",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Project.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "Project — {{VALUE:Project name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "01 Projects"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "New Research",
+      "id": "d8e3b2f1-0002-4000-8000-000000000002",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Research.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Research question}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "07 Research"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "New Concept",
+      "id": "d8e3b2f1-0003-4000-8000-000000000003",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Concept.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Concept name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "02 Knowledge"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "New Decision",
+      "id": "d8e3b2f1-0004-4000-8000-000000000004",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Decision.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "EDR — {{DATE:YYYY-MM-DD}} — {{VALUE:Title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "06 Decisions"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "New Meeting",
+      "id": "d8e3b2f1-0005-4000-8000-000000000005",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Meeting.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "Meeting — {{DATE:YYYY-MM-DD}} {{VALUE:Topic}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "04 Community"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "New Person",
+      "id": "d8e3b2f1-0006-4000-8000-000000000006",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Person.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Role}} — {{VALUE:Name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "04 Community"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "New Resource",
+      "id": "d8e3b2f1-0007-4000-8000-000000000007",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Resource.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:Resource name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Resources"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "New Idea",
+      "id": "d8e3b2f1-0008-4000-8000-000000000008",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Idea.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "Idea — {{VALUE:Title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "08 Lounge"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "New Tutorial",
+      "id": "d8e3b2f1-0009-4000-8000-000000000009",
+      "type": "Template",
+      "command": true,
+      "templatePath": ".obsidian/templates/Tutorial.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "Tutorial — {{VALUE:Title}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03 Learning"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "live",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
+    },
+    {
+      "name": "Quick Capture",
+      "id": "d8e3b2f1-000a-4000-8000-00000000000a",
+      "type": "Capture",
+      "command": true,
+      "captureTo": "00 Home/Community Inbox.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": false,
+        "format": ""
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "## Quick Captures",
+        "insertAtEnd": false,
+        "createIfNotFound": true,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFile": false,
+      "openFileInNewTab": false
+    },
+    {
+      "name": "Open Home",
+      "id": "d8e3b2f1-000b-4000-8000-00000000000b",
+      "type": "Macro",
+      "command": true,
+      "macros": [
+        {
+          "id": "d8e3b2f1-000c-4000-8000-00000000000c",
+          "name": "Open Home",
+          "commands": [
+            {
+              "type": "OpenFile",
+              "id": "d8e3b2f1-000d-4000-8000-00000000000d",
+              "name": "Open Home.md",
+              "path": "00 Home/Home.md"
+            }
+          ],
+          "runOnStartup": false
+        }
+      ]
+    }
+  ]
+}

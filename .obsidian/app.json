@@ -1,0 +1,19 @@
+{
+  "attachmentFolderPath": "90 Attachments",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showLineNumber": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showFrontmatter": true,
+  "livePreview": true,
+  "defaultViewMode": "live",
+  "promptDelete": true,
+  "trashOption": "local",
+  "fileSortOrder": "alphabetical",
+  "defaultNewTabPage": "00 Home/Home.md"
+}
