@@ -40,7 +40,7 @@ Use the **QuickAdd** menu (`Mod+Shift+A`): New Research / New Concept / New Proj
 | tutorial | `03 Learning/` |
 | meeting, person | `04 Community/` |
 | resource | `05 Resources/` |
-| decision | `06 Decisions/` |
+| decision | `06 Publishing/` |
 | research | `07 Research/` |
 | idea | `08 Lounge/` |
 

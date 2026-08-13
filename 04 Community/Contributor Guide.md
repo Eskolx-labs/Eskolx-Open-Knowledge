@@ -29,7 +29,7 @@ Question → Why It Matters → Current Understanding → Mathematical Backgroun
 
 Purpose → Outcome → Current Status → Milestones → Current Work → Blockers → Open Questions → Knowledge → Decisions → Contributors → GitHub → Next Actions
 
-### Decision records (EDR) (`06 Decisions/`)
+### Decision records (EDR) (`06 Publishing/`)
 
 Context → Problem → Options Considered → Decision → Why → Consequences → Revisit Conditions → Related
 
