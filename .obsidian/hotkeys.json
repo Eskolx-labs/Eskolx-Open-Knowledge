@@ -7,7 +7,7 @@
       "key": "T"
     }
   ],
-  "quickadd:run-quickadd": [
+  "quickadd:runQuickAdd": [
     {
       "modifiers": [
         "Mod",
@@ -25,7 +25,7 @@
       "key": "P"
     }
   ],
-  "obsidian-git:commit-and-sync": [
+  "obsidian-git:push": [
     {
       "modifiers": [
         "Mod",
@@ -34,7 +34,7 @@
       "key": "S"
     }
   ],
-  "obsidian-git:push": [
+  "obsidian-git:push2": [
     {
       "modifiers": [
         "Mod",
