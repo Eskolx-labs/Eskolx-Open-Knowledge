@@ -6,10 +6,12 @@ topic: probability
 created: 2026-08-13
 updated: 2026-08-13
 publish-status: draft
+tags:
 ---
 
 # Student t Distribution
 
+Test note....... the student t distribution is despite its name is not associated with students.
 ## Definition
 
 ## Intuition
