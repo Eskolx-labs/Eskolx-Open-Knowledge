@@ -1,5 +1,5 @@
 {
-  "commitMessage": "{{date}} vault update",
+  "commitMessage": "vault backup: {{date}}",
   "autoCommitMessage": "vault backup: {{date}}",
   "commitMessageScript": "",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
@@ -47,7 +47,7 @@
     "authorDisplay": "initials",
     "showCommitHash": false,
     "dateTimeFormatOptions": "date",
-    "dateTimeFormatCustomString": "YYYY-MM-DD HH:mm",
+    "dateTimeFormatCustomString": "YYYY-MM-DD HH:mm:ss",
     "dateTimeTimezone": "viewer-local",
     "coloringMaxAge": "1y",
     "colorNew": {
@@ -61,19 +61,6 @@
       "b": 255
     },
     "textColorCss": "var(--text-muted)",
-    "ignoreWhitespace": false,
-    "coloringMaxAgeMinutes": 43800,
-    "gutterSpacingFallbackLength": 5,
-    "lastShownAuthorDisplay": "initials",
-    "lastShownDateTimeFormatOptions": "date"
-  },
-  "submoduleRecurseCheck": false,
-  "autoCommitDateFormat": "YYYY-MM-DD HH:mm:ss",
-  "gitUsername": "",
-  "gitPassword": "",
-  "changedFilesInStatusBarType": "numeric",
-  "noteMobilePlaceholder": "",
-  "reAddedRemotes": {},
-  "scheduledPullInterval": 0,
-  "scheduledPushInterval": 0
+    "ignoreWhitespace": false
+  }
 }

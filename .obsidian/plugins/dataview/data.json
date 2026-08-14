@@ -1,5 +1,5 @@
 {
-  "renderNullAs": "—",
+  "renderNullAs": "\u2014",
   "taskCompletionTracking": false,
   "taskCompletionText": "completion",
   "warnOnEmptyResult": true,
@@ -19,5 +19,6 @@
   "enableDataviewJs": true,
   "enableInlineDataviewJs": true,
   "prettyRenderInlineFields": true,
-  "prettyRenderInlineFieldsInLivePreview": true
+  "prettyRenderInlineFieldsInLivePreview": true,
+  "dataviewJsKeyword": "dataviewjs"
 }

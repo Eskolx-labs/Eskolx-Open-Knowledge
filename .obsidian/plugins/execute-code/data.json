@@ -201,5 +201,6 @@
   "applescriptInteractive": false,
   "zigInteractive": false,
   "ocamlInteractive": false,
-  "phpInteractive": false
+  "phpInteractive": false,
+  "latexFigureTitlePattern": "/[^\\n][^%`]*\\title\\s*\\{(?<name>[^\\}]*)\\}/.source"
 }

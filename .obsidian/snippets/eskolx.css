@@ -1,13 +1,17 @@
 /* Eskolx — one visual family, two modes
-   Light = Open palette (warm cream/beige, grape, clay, earth green)
-   Dark  = Core palette (near-black, parchment, grape, harvest red, muted green)
+   Light = Open palette (warm cream/beige, grape, clay, vine green)
+   Dark  = Core palette (near-black soil, parchment, grape, harvest red, vine green)
    Both vaults share this snippet. Core defaults to dark, Open to light;
-   switching Appearance → Theme in either vault gives the other's look. */
+   switching Appearance → Theme in either vault gives the other's look.
+
+   Palette story: dark/light soil, grape purple for grapes & wine,
+   forest green for the leaves of the vines. */
 
 /* Light mode (Open) */
 :root {
   --eskolx-bg: #F5EBDD;
   --eskolx-surface: #FFF9F0;
+  --eskolx-surface-2: #E9E4D6;          /* bars/headers — green-tinted cream */
   --eskolx-text: #2B211D;
   --eskolx-text-muted: rgba(43, 33, 29, 0.65);
   --eskolx-text-faint: rgba(43, 33, 29, 0.4);
@@ -15,7 +19,8 @@
   --eskolx-hover: rgba(110, 59, 104, 0.12);
   --eskolx-grape: #6E3B68;
   --eskolx-clay: #A74F43;
-  --eskolx-green: #66725D;
+  --eskolx-green: #5F6B4E;              /* vine/forest green */
+  --eskolx-green-bright: #7A8B66;
   --eskolx-accent: #6E3B68;
 }
 
@@ -23,6 +28,7 @@
 .theme-dark {
   --eskolx-bg: #100C0B;
   --eskolx-surface: #1B1513;
+  --eskolx-surface-2: #222A1C;          /* bars/headers — dark vine-tinted */
   --eskolx-text: #E7D4B2;
   --eskolx-text-muted: rgba(231, 212, 178, 0.65);
   --eskolx-text-faint: rgba(231, 212, 178, 0.4);
@@ -30,14 +36,15 @@
   --eskolx-hover: rgba(111, 58, 103, 0.25);
   --eskolx-grape: #6F3A67;
   --eskolx-clay: #A74B43;
-  --eskolx-green: #69705C;
+  --eskolx-green: #5C6B4F;              /* vine/forest green */
+  --eskolx-green-bright: #7A8B6A;
   --eskolx-accent: #6F3A67;
 }
 
 body {
   --background-primary: var(--eskolx-bg);
   --background-primary-alt: var(--eskolx-surface);
-  --background-secondary: var(--eskolx-bg);
+  --background-secondary: var(--eskolx-surface-2);
   --background-secondary-alt: var(--eskolx-surface);
   --background-modifier-border: var(--eskolx-border);
   --background-modifier-hover: var(--eskolx-hover);
@@ -47,27 +54,65 @@ body {
   --text-accent: var(--eskolx-grape);
   --interactive-accent: var(--eskolx-grape);
   --interactive-accent-hover: #7e4280;
-  --titlebar-background: var(--eskolx-bg);
+  --titlebar-background: var(--eskolx-surface-2);
+  --titlebar-background-focused: var(--eskolx-surface-2);
   --ribbon-background: var(--eskolx-bg);
+  --tab-container-background: var(--eskolx-surface-2);
+  --status-bar-background: var(--eskolx-surface-2);
   --code-background: var(--eskolx-surface);
+  --scrollbar-thumb-bg: var(--eskolx-green);
+  --scrollbar-active-thumb-bg: var(--eskolx-green-bright);
 }
 
-/* Frosted glass — active in both vaults when translucency is on */
+/* ============================================================
+   LIQUID GLASS — full-window translucency
+   Obsidian's built-in translucent mode only affects the titlebar
+   and sidebars; the editor stays opaque. These rules make the
+   WHOLE window see-through (wallpaper visible behind everything)
+   while keeping text readable via backdrop blur.
+   ============================================================ */
 body.is-translucent {
-  --workspace-background-translucent: color-mix(in srgb, var(--eskolx-bg) 75%, transparent);
+  --workspace-background-translucent: color-mix(in srgb, var(--eskolx-bg) 55%, transparent);
 }
-body.is-translucent .workspace-split.mod-root,
+
+/* Every surface transparent so the root's glass shows through */
+body.is-translucent .workspace,
+body.is-translucent .workspace-split,
+body.is-translucent .workspace-tabs,
 body.is-translucent .workspace-tab-header-container,
+body.is-translucent .workspace-tab-header,
+body.is-translucent .workspace-leaf,
+body.is-translucent .workspace-leaf-content,
+body.is-translucent .view-content,
+body.is-translucent .markdown-preview-view,
+body.is-translucent .markdown-source-view,
+body.is-translucent .cm-sizer,
+body.is-translucent .cm-content,
+body.is-translucent .cm-editor,
 body.is-translucent .workspace-ribbon,
-body.is-translucent .workspace-tab-header-container,
 body.is-translucent .workspace-split.mod-left-split,
 body.is-translucent .workspace-split.mod-right-split,
-body.is-translucent .workspace-split.mod-root .workspace-tabs,
-body.is-translucent .workspace-split.mod-root .workspace-leaf,
-body.is-translucent .workspace-split.mod-root .workspace-leaf-content,
-body.is-translucent .workspace-split.mod-root .view-content {
-  backdrop-filter: blur(12px);
-  background-color: color-mix(in srgb, var(--eskolx-bg) 65%, transparent) !important;
+body.is-translucent .workspace-split.mod-root,
+body.is-translucent .titlebar,
+body.is-translucent .status-bar {
+  background-color: transparent !important;
+}
+
+/* The glass itself: translucent tint + blur over the wallpaper */
+body.is-translucent .workspace-split.mod-root {
+  background-color: var(--workspace-background-translucent) !important;
+  backdrop-filter: blur(24px) saturate(1.4);
+}
+
+/* Keep popups/modals readable — they should stay solid */
+body.is-translucent .modal,
+body.is-translucent .modal-bg,
+body.is-translucent .suggestion-container,
+body.is-translucent .menu,
+body.is-translucent .popover,
+body.is-translucent .prompt {
+  background-color: var(--eskolx-surface) !important;
+  backdrop-filter: none;
 }
 
 /* Headings */
