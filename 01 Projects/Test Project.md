@@ -8,6 +8,7 @@ created: 2026-08-13
 updated: 2026-08-13
 github: eskolx/stats-distributions
 publish-status: draft
+participants: ["Natnael-Getahun"]
 ---
 
 # Project — Test Project

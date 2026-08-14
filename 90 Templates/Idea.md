@@ -4,6 +4,7 @@ status: idea
 area: 
 author: 
 tags: [ideas]
+participants: []
 created: <% tp.date.now("YYYY-MM-DD") %>
 publish-status: draft
 ---
@@ -25,4 +26,3 @@ publish-status: draft
 ## Next Step
 
 - [ ] 
-

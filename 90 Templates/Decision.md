@@ -6,6 +6,7 @@ date: <% tp.date.now("YYYY-MM-DD") %>
 area: 
 author: 
 tags: [decisions]
+participants: []
 publish-status: draft
 ---
 
@@ -36,4 +37,3 @@ publish-status: draft
 ## Related
 
 - [[]]
-

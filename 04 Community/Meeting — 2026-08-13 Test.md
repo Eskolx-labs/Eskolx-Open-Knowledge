@@ -1,7 +1,6 @@
 ---
 type: meeting
 date: 2026-08-13
-participants: Natnael
 status: completed
 publish-status: draft
 ---

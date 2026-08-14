@@ -7,6 +7,7 @@ updated: 2026-08-14
 author: Natnael
 tags: [onboarding]
 publish-status: published
+participants: ["Natnael-Getahun"]
 ---
 
 # It's Always Eskolx Labs

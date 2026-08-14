@@ -7,6 +7,7 @@ updated: 2026-08-14
 author: Natnael
 tags: [tooling, onboarding]
 publish-status: published
+participants: ["Natnael-Getahun"]
 ---
 
 # Keybindings
