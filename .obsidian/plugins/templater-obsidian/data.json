@@ -9,7 +9,12 @@
   "shell_path": "",
   "user_scripts_folder": "",
   "folder_templates": [],
-  "file_templates": [],
+  "file_templates": [
+    {
+      "regex": "^00 Home/Daily Notes/",
+      "template": "90 Templates/Daily.md"
+    }
+  ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [],

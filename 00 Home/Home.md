@@ -16,6 +16,10 @@ cssclasses:
 - [[How To Contribute]]
 - [[Keybindings]]
 
+## What Eskolx Is
+
+A small lab rebuilding statistical/computing tools from first principles and publishing what it learns. Code lives in the Eskolx GitHub repos; this vault is the knowledge. See [[What Is Eskolx]].
+
 ## Learning
 
 [[Learning Paths]]

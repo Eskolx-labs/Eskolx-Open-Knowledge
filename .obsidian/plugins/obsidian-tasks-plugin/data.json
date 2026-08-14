@@ -3,7 +3,8 @@
     "default": "not done",
     "overdue": "not done\nhappens before today",
     "due_today": "not done\ndue today",
-    "mine": "not done\ntag includes #assignee/natnael",
+    "natnael": "not done\ntag includes #assignee/natnael",
+    "barkilign": "not done\ntag includes #assignee/barkilign",
     "this_file": "path includes {{query.file.path}}"
   },
   "globalQuery": "",

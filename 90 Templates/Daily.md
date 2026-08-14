@@ -5,7 +5,7 @@ author:
 tags: [daily]
 ---
 
-<%* await tp.file.move("00 Home/Daily Notes/" + tp.file.title + ".md") %>
+<%* await tp.file.move("00 Home/" + tp.file.title + ".md") %>
 
 # <% tp.date.now("YYYY-MM-DD") %>
 

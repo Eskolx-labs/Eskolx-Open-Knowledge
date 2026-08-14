@@ -25,3 +25,6 @@ secrets/
 
 # Personal appearance preference (theme, translucency, fonts)
 .obsidian/appearance.json
+
+# Obsidian local trash (machine state)
+.trash/
