@@ -97,7 +97,7 @@ Core defaults to **dark**; Open defaults to **light**. In either vault, switch A
 - **Windows 11**: the `translucent-bg` plugin applies native Mica/Acrylic materials (tinted to the Eskolx palette). Cycle with the ribbon icon or command palette.
 - **Windows 10 / Linux**: not possible — Electron removed the API (Windows) and never had it (Linux). The vault keeps the styled solid look (vine-green surfaces).
 
-Your theme/translucency choice is personal and stays local (`.obsidian/appearance.json` is gitignored, never pushed).
+The theme, accent color, translucency, and the enabled `eskolx` snippet ship in `.obsidian/appearance.json` (committed), so a fresh install looks right immediately — no manual setup. If you want to tweak the look, edit Appearance → Theme / Accent / Translucency; your personal tweaks stay in your local copy (the file is shared, so commit intentional changes).
 
 ## Python + LaTeX
 

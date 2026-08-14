@@ -23,9 +23,6 @@ secrets/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 
-# Personal appearance preference (theme, translucency, fonts)
-.obsidian/appearance.json
-
 # Obsidian local trash (machine state)
 .trash/
 
