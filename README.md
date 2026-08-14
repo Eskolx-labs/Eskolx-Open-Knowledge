@@ -87,6 +87,8 @@ One shared theme (`eskolx.css` snippet) with two modes — the same visual famil
 
 Core defaults to **dark**; Open defaults to **light**. In either vault, switch Appearance → Theme (dark/light) to see the other palette. The snippet is identical in both vaults and version-controlled.
 
+**Frosted glass** (translucent panels + backdrop blur) is on in both vaults — toggle it anytime via Settings → Appearance → Translucent window. Your theme/translucency choice is personal and stays local (`.obsidian/appearance.json` is gitignored, never pushed).
+
 ## Python + LaTeX
 
 - **Python**: use the Execute Code plugin — put code in a ` ```python ` block and click the ▶ Run button. Configured to use `python3`.

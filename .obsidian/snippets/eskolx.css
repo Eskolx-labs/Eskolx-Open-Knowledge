@@ -52,13 +52,20 @@ body {
   --code-background: var(--eskolx-surface);
 }
 
-/* Frosted glass (Core default — only when translucency is on) */
-body.translucent {
+/* Frosted glass — active in both vaults when translucency is on */
+body.is-translucent {
   --workspace-background-translucent: color-mix(in srgb, var(--eskolx-bg) 75%, transparent);
 }
-body.translucent .workspace-split.mod-root,
-body.translucent .workspace-tab-header-container,
-body.translucent .workspace-ribbon {
+body.is-translucent .workspace-split.mod-root,
+body.is-translucent .workspace-tab-header-container,
+body.is-translucent .workspace-ribbon,
+body.is-translucent .workspace-tab-header-container,
+body.is-translucent .workspace-split.mod-left-split,
+body.is-translucent .workspace-split.mod-right-split,
+body.is-translucent .workspace-split.mod-root .workspace-tabs,
+body.is-translucent .workspace-split.mod-root .workspace-leaf,
+body.is-translucent .workspace-split.mod-root .workspace-leaf-content,
+body.is-translucent .workspace-split.mod-root .view-content {
   backdrop-filter: blur(12px);
   background-color: color-mix(in srgb, var(--eskolx-bg) 65%, transparent) !important;
 }
