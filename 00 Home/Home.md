@@ -67,6 +67,22 @@ views:
       - type
 ```
 
+## Writing Pipeline
+
+```base
+filters:
+  and:
+    - note["publish-status"] != "published"
+    - note["publish-status"] != "archived"
+views:
+  - type: table
+    name: In Progress (draft / review / approved)
+    order:
+      - note["publish-status"]
+      - updated
+      - file.folder
+```
+
 ## Open PRs Awaiting Review
 
 PRs on the public GitHub repository are the review step of the knowledge pipeline. Check them at the repo's **Pull Requests** tab.

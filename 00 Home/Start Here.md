@@ -25,7 +25,7 @@ Welcome to Eskolx. Read this before contributing.
 - **Folders** are broad domain buckets — `02 Knowledge/`, `07 Research/`, `01 Projects/` etc. Never deep subfolders.
 - **Properties** (YAML frontmatter) say what a note is. Query them with Bases and Dataview.
 - **Links** say what a note connects to — link meaningful concepts as you write: `[[Student t distribution]]`.
-- **Tags** are only for cross-cutting topical discovery: `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding`. `type`, `status`, `area` never become tags.
+- **Tags** are only for cross-cutting topical discovery: `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding #core-only`. `type`, `status`, `area` never become tags.
 
 ## Always Work From A Template
 

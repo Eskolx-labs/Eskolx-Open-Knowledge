@@ -28,6 +28,6 @@
   "slides": false,
   "audio-recorder": false,
   "publish": false,
-  "sync": true,
+  "sync": false,
   "webviewer": false
 }

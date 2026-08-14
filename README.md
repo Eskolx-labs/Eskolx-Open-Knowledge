@@ -64,6 +64,20 @@ Educational documentation: CC BY 4.0 (final choice recorded in an EDR when made)
 
 Required: Obsidian Git, Dataview, Templater, QuickAdd, Tasks, tldraw, Execute Code. Everything else is built-in. Add a plugin only when it solves a real recurring problem.
 
+### Fallback map (if a plugin disappears, the knowledge survives)
+
+```text
+Obsidian Git   → command-line Git
+Dataview       → Bases + manual Markdown indexes
+Templater      → core Templates + QuickAdd
+QuickAdd       → command palette + core Templates
+Tasks          → normal Markdown checkboxes
+tldraw         → Markdown + SVG/images
+Execute Code   → run code outside Obsidian
+```
+
+These fallbacks don't reproduce every feature — they ensure the underlying knowledge stays recoverable and portable.
+
 ## Python + LaTeX
 
 - **Python**: use the Execute Code plugin — put code in a ` ```python ` block and click the ▶ Run button. Configured to use `python3`.
