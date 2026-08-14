@@ -95,10 +95,29 @@ class EskolxAuthorship extends Plugin {
 			const path = file && file.file ? file.file.path : "";
 			const entry = this.cache.files[path];
 			if (!entry || !entry.chunks) return RangeSet.empty;
+			// Find the end of the frontmatter block (line N of "--- ... ---")
+			// so dots for frontmatter chunks anchor at the first content line.
+			const docLines = view.state.doc.lines;
+			let fmEnd = 0;
+			const lineText = (n) => view.state.doc.line(Math.min(n, docLines)).text.trim();
+			if (lineText(1) === "---") {
+				for (let i = 2; i <= docLines; i++) {
+					if (lineText(i) === "---") { fmEnd = i; break; }
+				}
+			}
 			const range = [];
 			let lastEnd = -Infinity;
+			let lastAuthor = null;
+			let lastMeta = null;
 			for (const c of entry.chunks) {
-				if (c.start - lastEnd < MIN_GAP) continue;
+				// Merge only when the SAME author's chunk is close; a new
+				// author always gets their own dot, however close.
+				const sameAuthorGap = (c.start - lastEnd) < MIN_GAP && c.author === lastAuthor;
+				if (lastEnd !== -Infinity && sameAuthorGap) {
+					lastEnd = c.end;
+					if (lastMeta) lastMeta.lines += c.end - c.start + 1;
+					continue;
+				}
 				const color = this.cache.authors[c.author]?.color || "rgb(190,190,190)";
 				const meta = {
 					author: c.author,
@@ -109,9 +128,14 @@ class EskolxAuthorship extends Plugin {
 					merged: this.mergedCommits.has(c.commit || ""),
 					subject: c.subject || "",
 				};
-				const from = view.state.doc.line(Math.min(c.start, view.state.doc.lines)).from;
+				// Anchor: chunk start, but never inside the collapsed
+				// properties box — frontmatter chunks move to the body start.
+				const anchor = Math.min(Math.max(c.start, fmEnd + 1), docLines);
+				const from = view.state.doc.line(anchor).from;
 				range.push(new DotMarker(color, meta).range(from, from));
 				lastEnd = c.end;
+				lastAuthor = c.author;
+				lastMeta = meta;
 			}
 			return RangeSet.of(range, true);
 		};

@@ -37,16 +37,16 @@
   "dateInHistoryView": true,
   "diffStyle": "split",
   "hunks": {
-    "showSigns": true,
-    "hunkCommands": true,
-    "statusBar": "enabled"
+    "showSigns": false,
+    "hunkCommands": false,
+    "statusBar": "disabled"
   },
   "lineAuthor": {
-    "show": true,
+    "show": false,
     "followMovement": "inactive",
     "authorDisplay": "full",
     "showCommitHash": false,
-    "dateTimeFormatOptions": "date",
+    "dateTimeFormatOptions": "hide",
     "dateTimeFormatCustomString": "YYYY-MM-DD HH:mm",
     "dateTimeTimezone": "viewer-local",
     "coloringMaxAge": "1y",

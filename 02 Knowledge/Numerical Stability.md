@@ -6,8 +6,12 @@ topic: computing
 created: 2026-08-14
 updated: 2026-08-14
 publish-status: draft
+
+cover: https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg
 participants: ["Natnael-Getahun"]
 ---
+
+![Numerical Stability cover](https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg)
 
 # Numerical Stability
 

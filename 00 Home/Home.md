@@ -2,8 +2,12 @@
 cssclasses:
   - eskolx-open
   - dashboard
+
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
 participants: ["Natnael-Getahun"]
 ---
+
+![Home cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
 
 # Eskolx Labs — Open
 

@@ -16,6 +16,8 @@ publish-status: draft
 
 <%* await tp.file.move("03 Learning/" + tp.file.title + ".md") %>
 
+> Embed by URL by default — `![Title](https://...)`. Local attachments only for Eskolx-created media.
+
 # Tutorial — <% tp.file.title.replace(/^Tutorial — /, "") %>
 
 ## What You Will Learn
