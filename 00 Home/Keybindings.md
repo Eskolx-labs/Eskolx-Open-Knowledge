@@ -42,6 +42,11 @@ Your theme, font, and window preferences are personal — stored in `.obsidian/a
 Settings → Hotkeys → search the command name → click the `+` → press your keys.
 
 
+## Related Notes (Related Notes plugin)
+
+- No hotkey by default — open the panel from the ribbon (paper-plane icon) or command palette ("Related Notes: Open related notes panel").
+- Offline similarity search; no API key needed.
+
 ## Authorship dots (Eskolx Authorship plugin)
 
 No hotkey needed — the right-margin dots are always visible in edit mode.
