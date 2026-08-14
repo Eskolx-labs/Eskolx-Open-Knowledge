@@ -102,11 +102,12 @@ class DotMarker extends GutterMarker {
 				clearTimeout(el._popTimer);
 				el._popTimer = setTimeout(() => {
 					if (el._pop) { el._pop.remove(); el._pop = null; }
-				}, 150);
+				}, 700);
 			};
 			const keepOpen = () => clearTimeout(el._popTimer);
 			p.addEventListener("mouseenter", keepOpen);
 			p.addEventListener("mouseleave", hideTimer);
+			el.addEventListener("mouseenter", keepOpen);
 			el.addEventListener("mouseleave", hideTimer);
 			el._hide = hideTimer;
 			el._keep = keepOpen;

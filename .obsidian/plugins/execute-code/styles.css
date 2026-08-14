@@ -37,13 +37,14 @@ settings:
 */
 
 button.run-code-button {
-	display: none;
+	display: block;
 	color: var(--text-muted);
 	position: absolute;
-	bottom: 0;
+	top: 0;
+	bottom: auto;
 	right: 0;
 	margin: 5px;
-	padding: 5px 20px 5px 20px;
+	padding: 2px 12px;
 	z-index: 100;
 }
 
@@ -71,6 +72,11 @@ pre:hover .clear-button-disabled {
 .run-button-disabled,
 .clear-button-disabled {
 	display: none;
+}
+
+/* Eskolx: always show the Run button (top-right), don't wait for hover */
+.run-code-button {
+	display: block;
 }
 
 pre:hover code.language-output {

@@ -11,7 +11,7 @@ tags: [community]
 participants: ["Natnael-Getahun"]
 ---
 
-![How To Contribute cover](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
+![How To Contribute cover|219](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
 
 # How To Contribute
 

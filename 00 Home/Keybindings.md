@@ -12,7 +12,7 @@ cover: https://upload.wikimedia.org/wikipedia/commons/e/e2/Firefoxshortcuts.png
 participants: ["Natnael-Getahun"]
 ---
 
-![Keybindings cover](https://upload.wikimedia.org/wikipedia/commons/e/e2/Firefoxshortcuts.png)
+![Keybindings cover|152](https://upload.wikimedia.org/wikipedia/commons/e/e2/Firefoxshortcuts.png)
 
 # Keybindings
 

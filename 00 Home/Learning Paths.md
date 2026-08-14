@@ -11,7 +11,7 @@ tags: [onboarding]
 participants: ["Natnael-Getahun"]
 ---
 
-![Learning Paths cover](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Noun-e-learning-3683598.svg/500px-Noun-e-learning-3683598.svg.png)
+![Learning Paths cover|195](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Noun-e-learning-3683598.svg/500px-Noun-e-learning-3683598.svg.png)
 
 # Learning Paths
 

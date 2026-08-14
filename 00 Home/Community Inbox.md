@@ -11,7 +11,7 @@ tags: [inbox]
 participants: ["Natnael-Getahun"]
 ---
 
-![Community Inbox cover](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/VK_icons_inbox_outline_56.svg/500px-VK_icons_inbox_outline_56.svg.png)
+![Community Inbox cover|173](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/VK_icons_inbox_outline_56.svg/500px-VK_icons_inbox_outline_56.svg.png)
 
 # Community Inbox
 
