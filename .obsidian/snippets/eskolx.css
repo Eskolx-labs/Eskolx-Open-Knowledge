@@ -242,3 +242,29 @@ body.dashboard .markdown-preview-view h2 {
 .graph-view.color-line {
   color: var(--eskolx-border);
 }
+
+/* ============ Execute Code: always show the Run button (top-right) ============
+   The plugin hides the button until you hover the code block. We override that
+   so the Run button is always visible on the right — it's the primary action. */
+button.run-code-button {
+  display: block;
+  top: 0;
+  bottom: auto;
+  right: 0;
+  margin: 5px;
+  padding: 2px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  background-color: var(--eskolx-surface);
+  border: 1px solid var(--eskolx-border);
+  color: var(--eskolx-text);
+  opacity: 0.85;
+}
+button.run-code-button:hover {
+  opacity: 1;
+  background-color: var(--eskolx-hover);
+}
+/* Keep the clear button hover-only (it's secondary) */
+button.clear-button {
+  display: none;
+}
