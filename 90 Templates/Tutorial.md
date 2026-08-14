@@ -8,6 +8,7 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
 author: 
 tags: [tutorials, statistics]
+participants: []
 publish-status: draft
 ---
 
@@ -38,4 +39,3 @@ publish-status: draft
 ## Related Concepts
 
 - [[]]
-

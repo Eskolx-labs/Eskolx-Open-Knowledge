@@ -4,6 +4,7 @@ status: active
 area: community
 created: 2026-08-13
 updated: 2026-08-13
+participants: ["Natnael-Getahun"]
 ---
 
 # How To Learn With Eskolx

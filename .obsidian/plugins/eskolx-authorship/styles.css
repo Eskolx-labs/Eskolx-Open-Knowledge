@@ -1,0 +1,41 @@
+.eskolx-dot-gutter {
+	width: 10px;
+}
+.eskolx-dot-gutter .cm-gutterElement {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 0;
+}
+.eskolx-dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	margin-top: 0.55em;
+	transition: transform 0.1s ease;
+	cursor: pointer;
+}
+.eskolx-dot:hover {
+	transform: scale(1.6);
+}
+.eskolx-dot-popover {
+	position: fixed;
+	z-index: 1000;
+	background: var(--background-secondary);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 8px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	pointer-events: none;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+	max-width: 320px;
+	white-space: nowrap;
+}
+.eskolx-dot-popover .eskolx-dot-author {
+	font-weight: 600;
+}
+.eskolx-dot-popover .eskolx-dot-meta {
+	color: var(--text-muted);
+}

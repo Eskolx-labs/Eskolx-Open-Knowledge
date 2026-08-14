@@ -1,0 +1,9 @@
+{
+	"id": "eskolx-authorship",
+	"name": "Eskolx Authorship",
+	"version": "0.1.0",
+	"minAppVersion": "1.4.0",
+	"description": "Right-margin authorship dots — one per contiguous author chunk, color-coded by author, silent until hovered. Reads .obsidian/eskolx-authorship/cache.json.",
+	"author": "Eskolx Labs",
+	"isDesktopOnly": true
+}

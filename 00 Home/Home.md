@@ -2,6 +2,7 @@
 cssclasses:
   - eskolx-open
   - dashboard
+participants: ["Natnael-Getahun"]
 ---
 
 # Eskolx Lab — Open
