@@ -102,5 +102,5 @@ views:
 
 ## Contribute
 
-- [[Contributor Guide]] · [[First Contribution]] · [[Code of Conduct]]
+- [[Contributor Guide]] · [[First Contribution]] · [[Code of Conduct]] · [[The Eskolx Lab Rules]]
 - Community Inbox: [[Community Inbox]]

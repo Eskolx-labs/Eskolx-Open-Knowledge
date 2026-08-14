@@ -1,0 +1,62 @@
+{
+  "tldrawFileFormatVersion": 1,
+  "schema": {
+    "schemaVersion": 2,
+    "sequences": {
+      "com.tldraw.asset": 1,
+      "com.tldraw.camera": 1,
+      "com.tldraw.document": 2,
+      "com.tldraw.instance": 17,
+      "com.tldraw.instance_page_state": 3,
+      "com.tldraw.page": 1,
+      "com.tldraw.shape": 3,
+      "com.tldraw.instance_presence": 4,
+      "com.tldraw.pointer": 1
+    }
+  },
+  "records": [
+    {
+      "id": "document:document",
+      "typeName": "document",
+      "name": "Eskolx Test Scene",
+      "gridSize": 10,
+      "meta": {}
+    },
+    {
+      "id": "page:page1",
+      "typeName": "page",
+      "name": "Page 1",
+      "index": "a1",
+      "meta": {}
+    },
+    {
+      "id": "shape:test-geo",
+      "typeName": "shape",
+      "type": "geo",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "index": "a1",
+      "parentId": "page:page1",
+      "opacity": 1,
+      "isLocked": false,
+      "props": {
+        "geo": "rectangle",
+        "labelColor": "black",
+        "color": "black",
+        "fill": "none",
+        "dash": "draw",
+        "size": "m",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "growY": 0,
+        "url": "",
+        "w": 200,
+        "h": 100,
+        "text": "Eskolx"
+      },
+      "meta": {}
+    }
+  ]
+}
