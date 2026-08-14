@@ -1,0 +1,62 @@
+/* =============================================================================
+   Obsidian Translucent BG — overlay and shell transparency styles
+   =============================================================================
+
+   The plugin sets the Electron window's background material (Mica / Acrylic / …),
+   adds `is-translucent` and `translucent-bg-enabled` to <body>, injects a
+   <div id="translucent-bg-overlay"> as the first child of <body>, and writes
+   these custom properties to <body> at runtime:
+
+     --tbg-tint-base     CSS color (hex or var()) — origin color for the overlay
+     --tbg-tint-opacity  0–1 number or CSS var()  — alpha for the overlay
+
+   The overlay applies --tbg-tint-base as background-color and --tbg-tint-opacity
+   as element opacity (no children, so element opacity is safe and avoids the
+   css-relative-colors compatibility issue).
+
+   When .translucent-bg-theme-opacity is on <body>, --workspace-background-
+   translucent is set by JS and the overlay is hidden — Obsidian's shell handles
+   the tinted background.
+   ============================================================================= */
+
+
+.translucent-bg-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: var(--tbg-tint-base, var(--background-secondary));
+    opacity: var(--tbg-tint-opacity, 0);
+    transition: background-color 120ms ease-out, opacity 120ms ease-out;
+}
+
+body.translucent-bg-theme-opacity .translucent-bg-overlay {
+    display: none;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Titlebar — keep it transparent and draggable
+   ----------------------------------------------------------------------------- */
+body.translucent-bg-enabled .titlebar {
+    -webkit-app-region: drag;
+    background-color: transparent !important;
+}
+
+body.translucent-bg-enabled .titlebar .titlebar-button,
+body.translucent-bg-enabled .titlebar .titlebar-button-container,
+body.translucent-bg-enabled .titlebar button,
+body.translucent-bg-enabled .titlebar input,
+body.translucent-bg-enabled .titlebar a {
+    -webkit-app-region: no-drag;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Workspace root — clear background so material / tint shows through
+   ----------------------------------------------------------------------------- */
+body.translucent-bg-enabled .workspace-split.mod-root {
+    background-color: var(--workspace-split-bg);
+}
+
+

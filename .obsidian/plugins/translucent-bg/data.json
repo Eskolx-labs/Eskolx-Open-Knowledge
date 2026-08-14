@@ -1,0 +1,9 @@
+{
+  "material": "acrylic",
+  "lightTintColor": "#F5EBDD",
+  "lightTintOpacity": 0.35,
+  "darkTintColor": "#100C0B",
+  "darkTintOpacity": 0.45,
+  "themeHandlesOpacity": true,
+  "themeHandlesTint": true
+}

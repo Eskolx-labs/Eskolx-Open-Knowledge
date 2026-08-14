@@ -87,7 +87,13 @@ One shared theme (`eskolx.css` snippet) with two modes — the same visual famil
 
 Core defaults to **dark**; Open defaults to **light**. In either vault, switch Appearance → Theme (dark/light) to see the other palette. The snippet is identical in both vaults and version-controlled.
 
-**Frosted glass** (translucent panels + backdrop blur) is on in both vaults — toggle it anytime via Settings → Appearance → Translucent window. Your theme/translucency choice is personal and stays local (`.obsidian/appearance.json` is gitignored, never pushed).
+**Frosted glass / translucency** — platform-dependent, by design:
+
+- **macOS**: Settings → Appearance → Translucent window (built-in) + the `eskolx.css` glass rules. Full liquid-glass look.
+- **Windows 11**: the `translucent-bg` plugin applies native Mica/Acrylic materials (tinted to the Eskolx palette). Cycle with the ribbon icon or command palette.
+- **Windows 10 / Linux**: not possible — Electron removed the API (Windows) and never had it (Linux). The vault keeps the styled solid look (vine-green surfaces).
+
+Your theme/translucency choice is personal and stays local (`.obsidian/appearance.json` is gitignored, never pushed).
 
 ## Python + LaTeX
 
