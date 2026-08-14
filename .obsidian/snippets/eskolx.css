@@ -238,14 +238,19 @@ body.dashboard .markdown-preview-view h2 {
 /* ============ Cover feature images (theme-aware) ============
    Covers are flat icon/diagram SVGs. In dark mode we invert them so
    dark icons render light (and light icons render dark), matching the
-   theme instead of clashing. The cover is the first image in a note body. */
+   theme instead of clashing. Applied across every surface: note body
+   and Notebook Navigator thumbnails. */
 .markdown-preview-view .cm-content img:first-of-type,
-.markdown-preview-view img:first-of-type {
+.markdown-preview-view img:first-of-type,
+.nn-file-thumbnail-img,
+.nn-file-thumbnail img {
   border-radius: 8px;
-  max-height: 200px;
   object-fit: contain;
 }
-.theme-dark .markdown-preview-view img:first-of-type {
+.theme-dark .markdown-preview-view img:first-of-type,
+.theme-dark .cm-content img:first-of-type,
+.theme-dark .nn-file-thumbnail-img,
+.theme-dark .nn-file-thumbnail img {
   filter: invert(0.92) hue-rotate(180deg);
   opacity: 0.92;
 }
