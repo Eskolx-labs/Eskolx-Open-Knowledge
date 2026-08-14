@@ -8,6 +8,7 @@ updated: 2026-08-13
 publish-status: draft
 tags:
 participants: ["Natnael-Getahun"]
+participants: ["Natnael-Getahun"]
 ---
 
 # Student t Distribution

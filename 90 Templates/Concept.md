@@ -1,5 +1,7 @@
 ---
 type: concept
+cover: 
+featured: false
 status: draft
 area: 
 topic: 

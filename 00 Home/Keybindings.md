@@ -8,6 +8,7 @@ author: Natnael
 tags: [tooling, onboarding]
 publish-status: published
 participants: ["Natnael-Getahun"]
+participants: ["Natnael-Getahun"]
 ---
 
 # Keybindings

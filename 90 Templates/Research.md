@@ -1,5 +1,9 @@
 ---
 type: research
+cover: 
+featured: false
+abstract: 
+keywords: []
 status: question
 area: 
 project: 
@@ -16,21 +20,16 @@ publish-status: draft
 
 # <% tp.file.title %>
 
-## Question
+> [!abstract] Abstract
+> One paragraph that stands alone: what, why, how, what you found.
 
-## Why It Matters
+## Motivation
 
-## Current Understanding
+## Method
 
-## Mathematical Background
+## Results
 
-## Experiment
-
-## Implementation
-
-## Validation
-
-## Findings
+## Discussion
 
 ## Open Questions
 
@@ -39,3 +38,7 @@ publish-status: draft
 - [[]]
 
 ## References
+
+- If the source is free: a summary note with the paper embedded inside it
+- Preferred citation: a link to a summary note with an embedded paper/web-clipping
+- Fallback: plain citation (author, year, title, venue, URL)

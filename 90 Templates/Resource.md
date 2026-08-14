@@ -1,5 +1,6 @@
 ---
 type: resource
+cover: 
 status: active
 area: 
 kind: paper

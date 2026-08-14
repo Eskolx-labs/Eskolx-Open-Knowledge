@@ -1,5 +1,7 @@
 ---
 type: tutorial
+cover: 
+featured: false
 status: draft
 area: 
 level: beginner

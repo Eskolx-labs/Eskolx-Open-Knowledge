@@ -1,5 +1,6 @@
 ---
 type: person
+cover: 
 status: active
 role: 
 company: 
