@@ -3125,6 +3125,7 @@ const DEFAULT_SETTINGS = {
         Amber: "#C98A2B80",
     },
     highlighterOrder: [],
+    lastColor: "",
 };
 DEFAULT_SETTINGS.highlighterOrder = Object.keys(DEFAULT_SETTINGS.highlighters);
 
@@ -3412,6 +3413,9 @@ const highlighterMenu = (app, settings, editor) => {
                 highlighterItem.setTitle(highlighter);
                 highlighterItem.setIcon(`highlightr-pen-${highlighter}`.toLowerCase());
                 highlighterItem.onClick(() => {
+                    settings.lastColor = settings.highlighters[highlighter];
+                    document.documentElement.style.setProperty("--text-highlight-bg", settings.highlighters[highlighter]);
+                    localStorage.setItem("eskolx-highlight-color", settings.highlighters[highlighter]);
                     app.commands.executeCommandById(`highlightr-plugin:${highlighter}`);
                 });
             });
@@ -3509,6 +3513,8 @@ class HighlightrPlugin extends obsidian.Plugin {
             console.log(`Highlightr v${this.manifest.version} loaded`);
             addIcons();
             yield this.loadSettings();
+            var savedColor = localStorage.getItem("eskolx-highlight-color");
+            if (savedColor) { document.documentElement.style.setProperty("--text-highlight-bg", savedColor); this.settings.lastColor = savedColor; }
             this.app.workspace.onLayoutReady(() => {
                 this.reloadStyles(this.settings);
                 createHighlighterIcons(this.settings, this);
