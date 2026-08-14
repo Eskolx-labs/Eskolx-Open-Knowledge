@@ -3,5 +3,7 @@
   "dataview",
   "templater-obsidian",
   "quickadd",
-  "tldraw"
+  "tldraw",
+  "execute-code",
+  "obsidian-tasks-plugin"
 ]

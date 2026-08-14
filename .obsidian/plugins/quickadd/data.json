@@ -5,10 +5,10 @@
       "id": "d8e3b2f1-0001-4000-8000-000000000001",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Project.md",
+      "templatePath": "90 Templates/Project.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "Project — {{VALUE:Project name}}"
+        "format": "Project \u2014 {{VALUE:Project name}}"
       },
       "folder": {
         "enabled": true,
@@ -36,7 +36,7 @@
       "id": "d8e3b2f1-0002-4000-8000-000000000002",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Research.md",
+      "templatePath": "90 Templates/Research.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "{{VALUE:Research question}}"
@@ -67,7 +67,7 @@
       "id": "d8e3b2f1-0003-4000-8000-000000000003",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Concept.md",
+      "templatePath": "90 Templates/Concept.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "{{VALUE:Concept name}}"
@@ -98,10 +98,10 @@
       "id": "d8e3b2f1-0004-4000-8000-000000000004",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Decision.md",
+      "templatePath": "90 Templates/Decision.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "EDR — {{DATE:YYYY-MM-DD}} — {{VALUE:Title}}"
+        "format": "EDR \u2014 {{DATE:YYYY-MM-DD}} \u2014 {{VALUE:Title}}"
       },
       "folder": {
         "enabled": true,
@@ -129,10 +129,10 @@
       "id": "d8e3b2f1-0005-4000-8000-000000000005",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Meeting.md",
+      "templatePath": "90 Templates/Meeting.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "Meeting — {{DATE:YYYY-MM-DD}} {{VALUE:Topic}}"
+        "format": "Meeting \u2014 {{DATE:YYYY-MM-DD}} {{VALUE:Topic}}"
       },
       "folder": {
         "enabled": true,
@@ -160,10 +160,10 @@
       "id": "d8e3b2f1-0006-4000-8000-000000000006",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Person.md",
+      "templatePath": "90 Templates/Person.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{VALUE:Role}} — {{VALUE:Name}}"
+        "format": "{{VALUE:Role}} \u2014 {{VALUE:Name}}"
       },
       "folder": {
         "enabled": true,
@@ -191,7 +191,7 @@
       "id": "d8e3b2f1-0007-4000-8000-000000000007",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Resource.md",
+      "templatePath": "90 Templates/Resource.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "{{VALUE:Resource name}}"
@@ -222,10 +222,10 @@
       "id": "d8e3b2f1-0008-4000-8000-000000000008",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Idea.md",
+      "templatePath": "90 Templates/Idea.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "Idea — {{VALUE:Title}}"
+        "format": "Idea \u2014 {{VALUE:Title}}"
       },
       "folder": {
         "enabled": true,
@@ -253,10 +253,10 @@
       "id": "d8e3b2f1-0009-4000-8000-000000000009",
       "type": "Template",
       "command": true,
-      "templatePath": ".obsidian/templates/Tutorial.md",
+      "templatePath": "90 Templates/Tutorial.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "Tutorial — {{VALUE:Title}}"
+        "format": "Tutorial \u2014 {{VALUE:Title}}"
       },
       "folder": {
         "enabled": true,

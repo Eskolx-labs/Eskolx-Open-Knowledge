@@ -1,7 +1,7 @@
 {
   "data_version": 2,
   "command_timeout": 5,
-  "templates_folder": ".obsidian/templates",
+  "templates_folder": "90 Templates",
   "templates_pairs": [],
   "trigger_on_file_creation_mode": "none",
   "auto_jump_to_cursor": true,
