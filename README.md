@@ -22,7 +22,9 @@ Read the system documents at the repository root (one level up from this vault):
 07 Research/       exploratory, in-progress research
 08 Lounge/         informal community discussion (template-free, no review needed)
 90 Attachments/    all attachments, including animations/
+90 Templates/      Templater + QuickAdd templates (visible folder, not hidden)
 99 Archive/        inactive public material
+Clippings/        web clippings from the Obsidian Web Clipper extension
 ```
 
 No nesting beyond this — except `06 Publishing/` may use draft/review/published subfolders because publication state is operationally meaningful.
@@ -60,4 +62,9 @@ Educational documentation: CC BY 4.0 (final choice recorded in an EDR when made)
 
 ## Plugins
 
-Required: Obsidian Git, Dataview, Templater, QuickAdd, Tasks, tldraw. Everything else is built-in. Add a plugin only when it solves a real recurring problem.
+Required: Obsidian Git, Dataview, Templater, QuickAdd, Tasks, tldraw, Execute Code. Everything else is built-in. Add a plugin only when it solves a real recurring problem.
+
+## Python + LaTeX
+
+- **Python**: use the Execute Code plugin — put code in a ` ```python ` block and click the ▶ Run button. Configured to use `python3`.
+- **LaTeX math**: built into Obsidian (MathJax) — `$...$` for inline, `$$...$$` for display. No plugin needed.
