@@ -3,10 +3,9 @@ cssclasses:
   - eskolx-open
   - dashboard
 participants: ["Natnael-Getahun"]
-participants: ["Natnael-Getahun"]
 ---
 
-# Eskolx Lab — Open
+# Eskolx Labs — Open
 
 > **Build. Understand. Share.** A public learning library for statistics, statistical computing, and data analysis automation.
 
@@ -212,5 +211,5 @@ views:
 
 ## Contribute
 
-- [[Contributor Guide]] · [[First Contribution]] · [[Code of Conduct]] · [[The Eskolx Lab Rules]]
+- [[Contributor Guide]] · [[First Contribution]] · [[Code of Conduct]] · [[The Eskolx Labs Rules]]
 - Community Inbox: [[Community Inbox]]
