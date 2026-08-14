@@ -2,6 +2,8 @@
 type: meeting
 date: <% tp.date.now("YYYY-MM-DD") %>
 participants: 
+author: 
+tags: [meetings]
 status: completed
 publish-status: draft
 ---

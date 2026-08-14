@@ -2,6 +2,8 @@
 type: idea
 status: idea
 area: 
+author: 
+tags: [ideas]
 created: <% tp.date.now("YYYY-MM-DD") %>
 publish-status: draft
 ---
