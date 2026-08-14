@@ -14,6 +14,7 @@ cssclasses:
 - [[What Is Eskolx]]
 - [[How To Learn With Eskolx]]
 - [[How To Contribute]]
+- [[Keybindings]]
 
 ## Learning
 

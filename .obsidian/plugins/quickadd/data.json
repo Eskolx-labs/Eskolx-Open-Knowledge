@@ -342,7 +342,7 @@
           "name": "Open Home",
           "id": "d8e3b2f1-000b-4000-8000-00000000000b",
           "type": "Macro",
-          "command": false,
+          "command": true,
           "macro": {
             "id": "d8e3b2f1-000c-4000-8000-00000000000c",
             "name": "Open Home",
@@ -359,6 +359,37 @@
             ]
           },
           "runOnStartup": false
+        },
+        {
+          "name": "New Daily Note",
+          "id": "d8e3b2f1-000e-4000-8000-00000000000e",
+          "type": "Template",
+          "command": false,
+          "templatePath": "90 Templates/Daily.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{DATE:YYYY-MM-DD}} \u2014 {{VALUE:Your name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "00 Home"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFile": true,
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "mode": "live",
+            "focus": true
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
         }
       ],
       "collapsed": false,

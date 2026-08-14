@@ -6,6 +6,8 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 publish-status: draft
 ---
 
+<%* await tp.file.move("08 Lounge/" + tp.file.title + ".md") %>
+
 # Idea — <% tp.file.title.replace(/^Idea — /, "") %>
 
 ## What

@@ -6,9 +6,13 @@ area:
 owner: 
 created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
+author: 
+tags: [projects]
 github: 
 publish-status: draft
 ---
+
+<%* await tp.file.move("01 Projects/" + tp.file.title + ".md") %>
 
 # Project — <% tp.file.title.replace(/^Project — /, "") %>
 

@@ -1,4 +1,11 @@
 {
+  "presets": {
+    "default": "not done",
+    "overdue": "not done\nhappens before today",
+    "due_today": "not done\ndue today",
+    "mine": "not done\ntag includes #assignee/natnael",
+    "this_file": "path includes {{query.file.path}}"
+  },
   "globalQuery": "",
   "globalFilter": "",
   "removeGlobalFilter": false,
@@ -11,88 +18,82 @@
   "autoSuggestMaxItems": 6,
   "provideAccessKeys": true,
   "useFilenameAsScheduledDate": false,
-  "filenameAsScheduledDateFolders": [],
-  "scheduledDateField": "scheduled",
-  "dueDateField": "due",
-  "dueDateFormats": [
-    "YYYY-MM-DD"
-  ],
-  "doneDateField": "done",
-  "cancelledDateField": "cancelled",
-  "priorityFields": [
-    "priority"
-  ],
-  "recurrenceFields": [
-    "recurring"
-  ],
-  "statusTypes": [
-    {
-      "typeKey": "TODO",
-      "name": "Todo",
-      "statusSymbol": " ",
-      "nextStatusSymbol": "x",
-      "availableAsCommand": true,
-      "type": "TODO"
-    },
-    {
-      "typeKey": "DONE",
-      "name": "Done",
-      "statusSymbol": "x",
-      "nextStatusSymbol": " ",
-      "availableAsCommand": true,
-      "type": "DONE"
-    }
-  ],
-  "lowPriority": "low",
-  "normalPriority": "normal",
-  "highPriority": "high",
-  "criticalPriority": "critical",
-  "lowPrioritySymbol": "🔽",
-  "normalPrioritySymbol": "🔼",
-  "highPrioritySymbol": "⏫",
-  "criticalPrioritySymbol": "🔺",
-  "defaultPriority": "normal",
-  "completeTasksOnSave": false,
-  "filteredViewMode": "list",
-  "filteredViewDisplayMode": "simple",
-  "statusSettings": {
-    "enabled": false,
-    "timer": {
-      "statusType": "IN_PROGRESS",
-      "statusSymbol": "/",
-      "statusName": "In Progress"
-    },
-    "nextStatusSymbol": "x"
+  "filenameAsScheduledDateFormat": "",
+  "filenameAsDateFolders": [],
+  "recurrenceOnNextLine": false,
+  "removeScheduledDateOnRecurrence": false,
+  "searchResults": {
+    "taskCountLocation": "bottom"
   },
-  "hideGlobalFilter": false,
-  "ignoreDoneTasks": false,
-  "hideDueDate": false,
-  "hideScheduledDate": false,
-  "hideDoneDate": false,
-  "hideStartDate": false,
-  "hidePriority": false,
-  "hideRecurrenceRule": false,
-  "hideTaskCount": false,
-  "hideEditButton": false,
-  "hidePostponeButton": false,
-  "hideUrgency": false,
-  "hideBacklinks": false,
-  "hideTag": false,
-  "hideTaskId": false,
-  "hideOnCompletion": false,
-  "sort": "urgency",
-  "sortReverse": false,
-  "sortIgnoreCase": false,
-  "sortByStatusType": false,
-  "sortByStatusTypeOrder": [
-    "TODO",
-    "IN_PROGRESS",
-    "DONE"
-  ],
-  "limit": 100,
-  "limitSubItems": -1,
-  "tagValues": [],
-  "workspace": "global",
-  "workspaceEnabled": false,
-  "showCompletedOn": "all"
+  "statusSettings": {
+    "coreStatuses": [
+      {
+        "symbol": " ",
+        "name": "Todo",
+        "nextStatusSymbol": "x",
+        "availableAsCommand": true,
+        "type": "TODO"
+      },
+      {
+        "symbol": "x",
+        "name": "Done",
+        "nextStatusSymbol": " ",
+        "availableAsCommand": true,
+        "type": "DONE"
+      }
+    ],
+    "customStatuses": [
+      {
+        "symbol": "/",
+        "name": "In Progress",
+        "nextStatusSymbol": "x",
+        "availableAsCommand": true,
+        "type": "IN_PROGRESS"
+      },
+      {
+        "symbol": "-",
+        "name": "Cancelled",
+        "nextStatusSymbol": " ",
+        "availableAsCommand": true,
+        "type": "CANCELLED"
+      }
+    ]
+  },
+  "isShownInEditModal": {
+    "priority": true,
+    "recurrence": true,
+    "due": true,
+    "scheduled": true,
+    "start": true,
+    "before_this": true,
+    "after_this": true,
+    "status": true,
+    "created": true,
+    "done": true,
+    "cancelled": true
+  },
+  "features": {
+    "INTERNAL_TESTING_ENABLED_BY_DEFAULT": false
+  },
+  "generalSettings": {},
+  "headingOpened": {
+    "Core Statuses": true,
+    "Custom Statuses": true
+  },
+  "debugSettings": {
+    "ignoreSortInstructions": false,
+    "showTaskHiddenData": false,
+    "recordTimings": false
+  },
+  "loggingOptions": {
+    "minLevels": {
+      "": "info",
+      "tasks": "info",
+      "tasks.Query": "info",
+      "tasks.Cache": "info",
+      "tasks.Events": "info",
+      "tasks.File": "info",
+      "tasks.Task": "info"
+    }
+  }
 }

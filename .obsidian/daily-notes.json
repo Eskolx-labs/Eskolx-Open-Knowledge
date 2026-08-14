@@ -1,5 +1,6 @@
 {
   "folder": "00 Home",
   "format": "YYYY-MM-DD",
-  "autorun": false
+  "autorun": false,
+  "template": ""
 }

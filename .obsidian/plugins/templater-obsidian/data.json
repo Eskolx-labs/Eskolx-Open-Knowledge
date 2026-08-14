@@ -3,28 +3,22 @@
   "command_timeout": 5,
   "templates_folder": "90 Templates",
   "templates_pairs": [],
-  "trigger_on_file_creation_mode": "none",
+  "trigger_on_file_creation_mode": "regex",
   "auto_jump_to_cursor": true,
   "jump_to_cursor_after_file_name": false,
   "shell_path": "",
-  "user_scripts_folder": ".obsidian/scripts",
+  "user_scripts_folder": "",
   "folder_templates": [],
-  "file_templates": [],
+  "file_templates": [
+    {
+      "regex": "^\\d{4}-\\d{2}-\\d{2}( \u2014 .*)?\\.md$",
+      "template": "90 Templates/Daily.md"
+    }
+  ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [],
   "startup_templates": [],
   "intellisense_render": "1",
-  "ignore_folders_on_creation": [],
-  "folder_overrides": [],
-  "enable_front_matter_templates": true,
-  "front_matter_templates": [
-    {
-      "regex": ".*",
-      "template": ""
-    }
-  ],
-  "enable_file_templates_for_new_notes": false,
-  "templates_hotkeys": [],
-  "enable_folder_templates_hotkeys": false
+  "ignore_folders_on_creation": []
 }
