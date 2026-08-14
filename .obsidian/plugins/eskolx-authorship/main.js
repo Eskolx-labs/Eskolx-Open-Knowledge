@@ -96,20 +96,32 @@ class DotMarker extends GutterMarker {
 			p.style.top = top + "px";
 			el._pop = p;
 			// Keep the popover open while the cursor is over it (so the commit/PR
-			// link is clickable) or anywhere near it — bridge the gap between the
-			// dot and the popover so it doesn't vanish while moving toward it.
-			const hideTimer = () => {
+			// link is clickable) — bridge the gap between the dot and the popover
+			// so it doesn't vanish while moving toward it.
+			const dismiss = () => {
 				clearTimeout(el._popTimer);
-				el._popTimer = setTimeout(() => {
-					if (el._pop) { el._pop.remove(); el._pop = null; }
-				}, 700);
+				if (el._pop) { el._pop.remove(); el._pop = null; }
+				document.removeEventListener("scroll", onScroll);
+				window.removeEventListener("wheel", onScroll);
+			};
+			const hideTimer = (ms) => {
+				clearTimeout(el._popTimer);
+				el._popTimer = setTimeout(dismiss, ms || 700);
 			};
 			const keepOpen = () => clearTimeout(el._popTimer);
 			p.addEventListener("mouseenter", keepOpen);
-			p.addEventListener("mouseleave", hideTimer);
+			p.addEventListener("mouseleave", () => hideTimer(700));
 			el.addEventListener("mouseenter", keepOpen);
-			el.addEventListener("mouseleave", hideTimer);
-			el._hide = hideTimer;
+			el.addEventListener("mouseleave", () => hideTimer(700));
+			// Clicking the commit/PR link moves focus to the new tab, so no mouseleave
+			// fires — hide it right after the click instead.
+			const links = p.querySelectorAll("a");
+			links.forEach((l) => l.addEventListener("click", () => hideTimer(150)));
+			// Hide when the page scrolls or the mouse wheel turns.
+			const onScroll = () => hideTimer(0);
+			document.addEventListener("scroll", onScroll, { passive: true });
+			window.addEventListener("wheel", onScroll, { passive: true });
+			el._hide = () => hideTimer(0);
 			el._keep = keepOpen;
 		});
 		return el;
