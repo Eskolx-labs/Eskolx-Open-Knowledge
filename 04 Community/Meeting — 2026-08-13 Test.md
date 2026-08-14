@@ -3,11 +3,11 @@ type: meeting
 date: 2026-08-13
 status: completed
 publish-status: draft
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Sitzung_von_Wiki_Loves_Broadcast_im_Kontor_Hamburg.jpg/3840px-Sitzung_von_Wiki_Loves_Broadcast_im_Kontor_Hamburg.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Handshake_icon.svg/500px-Handshake_icon.svg.png
 tags: [meetings]
 ---
 
-![Meeting — 2026-08-13 Test cover](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Sitzung_von_Wiki_Loves_Broadcast_im_Kontor_Hamburg.jpg/3840px-Sitzung_von_Wiki_Loves_Broadcast_im_Kontor_Hamburg.jpg)
+![Meeting — 2026-08-13 Test cover](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Handshake_icon.svg/500px-Handshake_icon.svg.png)
 
 # Meeting — 2026-08-13 Test
 

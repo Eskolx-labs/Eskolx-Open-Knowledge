@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/b/b7/Wikipedia_Day_NYC_2025_-50.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Checklist.svg/500px-Checklist.svg.png
 
 tags: [community]
 participants: ["Natnael-Getahun"]
 ---
 
-![Code of Conduct cover](https://upload.wikimedia.org/wikipedia/commons/b/b7/Wikipedia_Day_NYC_2025_-50.jpg)
+![Code of Conduct cover](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Checklist.svg/500px-Checklist.svg.png)
 
 # Code of Conduct
 

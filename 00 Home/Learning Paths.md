@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Cooking_contest_140418-N-OX321-101.jpg/3840px-Cooking_contest_140418-N-OX321-101.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Noun-e-learning-3683598.svg/500px-Noun-e-learning-3683598.svg.png
 
 tags: [onboarding]
 participants: ["Natnael-Getahun"]
 ---
 
-![Learning Paths cover](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Cooking_contest_140418-N-OX321-101.jpg/3840px-Cooking_contest_140418-N-OX321-101.jpg)
+![Learning Paths cover](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Noun-e-learning-3683598.svg/500px-Noun-e-learning-3683598.svg.png)
 
 # Learning Paths
 

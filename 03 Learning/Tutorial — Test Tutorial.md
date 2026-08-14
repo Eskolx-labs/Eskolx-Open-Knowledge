@@ -7,11 +7,11 @@ project: Test Project
 created: 2026-08-13
 updated: 2026-08-13
 publish-status: draft
-cover: https://upload.wikimedia.org/wikipedia/commons/0/08/Meeting_of_doctors_at_the_university_of_Paris.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png
 tags: [tutorials]
 ---
 
-![Tutorial — Test Tutorial cover](https://upload.wikimedia.org/wikipedia/commons/0/08/Meeting_of_doctors_at_the_university_of_Paris.jpg)
+![Tutorial — Test Tutorial cover](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png)
 
 # Tutorial — Test Tutorial
 

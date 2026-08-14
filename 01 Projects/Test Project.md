@@ -9,13 +9,13 @@ updated: 2026-08-13
 github: eskolx/stats-distributions
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/BG_Group-CNOOC_signing_ceremony_in_Brisbane_hosted_by_QGC_%288712724787%29.jpg/500px-BG_Group-CNOOC_signing_ceremony_in_Brisbane_hosted_by_QGC_%288712724787%29.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Simpleicons_Business_briefcase-variant.svg/500px-Simpleicons_Business_briefcase-variant.svg.png
 
 tags: [projects]
 participants: ["Natnael-Getahun"]
 ---
 
-![Test Project cover](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/BG_Group-CNOOC_signing_ceremony_in_Brisbane_hosted_by_QGC_%288712724787%29.jpg/500px-BG_Group-CNOOC_signing_ceremony_in_Brisbane_hosted_by_QGC_%288712724787%29.jpg)
+![Test Project cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Simpleicons_Business_briefcase-variant.svg/500px-Simpleicons_Business_briefcase-variant.svg.png)
 
 # Project — Test Project
 

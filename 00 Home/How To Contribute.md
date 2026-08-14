@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/0/0e/Debian_13_with_FOSS_software_open.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png
 
 tags: [community]
 participants: ["Natnael-Getahun"]
 ---
 
-![How To Contribute cover](https://upload.wikimedia.org/wikipedia/commons/0/0e/Debian_13_with_FOSS_software_open.png)
+![How To Contribute cover](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
 
 # How To Contribute
 

@@ -3,13 +3,13 @@ cssclasses:
   - eskolx-open
   - dashboard
 
-cover: https://upload.wikimedia.org/wikipedia/commons/c/c6/SearsHouse115.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png
 
 tags: [dashboard]
 participants: ["Natnael-Getahun"]
 ---
 
-![Home cover](https://upload.wikimedia.org/wikipedia/commons/c/c6/SearsHouse115.jpg)
+![Home cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
 
 # Eskolx Labs — Open
 

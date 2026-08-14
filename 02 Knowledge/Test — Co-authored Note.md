@@ -2,7 +2,7 @@
 type: concept
 status: draft
 area: tooling
-cover: https://upload.wikimedia.org/wikipedia/commons/5/52/3d10_fm_de_vilafranca.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png
 featured: false
 created: 2026-08-14
 updated: 2026-08-14
@@ -12,7 +12,7 @@ publish-status: draft
 participants: []
 ---
 
-![Test — Co-authored Note cover](https://upload.wikimedia.org/wikipedia/commons/5/52/3d10_fm_de_vilafranca.jpg)
+![Test — Co-authored Note cover](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
 
 # Test — Co-authored Note
 

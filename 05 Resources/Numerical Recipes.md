@@ -8,13 +8,13 @@ created: 2026-08-13
 updated: 2026-08-13
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/8/88/NumericalRecipes3rdEdCover.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png
 
 tags: [numerical-methods]
 participants: ["Natnael-Getahun"]
 ---
 
-![Numerical Recipes cover](https://upload.wikimedia.org/wikipedia/commons/8/88/NumericalRecipes3rdEdCover.jpg)
+![Numerical Recipes cover](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png)
 
 # Numerical Recipes
 

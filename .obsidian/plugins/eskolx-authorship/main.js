@@ -95,9 +95,21 @@ class DotMarker extends GutterMarker {
 			p.style.left = left + "px";
 			p.style.top = top + "px";
 			el._pop = p;
-		});
-		el.addEventListener("mouseleave", () => {
-			if (el._pop) { el._pop.remove(); el._pop = null; }
+			// Keep the popover open while the cursor is over it (so the commit/PR
+			// link is clickable) or anywhere near it — bridge the gap between the
+			// dot and the popover so it doesn't vanish while moving toward it.
+			const hideTimer = () => {
+				clearTimeout(el._popTimer);
+				el._popTimer = setTimeout(() => {
+					if (el._pop) { el._pop.remove(); el._pop = null; }
+				}, 150);
+			};
+			const keepOpen = () => clearTimeout(el._popTimer);
+			p.addEventListener("mouseenter", keepOpen);
+			p.addEventListener("mouseleave", hideTimer);
+			el.addEventListener("mouseleave", hideTimer);
+			el._hide = hideTimer;
+			el._keep = keepOpen;
 		});
 		return el;
 	}

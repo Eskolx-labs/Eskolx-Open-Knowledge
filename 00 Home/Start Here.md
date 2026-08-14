@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/5/5c/Tetradrachm_Athens_480-420BC_MBA_Lyon.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png
 
 tags: [onboarding]
 participants: ["Natnael-Getahun"]
 ---
 
-![Start Here cover](https://upload.wikimedia.org/wikipedia/commons/5/5c/Tetradrachm_Athens_480-420BC_MBA_Lyon.jpg)
+![Start Here cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
 
 # Start Here
 

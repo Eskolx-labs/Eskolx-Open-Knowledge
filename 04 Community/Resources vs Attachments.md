@@ -6,13 +6,13 @@ created: 2026-08-14
 updated: 2026-08-14
 publish-status: published
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Singapore_Ship_Docks_%28PSA%29_%286464681311%29.jpg/3840px-Singapore_Ship_Docks_%28PSA%29_%286464681311%29.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Simpleicons_Business_briefcase-variant.svg/500px-Simpleicons_Business_briefcase-variant.svg.png
 
 tags: [operations]
 participants: ["Natnael-Getahun"]
 ---
 
-![Resources vs Attachments cover](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Singapore_Ship_Docks_%28PSA%29_%286464681311%29.jpg/3840px-Singapore_Ship_Docks_%28PSA%29_%286464681311%29.jpg)
+![Resources vs Attachments cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Simpleicons_Business_briefcase-variant.svg/500px-Simpleicons_Business_briefcase-variant.svg.png)
 
 # Resources vs Attachments
 

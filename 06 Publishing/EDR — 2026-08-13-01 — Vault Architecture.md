@@ -5,11 +5,11 @@ status: accepted
 date: 2026-08-13
 area: infrastructure
 publish-status: draft
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/View_of_Santa_Maria_del_Fiore_in_Florence.jpg/500px-View_of_Santa_Maria_del_Fiore_in_Florence.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Colibre_%E2%80%93_flowchartshapes.flowchart-decision.svg/500px-Colibre_%E2%80%93_flowchartshapes.flowchart-decision.svg.png
 tags: [decisions]
 ---
 
-![EDR — 2026-08-13-01 — Vault Architecture cover](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/View_of_Santa_Maria_del_Fiore_in_Florence.jpg/500px-View_of_Santa_Maria_del_Fiore_in_Florence.jpg)
+![EDR — 2026-08-13-01 — Vault Architecture cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Colibre_%E2%80%93_flowchartshapes.flowchart-decision.svg/500px-Colibre_%E2%80%93_flowchartshapes.flowchart-decision.svg.png)
 
 # EDR — 2026-08-13-01 — Vault Architecture
 

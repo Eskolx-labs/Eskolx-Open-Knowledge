@@ -8,11 +8,11 @@ author: Natnael
 tags: [research, tooling]
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/a/a0/Citations_on_p._44_of_The_Byzantine_empire_by_Finlay.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png
 participants: ["Natnael-Getahun"]
 ---
 
-![Citations Convention cover](https://upload.wikimedia.org/wikipedia/commons/a/a0/Citations_on_p._44_of_The_Byzantine_empire_by_Finlay.png)
+![Citations Convention cover](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png)
 
 # Citations Convention
 

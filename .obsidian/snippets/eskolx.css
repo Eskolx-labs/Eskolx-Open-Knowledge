@@ -247,7 +247,7 @@ body.dashboard .markdown-preview-view h2 {
    The plugin hides the button until you hover the code block. We override that
    so the Run button is always visible on the right — it's the primary action. */
 button.run-code-button {
-  display: block;
+  display: block !important;
   top: 0;
   bottom: auto;
   right: 0;

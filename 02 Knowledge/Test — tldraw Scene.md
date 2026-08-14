@@ -5,11 +5,11 @@ area: tooling
 created: 2026-08-14
 updated: 2026-08-14
 publish-status: draft
-cover: https://upload.wikimedia.org/wikipedia/commons/b/b4/NCTR_Intern_Claire_Boyle_%2815558843862%29.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png
 tags: [tooling]
 ---
 
-![Test — tldraw Scene cover](https://upload.wikimedia.org/wikipedia/commons/b/b4/NCTR_Intern_Claire_Boyle_%2815558843862%29.jpg)
+![Test — tldraw Scene cover](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
 
 # Test — tldraw Scene
 

@@ -7,13 +7,13 @@ created: 2026-08-14
 updated: 2026-08-14
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Colibre_%E2%80%93_flowchartshapes.flowchart-decision.svg/500px-Colibre_%E2%80%93_flowchartshapes.flowchart-decision.svg.png
 
 tags: [numerical-methods]
 participants: ["Natnael-Getahun"]
 ---
 
-![Numerical Stability cover](https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg)
+![Numerical Stability cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Colibre_%E2%80%93_flowchartshapes.flowchart-decision.svg/500px-Colibre_%E2%80%93_flowchartshapes.flowchart-decision.svg.png)
 
 # Numerical Stability
 

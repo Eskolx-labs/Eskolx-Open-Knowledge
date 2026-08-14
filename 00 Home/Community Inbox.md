@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/3/39/A_community_townhall_at_Makoko_community.jpg
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/VK_icons_inbox_outline_56.svg/500px-VK_icons_inbox_outline_56.svg.png
 
 tags: [inbox]
 participants: ["Natnael-Getahun"]
 ---
 
-![Community Inbox cover](https://upload.wikimedia.org/wikipedia/commons/3/39/A_community_townhall_at_Makoko_community.jpg)
+![Community Inbox cover](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/VK_icons_inbox_outline_56.svg/500px-VK_icons_inbox_outline_56.svg.png)
 
 # Community Inbox
 

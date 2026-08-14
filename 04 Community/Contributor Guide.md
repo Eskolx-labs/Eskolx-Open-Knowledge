@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Open_Source_Initiative.svg/500px-Open_Source_Initiative.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png
 
 tags: [community]
 participants: ["Natnael-Getahun"]
 ---
 
-![Contributor Guide cover](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Open_Source_Initiative.svg/500px-Open_Source_Initiative.svg.png)
+![Contributor Guide cover](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
 
 # Contributor Guide
 
