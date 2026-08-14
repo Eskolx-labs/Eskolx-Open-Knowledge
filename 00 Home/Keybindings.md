@@ -7,8 +7,12 @@ updated: 2026-08-14
 author: Natnael
 tags: [tooling, onboarding]
 publish-status: published
+
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
 participants: ["Natnael-Getahun"]
 ---
+
+![Keybindings cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
 
 # Keybindings
 
@@ -48,9 +52,10 @@ Settings → Hotkeys → search the command name → click the `+` → press you
 
 ## Authorship dots (Eskolx Authorship plugin)
 
-No hotkey needed — the right-margin dots are always visible in edit mode.
+**Dots are the only authorship display.** The per-line name/date gutter is OFF — the left margin is empty; the right margin carries the dots.
 
 - A dot marks the start of a contiguous chunk written by one person in one sitting.
 - Color = author (consistent across the whole vault).
 - Hover a dot to see author, date, branch, merge status, and commit subject.
 - The `participants` frontmatter property is machine-generated (scripts/authorship.py) — never hand-edit it.
+- Git blame / history still hold the full record (author + date per commit) — see Obsidian Git's History view.

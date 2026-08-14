@@ -14,7 +14,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 15,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 18,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -29,11 +45,27 @@
    "chunks": [
     {
      "start": 1,
-     "end": 215,
+     "end": 5,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
      "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 7,
+     "end": 8,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 11,
+     "end": 218,
+     "author": "Natnael-Getahun",
+     "commit": "c30218c4e1d323907b51df862c1dddd778754270",
+     "date": "2026-08-14 07:24",
+     "subject": "v0.0.1: naming fixes (Eskolx Labs Rules, Home titles), participants dedupe"
     }
    ],
    "participants": [
@@ -44,7 +76,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 49,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 52,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -59,7 +107,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 39,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 42,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -74,7 +138,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 22,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "4b9fcc036b8d26b39e8b8b4e62b97cc60f0028e7",
+     "date": "2026-08-14 06:13",
+     "subject": "v0.3: round 3 fixes \u2014 Tasks full build, Open Home macro, native highlight, gutter signs, palette order, topic branches, naming rule, Home priority"
+    },
+    {
+     "start": 12,
+     "end": 13,
+     "author": "Natnael-Getahun",
+     "commit": "4b9fcc036b8d26b39e8b8b4e62b97cc60f0028e7",
+     "date": "2026-08-14 06:13",
+     "subject": "v0.3: round 3 fixes \u2014 Tasks full build, Open Home macro, native highlight, gutter signs, palette order, topic branches, naming rule, Home priority"
+    },
+    {
+     "start": 16,
+     "end": 25,
      "author": "Natnael-Getahun",
      "commit": "4b9fcc036b8d26b39e8b8b4e62b97cc60f0028e7",
      "date": "2026-08-14 06:13",
@@ -89,11 +169,35 @@
    "chunks": [
     {
      "start": 1,
-     "end": 56,
+     "end": 10,
      "author": "Natnael-Getahun",
      "commit": "bbb7e2f04df1064631e68b4d157b3c818797f41f",
      "date": "2026-08-14 05:23",
      "subject": "feat: per-user branch, highlightr, tasks schema fix, template routing, keybindings, overlays"
+    },
+    {
+     "start": 12,
+     "end": 13,
+     "author": "Natnael-Getahun",
+     "commit": "bbb7e2f04df1064631e68b4d157b3c818797f41f",
+     "date": "2026-08-14 05:23",
+     "subject": "feat: per-user branch, highlightr, tasks schema fix, template routing, keybindings, overlays"
+    },
+    {
+     "start": 16,
+     "end": 53,
+     "author": "Natnael-Getahun",
+     "commit": "bbb7e2f04df1064631e68b4d157b3c818797f41f",
+     "date": "2026-08-14 05:23",
+     "subject": "feat: per-user branch, highlightr, tasks schema fix, template routing, keybindings, overlays"
+    },
+    {
+     "start": 55,
+     "end": 59,
+     "author": "Natnael-Getahun",
+     "commit": "ab9dd4b642ea760abd595c24775031c22ba6d3ee",
+     "date": "2026-08-14 07:04",
+     "subject": "v0.4: docs \u2014 Keybindings dots section, version bump"
     }
    ],
    "participants": [
@@ -104,7 +208,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 35,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 38,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -119,7 +239,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 67,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "eda813b324ce7ec122e5ddcd99f493722cd89992",
+     "date": "2026-08-14 05:41",
+     "subject": "feat: CLI + agent integration (AGENTS.md, Obsidian CLI guide), version 0.2, harder tests"
+    },
+    {
+     "start": 12,
+     "end": 13,
+     "author": "Natnael-Getahun",
+     "commit": "eda813b324ce7ec122e5ddcd99f493722cd89992",
+     "date": "2026-08-14 05:41",
+     "subject": "feat: CLI + agent integration (AGENTS.md, Obsidian CLI guide), version 0.2, harder tests"
+    },
+    {
+     "start": 16,
+     "end": 70,
      "author": "Natnael-Getahun",
      "commit": "eda813b324ce7ec122e5ddcd99f493722cd89992",
      "date": "2026-08-14 05:41",
@@ -134,7 +270,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 73,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 76,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -149,7 +301,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 32,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 35,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -164,7 +332,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 55,
+     "end": 11,
+     "author": "Natnael-Getahun",
+     "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
+     "date": "2026-08-13 18:47",
+     "subject": "test: add one note per type to verify templates and dashboards"
+    },
+    {
+     "start": 13,
+     "end": 14,
+     "author": "Natnael-Getahun",
+     "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
+     "date": "2026-08-13 18:47",
+     "subject": "test: add one note per type to verify templates and dashboards"
+    },
+    {
+     "start": 17,
+     "end": 58,
      "author": "Natnael-Getahun",
      "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
      "date": "2026-08-13 18:47",
@@ -179,7 +363,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 33,
+     "end": 9,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 11,
+     "end": 12,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 15,
+     "end": 36,
      "author": "Natnael-Getahun",
      "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
      "date": "2026-08-14 02:51",
@@ -194,7 +394,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 33,
+     "end": 9,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 11,
+     "end": 12,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 15,
+     "end": 36,
      "author": "Natnael-Getahun",
      "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
      "date": "2026-08-14 02:51",
@@ -209,7 +425,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 33,
+     "end": 9,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 11,
+     "end": 12,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 15,
+     "end": 36,
      "author": "Natnael-Getahun",
      "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
      "date": "2026-08-14 02:51",
@@ -224,7 +456,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 33,
+     "end": 9,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 11,
+     "end": 12,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 15,
+     "end": 36,
      "author": "Natnael-Getahun",
      "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
      "date": "2026-08-14 02:51",
@@ -239,7 +487,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 32,
+     "end": 9,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 11,
+     "end": 12,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 15,
+     "end": 35,
      "author": "Natnael-Getahun",
      "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
      "date": "2026-08-14 02:51",
@@ -254,7 +518,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 33,
+     "end": 9,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 11,
+     "end": 12,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 15,
+     "end": 36,
      "author": "Natnael-Getahun",
      "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
      "date": "2026-08-14 02:51",
@@ -269,7 +549,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 33,
+     "end": 9,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 11,
+     "end": 12,
+     "author": "Natnael-Getahun",
+     "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
+     "date": "2026-08-14 02:51",
+     "subject": "docs: add learning path concept stubs to Open vault"
+    },
+    {
+     "start": 15,
+     "end": 36,
      "author": "Natnael-Getahun",
      "commit": "d830d6945fc81b42198c11b927d25020ea8d90ff",
      "date": "2026-08-14 02:51",
@@ -284,23 +580,31 @@
    "chunks": [
     {
      "start": 1,
-     "end": 9,
+     "end": 10,
      "author": "Natnael-Getahun",
      "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
      "date": "2026-08-13 18:47",
      "subject": "test: add one note per type to verify templates and dashboards"
     },
     {
-     "start": 11,
-     "end": 34,
+     "start": 12,
+     "end": 13,
      "author": "Natnael-Getahun",
      "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
      "date": "2026-08-13 18:47",
      "subject": "test: add one note per type to verify templates and dashboards"
     },
     {
-     "start": 35,
-     "end": 38,
+     "start": 16,
+     "end": 37,
+     "author": "Natnael-Getahun",
+     "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
+     "date": "2026-08-13 18:47",
+     "subject": "test: add one note per type to verify templates and dashboards"
+    },
+    {
+     "start": 38,
+     "end": 41,
      "author": "test-coauthor",
      "commit": "e38609c4ed508faadb6a4c3791ff805343b7a896",
      "date": "2026-08-14 07:29",
@@ -316,7 +620,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 39,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "1c146dc4545d63843124ad3bf8b2e04d21b258a2",
+     "date": "2026-08-14 07:15",
+     "subject": "v0.0.1: new user conveniences \u2014 NN + Related Notes plugins, shelves, research upgrade, citations, email-safe cache"
+    },
+    {
+     "start": 12,
+     "end": 13,
+     "author": "Natnael-Getahun",
+     "commit": "1c146dc4545d63843124ad3bf8b2e04d21b258a2",
+     "date": "2026-08-14 07:15",
+     "subject": "v0.0.1: new user conveniences \u2014 NN + Related Notes plugins, shelves, research upgrade, citations, email-safe cache"
+    },
+    {
+     "start": 16,
+     "end": 42,
      "author": "Natnael-Getahun",
      "commit": "1c146dc4545d63843124ad3bf8b2e04d21b258a2",
      "date": "2026-08-14 07:15",
@@ -331,7 +651,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 30,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 33,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -346,7 +682,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 85,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 88,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -361,7 +713,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 46,
+     "end": 7,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 9,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
+     "date": "2026-08-13 18:35",
+     "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 13,
+     "end": 49,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
@@ -376,7 +744,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 38,
+     "end": 8,
+     "author": "Natnael-Getahun",
+     "commit": "d1dc7b0f98f485c7823833dbaa0453c0568fa6d9",
+     "date": "2026-08-14 03:10",
+     "subject": "feat: single command center, 15 rules, writing pipeline, fallback map, tags, resources rule"
+    },
+    {
+     "start": 10,
+     "end": 11,
+     "author": "Natnael-Getahun",
+     "commit": "d1dc7b0f98f485c7823833dbaa0453c0568fa6d9",
+     "date": "2026-08-14 03:10",
+     "subject": "feat: single command center, 15 rules, writing pipeline, fallback map, tags, resources rule"
+    },
+    {
+     "start": 14,
+     "end": 41,
      "author": "Natnael-Getahun",
      "commit": "d1dc7b0f98f485c7823833dbaa0453c0568fa6d9",
      "date": "2026-08-14 03:10",
@@ -391,11 +775,27 @@
    "chunks": [
     {
      "start": 1,
-     "end": 73,
+     "end": 8,
      "author": "Natnael-Getahun",
      "commit": "d1dc7b0f98f485c7823833dbaa0453c0568fa6d9",
      "date": "2026-08-14 03:10",
      "subject": "feat: single command center, 15 rules, writing pipeline, fallback map, tags, resources rule"
+    },
+    {
+     "start": 10,
+     "end": 11,
+     "author": "Natnael-Getahun",
+     "commit": "d1dc7b0f98f485c7823833dbaa0453c0568fa6d9",
+     "date": "2026-08-14 03:10",
+     "subject": "feat: single command center, 15 rules, writing pipeline, fallback map, tags, resources rule"
+    },
+    {
+     "start": 14,
+     "end": 76,
+     "author": "Natnael-Getahun",
+     "commit": "c30218c4e1d323907b51df862c1dddd778754270",
+     "date": "2026-08-14 07:24",
+     "subject": "v0.0.1: naming fixes (Eskolx Labs Rules, Home titles), participants dedupe"
     }
    ],
    "participants": [
@@ -406,7 +806,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 25,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
+     "date": "2026-08-13 18:47",
+     "subject": "test: add one note per type to verify templates and dashboards"
+    },
+    {
+     "start": 12,
+     "end": 13,
+     "author": "Natnael-Getahun",
+     "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
+     "date": "2026-08-13 18:47",
+     "subject": "test: add one note per type to verify templates and dashboards"
+    },
+    {
+     "start": 16,
+     "end": 28,
      "author": "Natnael-Getahun",
      "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
      "date": "2026-08-13 18:47",
@@ -421,7 +837,23 @@
    "chunks": [
     {
      "start": 1,
-     "end": 37,
+     "end": 10,
+     "author": "Natnael-Getahun",
+     "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
+     "date": "2026-08-13 18:47",
+     "subject": "test: add one note per type to verify templates and dashboards"
+    },
+    {
+     "start": 12,
+     "end": 13,
+     "author": "Natnael-Getahun",
+     "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
+     "date": "2026-08-13 18:47",
+     "subject": "test: add one note per type to verify templates and dashboards"
+    },
+    {
+     "start": 16,
+     "end": 40,
      "author": "Natnael-Getahun",
      "commit": "7c2a0625f3e5a2f3d9db3ce027d83241610b6954",
      "date": "2026-08-13 18:47",
@@ -432,26 +864,19 @@
     "Natnael-Getahun"
    ]
   },
-  "08 Lounge/Outside Test.md": {
-   "chunks": [
-    {
-     "start": 1,
-     "end": 1,
-     "author": "Natnael-Getahun",
-     "commit": "486a983ab97df3438161609db4ced2f428345e4d",
-     "date": "2026-08-14 06:14",
-     "subject": "test: direct push to main"
-    }
-   ],
-   "participants": [
-    "Natnael-Getahun"
-   ]
-  },
   "AGENTS.md": {
    "chunks": [
     {
      "start": 1,
-     "end": 64,
+     "end": 17,
+     "author": "Natnael-Getahun",
+     "commit": "eda813b324ce7ec122e5ddcd99f493722cd89992",
+     "date": "2026-08-14 05:41",
+     "subject": "feat: CLI + agent integration (AGENTS.md, Obsidian CLI guide), version 0.2, harder tests"
+    },
+    {
+     "start": 27,
+     "end": 60,
      "author": "Natnael-Getahun",
      "commit": "eda813b324ce7ec122e5ddcd99f493722cd89992",
      "date": "2026-08-14 05:41",
@@ -466,11 +891,19 @@
    "chunks": [
     {
      "start": 1,
-     "end": 98,
+     "end": 56,
      "author": "Natnael-Getahun",
      "commit": "aa8678c606d79931f238723a5e0539fdfe6fff8a",
      "date": "2026-08-13 18:35",
      "subject": "chore: initialize Eskolx Open knowledge vault"
+    },
+    {
+     "start": 64,
+     "end": 105,
+     "author": "Natnael-Getahun",
+     "commit": "e0f92676031d6e1eff8c9df03beaaca30c4ed4f5",
+     "date": "2026-08-14 06:59",
+     "subject": "v0.4: authorship dot system \u2014 cache generator, dots plugin, participants property, templates placeholder"
     }
    ],
    "participants": [
@@ -479,6 +912,6 @@
   }
  },
  "meta": {
-  "generated": "2026-08-14T07:30"
+  "generated": "2026-08-14T08:10"
  }
 }
