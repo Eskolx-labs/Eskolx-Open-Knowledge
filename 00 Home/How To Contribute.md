@@ -5,11 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/0/0e/Debian_13_with_FOSS_software_open.png
+
+tags: [community]
 participants: ["Natnael-Getahun"]
 ---
 
-![How To Contribute cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![How To Contribute cover](https://upload.wikimedia.org/wikipedia/commons/0/0e/Debian_13_with_FOSS_software_open.png)
 
 # How To Contribute
 

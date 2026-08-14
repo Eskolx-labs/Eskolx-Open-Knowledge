@@ -14,7 +14,7 @@
           "templatePath": "90 Templates/Project.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "Project \u2014 {{VALUE:Project name}}"
+            "format": "Project — {{VALUE:Project name}}"
           },
           "folder": {
             "enabled": true,
@@ -107,7 +107,7 @@
           "templatePath": "90 Templates/Decision.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "EDR \u2014 {{DATE:YYYY-MM-DD}} \u2014 {{VALUE:Title}}"
+            "format": "EDR — {{DATE:YYYY-MM-DD}} — {{VALUE:Title}}"
           },
           "folder": {
             "enabled": true,
@@ -138,7 +138,7 @@
           "templatePath": "90 Templates/Meeting.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "Meeting \u2014 {{DATE:YYYY-MM-DD}} {{VALUE:Topic}}"
+            "format": "Meeting — {{DATE:YYYY-MM-DD}} {{VALUE:Topic}}"
           },
           "folder": {
             "enabled": true,
@@ -169,7 +169,7 @@
           "templatePath": "90 Templates/Person.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "{{VALUE:Role}} \u2014 {{VALUE:Name}}"
+            "format": "{{VALUE:Role}} — {{VALUE:Name}}"
           },
           "folder": {
             "enabled": true,
@@ -231,7 +231,7 @@
           "templatePath": "90 Templates/Idea.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "Idea \u2014 {{VALUE:Title}}"
+            "format": "Idea — {{VALUE:Title}}"
           },
           "folder": {
             "enabled": true,
@@ -262,7 +262,7 @@
           "templatePath": "90 Templates/Tutorial.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "Tutorial \u2014 {{VALUE:Title}}"
+            "format": "Tutorial — {{VALUE:Title}}"
           },
           "folder": {
             "enabled": true,
@@ -286,7 +286,7 @@
           }
         },
         {
-          "name": "Quick Capture",
+          "name": "Send to Inbox",
           "id": "d8e3b2f1-000a-4000-8000-00000000000a",
           "type": "Capture",
           "command": false,
@@ -326,7 +326,7 @@
             "direction": "below"
           },
           "prepend": false,
-          "task": false,
+          "task": true,
           "openFile": false,
           "fileOpening": {
             "location": "tab",
@@ -419,7 +419,7 @@
           "templatePath": "90 Templates/Daily.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "{{DATE:YYYY-MM-DD}} \u2014 {{VALUE:Your name}}"
+            "format": "{{DATE:YYYY-MM-DD}} — {{VALUE:Your name}}"
           },
           "folder": {
             "enabled": true,

@@ -9,6 +9,8 @@ updated: 2026-08-13
 publish-status: draft
 
 cover: https://upload.wikimedia.org/wikipedia/commons/8/88/NumericalRecipes3rdEdCover.jpg
+
+tags: [numerical-methods]
 participants: ["Natnael-Getahun"]
 ---
 

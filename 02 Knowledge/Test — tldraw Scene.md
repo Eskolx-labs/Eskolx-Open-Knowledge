@@ -5,10 +5,11 @@ area: tooling
 created: 2026-08-14
 updated: 2026-08-14
 publish-status: draft
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/b/b4/NCTR_Intern_Claire_Boyle_%2815558843862%29.jpg
+tags: [tooling]
 ---
 
-![Test — tldraw Scene cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![Test — tldraw Scene cover](https://upload.wikimedia.org/wikipedia/commons/b/b4/NCTR_Intern_Claire_Boyle_%2815558843862%29.jpg)
 
 # Test — tldraw Scene
 

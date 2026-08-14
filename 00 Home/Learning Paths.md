@@ -5,11 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Cooking_contest_140418-N-OX321-101.jpg/3840px-Cooking_contest_140418-N-OX321-101.jpg
+
+tags: [onboarding]
 participants: ["Natnael-Getahun"]
 ---
 
-![Learning Paths cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![Learning Paths cover](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Cooking_contest_140418-N-OX321-101.jpg/3840px-Cooking_contest_140418-N-OX321-101.jpg)
 
 # Learning Paths
 

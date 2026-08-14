@@ -32,3 +32,9 @@ secrets/
 # Personal CSS overrides (never pushed)
 .obsidian/snippets/eskolx-personal.css
 
+# Personal highlight color choices (never pushed — each user picks their own)
+.obsidian/plugins/highlightr-plugin/data.json
+
+# Related Notes local cache (machine state, regenerated on open)
+.obsidian/plugins/obsidian-related-notes/
+

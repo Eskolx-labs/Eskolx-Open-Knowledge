@@ -3,11 +3,13 @@ cssclasses:
   - eskolx-open
   - dashboard
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/c/c6/SearsHouse115.jpg
+
+tags: [dashboard]
 participants: ["Natnael-Getahun"]
 ---
 
-![Home cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![Home cover](https://upload.wikimedia.org/wikipedia/commons/c/c6/SearsHouse115.jpg)
 
 # Eskolx Labs — Open
 
@@ -31,20 +33,11 @@ tag includes #assignee/natnael
 sort by urgency
 ```
 
-## Changed Since You Were Last Here
+## Tasks
 
-```base
-filters:
-  and:
-    - file.mtime > now() - "1 week"
-views:
-  - type: table
-    name: Recently Changed
-    order:
-      - file.mtime
-      - file.folder
-      - type
-      - author
+```tasks
+not done
+sort by urgency
 ```
 
 ## Needs Attention
@@ -81,6 +74,25 @@ views:
     name: Featured
     order:
       - updated
+```
+
+## Recent Changes
+
+The 20 most recently edited notes. Scroll the table to see further back — it lists every change, not just since your last visit.
+
+```base
+filters:
+  and:
+    - file.mtime > now() - "1 year"
+views:
+  - type: table
+    name: Recent Changes
+    limit: 20
+    order:
+      - file.mtime
+      - file.folder
+      - type
+      - author
 ```
 
 ## Research Papers Shelf
@@ -171,13 +183,6 @@ views:
       - note["publish-status"]
       - updated
       - file.folder
-```
-
-## Tasks
-
-```tasks
-not done
-sort by urgency
 ```
 
 ## Open PRs Awaiting Review

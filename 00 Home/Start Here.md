@@ -6,6 +6,8 @@ created: 2026-08-13
 updated: 2026-08-13
 
 cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+
+tags: [onboarding]
 participants: ["Natnael-Getahun"]
 ---
 
@@ -36,7 +38,7 @@ Welcome to Eskolx. Read this before contributing.
 
 ## Always Work From A Template
 
-Use the **QuickAdd** menu (`Mod+Shift+A`): New Research / New Concept / New Project / New Decision / New Tutorial / Quick Capture. Never hand-write a new note from scratch.
+Use the **QuickAdd** menu (`Mod+Shift+A`): New Research / New Concept / New Project / New Decision / New Tutorial / Send to Inbox. Never hand-write a new note from scratch.
 
 ## Where Each Note Type Lives
 

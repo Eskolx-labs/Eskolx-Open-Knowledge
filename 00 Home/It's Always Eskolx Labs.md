@@ -8,11 +8,11 @@ author: Natnael
 tags: [onboarding]
 publish-status: published
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/%22Keep_FDA_Off_The_Farm%22_%28FDA_140%29_%288205957369%29.jpg/3840px-%22Keep_FDA_Off_The_Farm%22_%28FDA_140%29_%288205957369%29.jpg
 participants: ["Natnael-Getahun"]
 ---
 
-![It's Always Eskolx Labs cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![It's Always Eskolx Labs cover](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/%22Keep_FDA_Off_The_Farm%22_%28FDA_140%29_%288205957369%29.jpg/3840px-%22Keep_FDA_Off_The_Farm%22_%28FDA_140%29_%288205957369%29.jpg)
 
 # It's Always Eskolx Labs
 

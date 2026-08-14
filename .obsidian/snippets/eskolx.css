@@ -148,14 +148,18 @@ textarea {
   background-color: var(--eskolx-hover);
   color: var(--eskolx-text);
 }
-/* Notices (toast notifications) — green/greenish, not grey */
+/* Notices (toast notifications) — translucent green, no left border */
 .notice {
-  background-color: var(--eskolx-surface-2);
+  background-color: color-mix(in srgb, var(--eskolx-green) 30%, transparent);
   color: var(--eskolx-text);
-  border-left: 3px solid var(--eskolx-green);
+  border: 1px solid color-mix(in srgb, var(--eskolx-green) 45%, transparent);
+  border-left: none;
+  backdrop-filter: blur(12px);
+  border-radius: 8px;
 }
 .notice.is-error {
-  border-left-color: var(--eskolx-wine);
+  background-color: color-mix(in srgb, var(--eskolx-wine) 30%, transparent);
+  border-color: color-mix(in srgb, var(--eskolx-wine) 45%, transparent);
 }
 /* QuickAdd/Highlightr menus are .menu */
 .menu {

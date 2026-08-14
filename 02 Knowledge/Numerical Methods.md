@@ -8,6 +8,8 @@ updated: 2026-08-14
 publish-status: draft
 
 cover: https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg
+
+tags: [numerical-methods]
 participants: ["Natnael-Getahun"]
 ---
 

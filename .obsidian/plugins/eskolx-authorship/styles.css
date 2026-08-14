@@ -28,14 +28,27 @@
 	padding: 8px 10px;
 	font-size: 12px;
 	line-height: 1.5;
-	pointer-events: none;
+	pointer-events: auto;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 	max-width: 320px;
-	white-space: nowrap;
+	/* Allow wrapping so long commit subjects never escape the window. */
+	white-space: normal;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 .eskolx-dot-popover .eskolx-dot-author {
 	font-weight: 600;
 }
 .eskolx-dot-popover .eskolx-dot-meta {
 	color: var(--text-muted);
+}
+.eskolx-dot-popover .eskolx-dot-link {
+	display: inline-block;
+	margin-top: 4px;
+	color: var(--text-accent);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.eskolx-dot-popover .eskolx-dot-link:hover {
+	color: var(--interactive-accent-hover);
 }

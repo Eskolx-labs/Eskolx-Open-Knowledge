@@ -8,11 +8,11 @@ author: Natnael
 tags: [research, tooling]
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/a/a0/Citations_on_p._44_of_The_Byzantine_empire_by_Finlay.png
 participants: ["Natnael-Getahun"]
 ---
 
-![Citations Convention cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![Citations Convention cover](https://upload.wikimedia.org/wikipedia/commons/a/a0/Citations_on_p._44_of_The_Byzantine_empire_by_Finlay.png)
 
 # Citations Convention
 

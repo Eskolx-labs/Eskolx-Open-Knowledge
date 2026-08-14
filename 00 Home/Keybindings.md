@@ -8,11 +8,11 @@ author: Natnael
 tags: [tooling, onboarding]
 publish-status: published
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/e/e2/Firefoxshortcuts.png
 participants: ["Natnael-Getahun"]
 ---
 
-![Keybindings cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![Keybindings cover](https://upload.wikimedia.org/wikipedia/commons/e/e2/Firefoxshortcuts.png)
 
 # Keybindings
 
