@@ -1,6 +1,6 @@
 # Eskolx-Open
 
-Public, continuously growing learning library for statistics, statistical computing, programming, and data analysis automation.
+**Version 0.2** — public, continuously growing learning library for statistics, statistical computing, programming, and data analysis automation.
 
 ## System
 
