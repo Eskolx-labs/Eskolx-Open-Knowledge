@@ -1,18 +1,18 @@
 {
-  "highlighterStyle": "none",
-  "highlighterMethods": "inline-styles",
-  "highlighters": {
-    "Grape": "#6E3B6880",
-    "Wine": "#A74B4380",
-    "Forest": "#5F6B4E80",
-    "Soil": "#8B735580",
-    "Harvest": "#C9A22780"
-  },
-  "highlighterOrder": [
-    "Grape",
-    "Wine",
-    "Forest",
-    "Soil",
-    "Harvest"
-  ]
+    "highlighterStyle": "none",
+    "highlighterMethods": "inline-styles",
+    "highlighters": {
+        "Grape": "#6E3B6880",
+        "Wine": "#A74B4380",
+        "Forest": "#5F6B4E80",
+        "Soil": "#8B735580",
+        "Harvest": "#C9A22780"
+    },
+    "highlighterOrder": [
+        "Soil",
+        "Wine",
+        "Grape",
+        "Forest",
+        "Harvest"
+    ]
 }

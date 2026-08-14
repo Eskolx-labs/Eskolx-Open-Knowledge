@@ -2,5 +2,5 @@
   "folder": "00 Home",
   "format": "YYYY-MM-DD",
   "autorun": false,
-  "template": ""
+  "template": "90 Templates/Daily.md"
 }

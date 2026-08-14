@@ -20,3 +20,9 @@ publish-status: draft
 2. It is embedded here **and** linked: [[Test Scene.tldr]].
 3. No local settings are required — colors/fonts are defined in the file itself.
 4. If it renders on a fresh clone, the portability rules hold.
+
+## Animation Support (checked 2026-08-14)
+
+The tldraw Obsidian plugin embeds **static scene previews only** — it is a drawing/whiteboard tool, not an animation player. There is no animation playback in embeds (confirmed against the plugin's own docs: "Preview the drawing when a tldraw file is referenced in markdown").
+
+Consequence: the "agent-generated animations in Obsidian" goal does not work with tldraw as-is. Options if we want motion later: export frames as images and embed them, or use a different tool (e.g. HTML/iframe embeds). For now, tldraw stays a static-diagram tool.

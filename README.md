@@ -4,10 +4,7 @@
 
 ## System
 
-Read the system documents at the repository root (one level up from this vault):
-
-- `Eshkolx_Labs_Obsidian_Knowledge_System(newer plan).md` — **the authoritative plan**
-- `Eshkolx_Labs_Obsidian_Knowledge_System(base plan slightly outdated).md` — earlier draft, kept for reference
+Read the system plan documents at the repository root (one level up from this vault) — the newer plan is authoritative; the earlier draft is kept for reference.
 
 ## Folder Structure
 
@@ -31,14 +28,14 @@ No nesting beyond this — except `06 Publishing/` may use draft/review/publishe
 
 ## Git Workflow (Important)
 
-**One personal branch per person. `main` is protected (PR-only).**
+**One topic branch per contribution. `main` is protected (PR-only, 1 review required).**
 
 1. Clone the repo. GitHub does **not** give you push access to `main`.
-2. Create your personal branch **once**: `git checkout -b yourname` then `git push -u origin yourname`.
-3. Always work on your personal branch. Obsidian Git's auto-sync (every 15 min) commits and pushes to *your* branch automatically — never to `main`.
-4. When you have work you want published, open a **pull request** from your branch against `main`. A maintainer reviews and merges.
+2. For each piece of work, create a topic branch: `git checkout -b yourname/topic` (e.g. `natnael/student-t`).
+3. Work on that branch. Obsidian Git's auto-sync (every 15 min) commits and pushes to *your current* branch automatically — never to `main`.
+4. When the work is ready, open a **pull request** from your branch against `main`. A maintainer reviews and merges (1 approval required).
 
-Why one branch per person, not per topic: notes are append/update-in-place, not feature-flag code. Per-topic branches (`natnael/student-t`, `natnael/distributions`) just create sprawl with no benefit. Attribution comes from git history + the `author` property on every note + git line author.
+Why topic branches, not one branch per person: each PR stays small, reviewable, and mergeable on its own — you can publish a finished `student-t` note without dragging along an unrelated half-finished `distributions` note. Attribution comes from git history + the `author` property on every note + git line author.
 
 The PR *is* the review step of the `private thought → research → validation → public rewrite → review → public knowledge` pipeline. Never commit directly to `main` — it's blocked at GitHub, not just by convention.
 

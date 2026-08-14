@@ -28,3 +28,6 @@ secrets/
 
 # Obsidian local trash (machine state)
 .trash/
+
+# Personal CSS overrides (never pushed)
+.obsidian/snippets/eskolx-personal.css

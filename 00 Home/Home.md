@@ -8,6 +8,8 @@ cssclasses:
 
 > **Build. Understand. Share.** A public learning library for statistics, statistical computing, and data analysis automation.
 
+> [!insight] It's always **Eskolx Labs** — never Eskol or Eskolx. [[It's Always Eskolx Labs]]
+
 ## Start Here
 
 - [[Start Here]]
@@ -15,6 +17,45 @@ cssclasses:
 - [[How To Learn With Eskolx]]
 - [[How To Contribute]]
 - [[Keybindings]]
+
+## My Tasks
+
+```tasks
+not done
+tag includes #assignee/natnael
+sort by urgency
+```
+
+## Changed Since You Were Last Here
+
+```base
+filters:
+  and:
+    - file.mtime > now() - "1 week"
+views:
+  - type: table
+    name: Recently Changed
+    order:
+      - file.mtime
+      - file.folder
+      - type
+      - author
+```
+
+## Needs Attention
+
+```base
+filters:
+  and:
+    - note["publish-status"] == "review"
+views:
+  - type: table
+    name: Awaiting Review
+    order:
+      - updated
+      - file.folder
+      - file.name
+```
 
 ## What Eskolx Is
 

@@ -339,6 +339,57 @@
           }
         },
         {
+          "name": "Insert Dataview Block",
+          "id": "d8e3b2f1-000f-4000-8000-00000000000f",
+          "type": "Capture",
+          "command": false,
+          "captureToActiveFile": true,
+          "activeFileWritePosition": "cursor",
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "\n```dataview\nTABLE status, area, owner FROM \"\" WHERE type = \"concept\"\n```\n"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "top",
+            "inline": false,
+            "replaceExisting": false,
+            "blankLineAfterMatchMode": "auto",
+            "promptHeading": false
+          },
+          "insertBefore": {
+            "enabled": false,
+            "before": "",
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "top"
+          },
+          "newLineCapture": {
+            "enabled": false,
+            "direction": "below"
+          },
+          "prepend": false,
+          "task": false,
+          "openFile": false,
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "mode": "live",
+            "focus": true
+          },
+          "templater": {
+            "afterCapture": "none"
+          }
+        },
+        {
           "name": "Open Home",
           "id": "d8e3b2f1-000b-4000-8000-00000000000b",
           "type": "Macro",
@@ -582,5 +633,22 @@
     "migrateToMultipleTemplateFolders": true,
     "refreshStaleDefaultModelSeeds": true,
     "pinAiModelRefs": true
-  }
+  },
+  "macros": [
+    {
+      "id": "d8e3b2f1-000c-4000-8000-00000000000c",
+      "name": "Open Home",
+      "commands": [
+        {
+          "type": "OpenFile",
+          "id": "d8e3b2f1-000d-4000-8000-00000000000d",
+          "name": "Open file: 00 Home/Home.md",
+          "filePath": "00 Home/Home.md",
+          "openInNewTab": false,
+          "location": "tab",
+          "focus": true
+        }
+      ]
+    }
+  ]
 }
