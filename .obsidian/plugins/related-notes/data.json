@@ -1,0 +1,20 @@
+{
+  "maxSuggestions": 5,
+  "debugMode": false,
+  "customTitle": "Related Notes",
+  "enableSampling": true,
+  "similarityThreshold": 0.15,
+  "batchSize": 5,
+  "priorityIndexSize": 10000,
+  "ngramSizes": [
+    3
+  ],
+  "hashFunctions": [
+    3
+  ],
+  "commonWordsThreshold": 0.5,
+  "maxStopwords": 200,
+  "sampleSizeThreshold": 5000,
+  "maxSampleSize": 1000,
+  "lastKnownVersion": "4.3.0"
+}
