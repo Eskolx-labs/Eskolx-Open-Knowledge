@@ -2,6 +2,18 @@
 
 **Version 0.0.1** — public, continuously growing learning library for statistics, statistical computing, programming, and data analysis automation.
 
+## Quick Start (if you've never used Obsidian)
+
+Obsidian is a free note-taking app that reads and writes plain Markdown files — this vault is just a folder of `.md` files, so everything is portable and version-controlled with Git.
+
+1. **Install Obsidian** → https://obsidian.md/download (Windows / macOS / Linux). Version **1.9+** is required (for the card shelves). You do NOT need an Obsidian account or sync.
+2. **Open this vault:** Obsidian → **Open another vault** → **Open folder as vault** → select the `Eskolx-Open` folder.
+3. **Trust the author:** when prompted "Trust author and enable plugins?", click **Trust**. This enables the 12 community plugins.
+4. **Done.** The theme, accent, translucency, and the `eskolx` snippet load automatically. Your personal tweaks go in `.obsidian/snippets/eskolx-personal.css` (gitignored, stays yours).
+5. **Start here:** press `Ctrl+Shift+H` to open Home, then `Ctrl+Shift+A` for the **Eskolx Command Center** menu (new notes, send to inbox, etc.).
+
+**Not an Obsidian user?** There's a full guided tour in `USER_CHECKLIST.md` at the repository root (one level up from this vault).
+
 ## System
 
 Read the system plan documents at the repository root (one level up from this vault) — the newer plan is authoritative; the earlier draft is kept for reference.

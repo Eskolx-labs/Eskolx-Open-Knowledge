@@ -7,11 +7,11 @@ project: Test Project
 created: 2026-08-13
 updated: 2026-08-13
 publish-status: draft
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Award_icon.png/500px-Award_icon.png
 tags: [tutorials]
 ---
 
-![Tutorial — Test Tutorial cover](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png)
+![Tutorial — Test Tutorial cover](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Award_icon.png/500px-Award_icon.png)
 
 # Tutorial — Test Tutorial
 

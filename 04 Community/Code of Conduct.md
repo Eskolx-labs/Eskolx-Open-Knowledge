@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Checklist.svg/500px-Checklist.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Scale_of_justice_2_new.jpeg/500px-Scale_of_justice_2_new.jpeg
 
 tags: [community]
 participants: ["Natnael-Getahun"]
 ---
 
-![Code of Conduct cover](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Checklist.svg/500px-Checklist.svg.png)
+![Code of Conduct cover](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Scale_of_justice_2_new.jpeg/500px-Scale_of_justice_2_new.jpeg)
 
 # Code of Conduct
 

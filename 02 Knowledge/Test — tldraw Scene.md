@@ -5,11 +5,11 @@ area: tooling
 created: 2026-08-14
 updated: 2026-08-14
 publish-status: draft
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/a/a8/Lightning_bolt_simple.png
 tags: [tooling]
 ---
 
-![Test — tldraw Scene cover](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
+![Test — tldraw Scene cover](https://upload.wikimedia.org/wikipedia/commons/a/a8/Lightning_bolt_simple.png)
 
 # Test — tldraw Scene
 

@@ -18,6 +18,7 @@ This is the **public** Eskolx knowledge vault. Agents working here must follow t
 5. **Embeddings by URL are the default; attachments only when necessary** — every note has a feature image, an internet embed (`![Title](https://...)`), never a local file. Set the `cover` property to the same URL (`scripts/covers.py` assigns one; pick a better descriptive image when a note deserves it). Notebook Navigator previews and the Home shelves depend on this.
    - Default: embed by URL (papers, reference diagrams, YouTube previews, covers).
    - Local attachment ONLY when Eskolx itself created the media (own diagrams, tldraw scenes) or the source must survive offline. Everything else embeds from the internet.
+   - **Cover style rule:** use a clean, flat, representative icon or diagram (like the Python logo) — NOT a literal photo of people/places. The image should be a simple symbol for the topic, easy to read at small size. Icons with dark strokes/silhouettes work best because the theme inverts them for dark mode (see `eskolx.css`), so they adapt to both light and dark themes.
 6. **Always work from a template** — templates live in `90 Templates/` and self-route via `tp.file.move`. Never hand-write from scratch.
 7. **Folders are broad buckets** — never deep subfolders.
 8. **Tags are topical only** — `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding`. `type`/`status`/`area` never become tags.

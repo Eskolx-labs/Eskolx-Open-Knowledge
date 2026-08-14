@@ -9,6 +9,8 @@ tags: [dashboard]
 participants: ["Natnael-Getahun"]
 ---
 
+![Home cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
+
 ![Home cover|78](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
 
 # Eskolx Labs — Open
@@ -70,7 +72,7 @@ filters:
   and:
     - featured == true
 views:
-  - type: card
+  - type: cards
     name: Featured
     order:
       - updated
@@ -102,7 +104,7 @@ filters:
   and:
     - type == "research"
 views:
-  - type: card
+  - type: cards
     name: Research Papers
     order:
       - updated
@@ -115,7 +117,7 @@ filters:
   and:
     - note["publish-status"] == "published"
 views:
-  - type: card
+  - type: cards
     name: Published Writing
     order:
       - updated

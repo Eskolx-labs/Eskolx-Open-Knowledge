@@ -12,6 +12,8 @@ cover: https://upload.wikimedia.org/wikipedia/commons/2/29/Linux_command-line._B
 participants: ["Natnael-Getahun"]
 ---
 
+![Obsidian CLI cover](https://upload.wikimedia.org/wikipedia/commons/2/29/Linux_command-line._Bash._GNOME_Terminal._screenshot.png)
+
 ![Obsidian CLI cover|280](https://upload.wikimedia.org/wikipedia/commons/2/29/Linux_command-line._Bash._GNOME_Terminal._screenshot.png)
 
 # Obsidian CLI

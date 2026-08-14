@@ -11,6 +11,8 @@ tags: [onboarding]
 participants: ["Natnael-Getahun"]
 ---
 
+![How To Learn With Eskolx cover](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Noun-e-learning-3683598.svg/500px-Noun-e-learning-3683598.svg.png)
+
 ![How To Learn With Eskolx cover|138](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Noun-e-learning-3683598.svg/500px-Noun-e-learning-3683598.svg.png)
 
 # How To Learn With Eskolx

@@ -9,13 +9,13 @@ updated: 2026-08-13
 github: eskolx/stats-distributions
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Simpleicons_Business_briefcase-variant.svg/500px-Simpleicons_Business_briefcase-variant.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Gear-icon-blue.png/500px-Gear-icon-blue.png
 
 tags: [projects]
 participants: ["Natnael-Getahun"]
 ---
 
-![Test Project cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Simpleicons_Business_briefcase-variant.svg/500px-Simpleicons_Business_briefcase-variant.svg.png)
+![Test Project cover](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Gear-icon-blue.png/500px-Gear-icon-blue.png)
 
 # Project — Test Project
 

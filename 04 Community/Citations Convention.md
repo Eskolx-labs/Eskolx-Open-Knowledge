@@ -8,11 +8,11 @@ author: Natnael
 tags: [research, tooling]
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/8/8c/Books_icon.png
 participants: ["Natnael-Getahun"]
 ---
 
-![Citations Convention cover](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Book_summarisation.svg/500px-Book_summarisation.svg.png)
+![Citations Convention cover](https://upload.wikimedia.org/wikipedia/commons/8/8c/Books_icon.png)
 
 # Citations Convention
 
