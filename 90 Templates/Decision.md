@@ -4,6 +4,8 @@ id: EDR-<% tp.date.now("YYYY-MM-DD") %>-<% tp.date.now("HHmm") %>
 status: proposed
 date: <% tp.date.now("YYYY-MM-DD") %>
 area: 
+author: 
+tags: [decisions]
 publish-status: draft
 ---
 
