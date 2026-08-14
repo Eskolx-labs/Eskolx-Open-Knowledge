@@ -1,5 +1,6 @@
 ---
 type: daily
+cover: 
 date: <% tp.date.now("YYYY-MM-DD") %>
 author: 
 tags: [daily]

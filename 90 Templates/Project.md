@@ -1,5 +1,7 @@
 ---
 type: project
+cover: 
+featured: false
 status: planned
 priority: normal
 area: 

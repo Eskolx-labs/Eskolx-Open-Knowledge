@@ -1,5 +1,6 @@
 ---
 type: idea
+cover: 
 status: idea
 area: 
 author: 

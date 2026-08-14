@@ -1,0 +1,202 @@
+/* Container styles */
+.related-notes-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Disabled button styles */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Content styles */
+.related-notes-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Title styles */
+.related-notes-title {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* List styles */
+.related-notes-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* Prevent layout shifts during updates */
+  contain: layout style;
+}
+
+.related-note-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 6px;
+  /* Use transform for hover effects instead of layout-triggering properties */
+  transform: translateZ(0);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.related-note-item:hover {
+  background-color: var(--background-modifier-hover);
+  border-color: var(--background-modifier-border);
+}
+
+.related-note-link-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  /* Prevent text overflow from causing layout shifts */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.related-note-link {
+  color: var(--text-normal);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 450;
+  /* Prevent text overflow from causing layout shifts */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.related-note-link:hover {
+  color: var(--text-accent);
+}
+
+/* Message styles */
+.related-notes-message {
+  padding: 16px;
+  text-align: left;
+  color: var(--text-muted);
+}
+
+.related-notes-message-text {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.related-notes-message-subtext {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Info styles */
+.related-notes-info {
+  padding: 8px 0;
+  text-align: left;
+  color: var(--text-muted);
+}
+
+.related-notes-info-text {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Item container styles */
+.related-note-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Actions container styles */
+.related-note-actions {
+  display: flex;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+/* Link button styles */
+.related-note-link-button {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.related-note-link-button:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+.related-note-link-button.linked {
+  background-color: var(--background-modifier-border);
+  color: var(--text-muted);
+  cursor: default;
+}
+
+/* Settings tab styles */
+.related-notes-button-container {
+  display: flex;
+  gap: 8px;
+}
+
+.related-notes-cancel-button-visible {
+  display: inline-block;
+}
+
+.related-notes-cancel-button-hidden {
+  display: none;
+}
+
+/* Settings page enhancements - minimal styling */
+.related-notes-bug-report-content {
+  margin: 8px 0;
+  padding: 8px;
+}
+
+.related-notes-bug-report-content p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.related-notes-bug-report-content a {
+  color: var(--interactive-accent);
+  text-decoration: none;
+}
+
+.related-notes-bug-report-content a:hover {
+  text-decoration: underline;
+}
+
+.related-notes-support-section {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.related-notes-coffee-button {
+  display: inline-block;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
+.related-notes-support-thanks {
+  color: var(--text-muted);
+  margin-top: 4px;
+}

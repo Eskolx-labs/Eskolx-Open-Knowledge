@@ -1,5 +1,6 @@
 ---
 type: meeting
+cover: 
 date: <% tp.date.now("YYYY-MM-DD") %>
 author: 
 tags: [meetings]

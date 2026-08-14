@@ -3,6 +3,7 @@ cssclasses:
   - eskolx-open
   - dashboard
 participants: ["Natnael-Getahun"]
+participants: ["Natnael-Getahun"]
 ---
 
 # Eskolx Lab — Open
@@ -65,6 +66,45 @@ A small lab rebuilding statistical/computing tools from first principles and pub
 ## Learning
 
 [[Learning Paths]]
+
+## Featured
+
+```base
+filters:
+  and:
+    - featured == true
+views:
+  - type: card
+    name: Featured
+    order:
+      - updated
+```
+
+## Research Papers Shelf
+
+```base
+filters:
+  and:
+    - type == "research"
+views:
+  - type: card
+    name: Research Papers
+    order:
+      - updated
+```
+
+## Published Shelf
+
+```base
+filters:
+  and:
+    - note["publish-status"] == "published"
+views:
+  - type: card
+    name: Published Writing
+    order:
+      - updated
+```
 
 ## Projects
 
