@@ -63,3 +63,12 @@ This vault uses **branch-per-edit + PR**. Every edit you make goes on your own b
 1. Read the [[Contributor Guide]]
 2. Create a tiny test note via QuickAdd
 3. Make a real contribution
+
+## One-Time Setup (every machine)
+
+These are per-machine, so every new machine needs them once:
+
+1. **Enable the CLI**: Settings → General → **Command line interface** → follow the on-screen instructions to register `obsidian` on your PATH. See [[Obsidian CLI]].
+2. **Enable plugins**: when Obsidian asks "Trust author and enable plugins?" → **Trust**.
+3. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the line-author gutter.
+4. **Create your personal branch** (Open vault only): `git checkout -b yourname && git push -u origin yourname`.
