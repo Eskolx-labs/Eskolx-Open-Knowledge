@@ -10,9 +10,6 @@ cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_arc
 tags: [onboarding]
 participants: ["Natnael-Getahun"]
 ---
-
-![Start Here cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
-
 ![Start Here cover|95](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
 
 # Start Here

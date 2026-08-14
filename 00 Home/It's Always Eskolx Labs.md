@@ -11,9 +11,6 @@ publish-status: published
 cover: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Idea_lightbulb_silhouette.svg/500px-Idea_lightbulb_silhouette.svg.png
 participants: ["Natnael-Getahun"]
 ---
-
-![It's Always Eskolx Labs cover](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Idea_lightbulb_silhouette.svg/500px-Idea_lightbulb_silhouette.svg.png)
-
 ![It's Always Eskolx Labs cover|38](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Idea_lightbulb_silhouette.svg/500px-Idea_lightbulb_silhouette.svg.png)
 
 # It's Always Eskolx Labs
