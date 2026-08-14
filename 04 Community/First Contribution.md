@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/6/6c/Vilnius_Marathon_2015_volunteers_by_Augustas_Didzgalvis.jpg
 
 tags: [community]
 participants: ["Natnael-Getahun"]
 ---
 
-![First Contribution cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![First Contribution cover](https://upload.wikimedia.org/wikipedia/commons/6/6c/Vilnius_Marathon_2015_volunteers_by_Augustas_Didzgalvis.jpg)
 
 # First Contribution
 

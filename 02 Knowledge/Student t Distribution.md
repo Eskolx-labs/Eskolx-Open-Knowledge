@@ -6,8 +6,7 @@ topic: probability
 created: 2026-08-13
 updated: 2026-08-13
 publish-status: draft
-tags:
-
+tags: [distributions, probability]
 cover: https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Student_t_pdf.svg/500px-Student_t_pdf.svg.png
 participants: ["Natnael-Getahun", "test-coauthor"]
 ---

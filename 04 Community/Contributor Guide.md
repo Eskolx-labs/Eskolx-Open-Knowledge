@@ -5,13 +5,13 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Open_Source_Initiative.svg/500px-Open_Source_Initiative.svg.png
 
 tags: [community]
 participants: ["Natnael-Getahun"]
 ---
 
-![Contributor Guide cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![Contributor Guide cover](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Open_Source_Initiative.svg/500px-Open_Source_Initiative.svg.png)
 
 # Contributor Guide
 

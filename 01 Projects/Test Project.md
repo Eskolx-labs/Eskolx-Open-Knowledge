@@ -9,13 +9,13 @@ updated: 2026-08-13
 github: eskolx/stats-distributions
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/BG_Group-CNOOC_signing_ceremony_in_Brisbane_hosted_by_QGC_%288712724787%29.jpg/500px-BG_Group-CNOOC_signing_ceremony_in_Brisbane_hosted_by_QGC_%288712724787%29.jpg
 
 tags: [projects]
 participants: ["Natnael-Getahun"]
 ---
 
-![Test Project cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![Test Project cover](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/BG_Group-CNOOC_signing_ceremony_in_Brisbane_hosted_by_QGC_%288712724787%29.jpg/500px-BG_Group-CNOOC_signing_ceremony_in_Brisbane_hosted_by_QGC_%288712724787%29.jpg)
 
 # Project — Test Project
 
@@ -64,5 +64,5 @@ Testing.
 
 To assign a task to someone, add `#assignee/name` and an optional due date. It then appears on **their** My Tasks section on Home (and on yours if it's you).
 
-- [ ] Example task for Natnael 🆔 natnael 📅 2026-08-20
-- [ ] Example task for Barkilign 🆔 barkilign 📅 2026-08-25
+- [ ] Example task for Natnael #assignee/natnael 📅 2026-08-20
+- [ ] Example task for Barkilign #assignee/barkilign 📅 2026-08-25

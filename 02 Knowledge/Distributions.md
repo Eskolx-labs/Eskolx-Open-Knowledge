@@ -7,13 +7,13 @@ created: 2026-08-14
 updated: 2026-08-14
 publish-status: draft
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Normal_Distribution_PDF.svg/960px-Normal_Distribution_PDF.svg.png
 
 tags: [distributions]
 participants: ["Natnael-Getahun"]
 ---
 
-![Distributions cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![Distributions cover](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Normal_Distribution_PDF.svg/960px-Normal_Distribution_PDF.svg.png)
 
 # Distributions
 

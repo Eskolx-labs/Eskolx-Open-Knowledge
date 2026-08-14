@@ -6,13 +6,13 @@ created: 2026-08-14
 updated: 2026-08-14
 publish-status: published
 
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Justice_scale_silhouette%2C_medium.svg/500px-Justice_scale_silhouette%2C_medium.svg.png
 
 tags: [operations]
 participants: ["Natnael-Getahun"]
 ---
 
-![The Eskolx Labs Rules cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Standard_deviation_diagram_micro.svg/500px-Standard_deviation_diagram_micro.svg.png)
+![The Eskolx Labs Rules cover](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Justice_scale_silhouette%2C_medium.svg/500px-Justice_scale_silhouette%2C_medium.svg.png)
 
 # The Eskolx Labs Rules
 
