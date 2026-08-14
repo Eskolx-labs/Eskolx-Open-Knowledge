@@ -373,7 +373,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "00 Home"
+              "00 Home/Daily Notes"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,

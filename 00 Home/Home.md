@@ -84,9 +84,32 @@ views:
       - file.folder
 ```
 
+## Tasks
+
+```tasks
+not done
+sort by urgency
+```
+
 ## Open PRs Awaiting Review
 
-PRs on the public GitHub repository are the review step of the knowledge pipeline. Check them at the repo's **Pull Requests** tab.
+```dataviewjs
+const repo = 'Natnael-Getahun/Eskolx-Open-Knowledge';
+const res = await fetch(`https://api.github.com/repos/${repo}/pulls?state=open&per_page=20`);
+if (res.ok) {
+  const prs = await res.json();
+  if (prs.length === 0) {
+    dv.paragraph('No open PRs.');
+  } else {
+    dv.table(['PR', 'Author', 'Title'],
+      prs.map(p => [dv.el('a', '#' + p.number, { href: p.html_url, style: 'color: var(--eskolx-grape)' }),
+                    p.user.login,
+                    p.title]));
+  }
+} else {
+  dv.paragraph('Could not fetch PRs (offline?). Open the repo directly: https://github.com/Natnael-Getahun/Eskolx-Open-Knowledge/pulls');
+}
+```
 
 ## Lounge Highlights
 

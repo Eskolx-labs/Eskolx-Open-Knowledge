@@ -9,12 +9,7 @@
   "shell_path": "",
   "user_scripts_folder": "",
   "folder_templates": [],
-  "file_templates": [
-    {
-      "regex": "^\\d{4}-\\d{2}-\\d{2}( \u2014 .*)?\\.md$",
-      "template": "90 Templates/Daily.md"
-    }
-  ],
+  "file_templates": [],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [],

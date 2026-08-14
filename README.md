@@ -31,16 +31,16 @@ No nesting beyond this — except `06 Publishing/` may use draft/review/publishe
 
 ## Git Workflow (Important)
 
-This vault uses **branch-per-edit + PR**:
+**One personal branch per person. `main` is protected (PR-only).**
 
-1. Pull latest `main`
-2. Create a branch: `git checkout -b yourname/topic`
-3. Write your note (always from a template via QuickAdd)
-4. Commit with a meaningful message
-5. Push the branch and open a **pull request** against the public GitHub repo
-6. A maintainer reviews and merges
+1. Clone the repo. GitHub does **not** give you push access to `main`.
+2. Create your personal branch **once**: `git checkout -b yourname` then `git push -u origin yourname`.
+3. Always work on your personal branch. Obsidian Git's auto-sync (every 15 min) commits and pushes to *your* branch automatically — never to `main`.
+4. When you have work you want published, open a **pull request** from your branch against `main`. A maintainer reviews and merges.
 
-The PR *is* the review step of the `private thought → research → validation → public rewrite → review → public knowledge` pipeline. Never commit directly to `main`.
+Why one branch per person, not per topic: notes are append/update-in-place, not feature-flag code. Per-topic branches (`natnael/student-t`, `natnael/distributions`) just create sprawl with no benefit. Attribution comes from git history + the `author` property on every note + git line author.
+
+The PR *is* the review step of the `private thought → research → validation → public rewrite → review → public knowledge` pipeline. Never commit directly to `main` — it's blocked at GitHub, not just by convention.
 
 ## Animation / tldraw Portability Rules
 
