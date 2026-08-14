@@ -32,3 +32,7 @@ Test note....... the student t distribution is despite its name is not associate
 - [[]]
 
 ## References
+
+## Contribution from a second author (test)
+
+This section was appended by `test-coauthor` to verify that a contiguous block written by a second person becomes its own dot with its own color, distinct from the original author's dots.
