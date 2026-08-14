@@ -11,7 +11,7 @@ tags: [onboarding]
 participants: ["Natnael-Getahun"]
 ---
 
-![What Is Eskolx cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
+![What Is Eskolx cover|326](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
 
 # What Is Eskolx
 
