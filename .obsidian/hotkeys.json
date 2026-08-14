@@ -51,11 +51,19 @@
       "key": "O"
     }
   ],
-  "app:go-home": [
+  "quickadd:choice:d8e3b2f1-000b-4000-8000-00000000000b": [
     {
       "modifiers": [
         "Mod",
         "Shift"
+      ],
+      "key": "H"
+    }
+  ],
+  "highlightr-plugin:highlighter-plugin-menu": [
+    {
+      "modifiers": [
+        "Mod"
       ],
       "key": "H"
     }

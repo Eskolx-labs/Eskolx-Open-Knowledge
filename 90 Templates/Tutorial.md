@@ -6,8 +6,12 @@ level: beginner
 project: 
 created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
+author: 
+tags: [tutorials, statistics]
 publish-status: draft
 ---
+
+<%* await tp.file.move("03 Learning/" + tp.file.title + ".md") %>
 
 # Tutorial — <% tp.file.title.replace(/^Tutorial — /, "") %>
 

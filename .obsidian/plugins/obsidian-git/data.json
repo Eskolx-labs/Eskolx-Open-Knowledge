@@ -3,9 +3,9 @@
   "autoCommitMessage": "vault backup: {{date}}",
   "commitMessageScript": "",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
-  "autoSaveInterval": 0,
-  "autoPushInterval": 0,
-  "autoPullInterval": 0,
+  "autoSaveInterval": 5,
+  "autoPushInterval": 15,
+  "autoPullInterval": 15,
   "autoPullOnBoot": true,
   "autoCommitOnlyStaged": false,
   "disablePush": false,
@@ -20,7 +20,7 @@
   "syncMethod": "merge",
   "mergeStrategy": "none",
   "customMessageOnAutoBackup": false,
-  "autoBackupAfterFileChange": false,
+  "autoBackupAfterFileChange": true,
   "treeStructure": false,
   "refreshSourceControl": true,
   "basePath": "",
@@ -42,23 +42,23 @@
     "statusBar": "disabled"
   },
   "lineAuthor": {
-    "show": false,
+    "show": true,
     "followMovement": "inactive",
-    "authorDisplay": "initials",
+    "authorDisplay": "full",
     "showCommitHash": false,
     "dateTimeFormatOptions": "date",
-    "dateTimeFormatCustomString": "YYYY-MM-DD HH:mm:ss",
+    "dateTimeFormatCustomString": "YYYY-MM-DD HH:mm",
     "dateTimeTimezone": "viewer-local",
     "coloringMaxAge": "1y",
     "colorNew": {
-      "r": 255,
-      "g": 150,
-      "b": 150
+      "r": 110,
+      "g": 59,
+      "b": 104
     },
     "colorOld": {
-      "r": 120,
-      "g": 160,
-      "b": 255
+      "r": 90,
+      "g": 107,
+      "b": 78
     },
     "textColorCss": "var(--text-muted)",
     "ignoreWhitespace": false
