@@ -23,13 +23,13 @@ The Eskolx keyboard map. Same in both vaults.
 | `Ctrl+Shift+H` | Open Home |
 | `Ctrl+O` | Quick switcher (open any note) |
 | `Ctrl+E` | Toggle edit / reading view |
-| `Ctrl+Shift+E` | Highlight menu (Highlightr) |
+| `Ctrl+Shift+E` | Highlightr color menu (Grape, Wine, Forest, Soil, Harvest) |
 
 ## Editing
 
 | Keys | Command |
 |---|---|
-| `Ctrl+H` | Highlight selected text (Highlightr menu) |
+| `Ctrl+H` | Toggle highlight (`==text==`, native background highlight) |
 
 ## Personal keys
 

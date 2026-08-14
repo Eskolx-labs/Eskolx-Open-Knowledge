@@ -60,7 +60,7 @@
       "key": "H"
     }
   ],
-  "highlightr-plugin:highlighter-plugin-menu": [
+  "editor:toggle-highlight": [
     {
       "modifiers": [
         "Mod"

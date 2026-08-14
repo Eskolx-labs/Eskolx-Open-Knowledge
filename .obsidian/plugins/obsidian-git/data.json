@@ -33,13 +33,13 @@
   "submoduleRecurseCheckout": false,
   "gitDir": "",
   "showFileMenu": true,
-  "authorInHistoryView": "hide",
-  "dateInHistoryView": false,
+  "authorInHistoryView": "full",
+  "dateInHistoryView": true,
   "diffStyle": "split",
   "hunks": {
-    "showSigns": false,
-    "hunkCommands": false,
-    "statusBar": "disabled"
+    "showSigns": true,
+    "hunkCommands": true,
+    "statusBar": "enabled"
   },
   "lineAuthor": {
     "show": true,

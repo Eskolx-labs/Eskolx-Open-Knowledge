@@ -96,21 +96,41 @@ body.is-translucent .workspace-split.mod-root {
 /* ============ OVERLAYS: modals, menus, prompts, notices ============ */
 .modal,
 .modal-bg,
+.modal-content,
+.modal-title,
+.modal-close-button,
 .suggestion-container,
+.suggestion-item,
 .menu,
+.menu-item,
 .popover,
 .prompt,
-.notice,
+.prompt-input,
 .prompt-results,
+.notice,
 .modal.mod-settings,
 .vertical-tab-header,
 .horizontal-tab-content,
-.suggestion-item,
-.menu-item,
-.dropdown {
+.dropdown,
+.checkbox-container,
+.slider,
+.text-input,
+input[type="text"],
+input[type="search"],
+input[type="date"],
+select,
+textarea {
   background-color: var(--eskolx-surface);
   color: var(--eskolx-text);
   border: 1px solid var(--eskolx-border);
+}
+.modal-content,
+.modal-title {
+  border: none;
+}
+.modal-close-button:hover {
+  background-color: var(--eskolx-hover);
+  color: var(--eskolx-text);
 }
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .vertical-tab-nav-item,
@@ -142,6 +162,10 @@ body.is-translucent .workspace-split.mod-root {
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
+
+/* ============ PERSONAL OVERRIDES ============
+   Drop your personal tweaks in `eskolx-personal.css` (gitignored).
+   It loads after this file, so it wins. Never edit this section. */
 
 /* ============ Headings ============ */
 .markdown-preview-view h1,
