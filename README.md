@@ -78,6 +78,15 @@ Execute Code   → run code outside Obsidian
 
 These fallbacks don't reproduce every feature — they ensure the underlying knowledge stays recoverable and portable.
 
+## Visual Identity
+
+One shared theme (`eskolx.css` snippet) with two modes — the same visual family, different atmosphere:
+
+- **Dark** = Core palette (near-black, parchment, grape purple, harvest red, muted green) — the private research lab / operations console
+- **Light** = Open palette (warm cream/beige, grape, clay, muted green) — the public learning library
+
+Core defaults to **dark**; Open defaults to **light**. In either vault, switch Appearance → Theme (dark/light) to see the other palette. The snippet is identical in both vaults and version-controlled.
+
 ## Python + LaTeX
 
 - **Python**: use the Execute Code plugin — put code in a ` ```python ` block and click the ▶ Run button. Configured to use `python3`.

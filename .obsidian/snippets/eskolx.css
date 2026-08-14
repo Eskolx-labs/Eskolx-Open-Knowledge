@@ -1,0 +1,127 @@
+/* Eskolx — one visual family, two modes
+   Light = Open palette (warm cream/beige, grape, clay, earth green)
+   Dark  = Core palette (near-black, parchment, grape, harvest red, muted green)
+   Both vaults share this snippet. Core defaults to dark, Open to light;
+   switching Appearance → Theme in either vault gives the other's look. */
+
+/* Light mode (Open) */
+:root {
+  --eskolx-bg: #F5EBDD;
+  --eskolx-surface: #FFF9F0;
+  --eskolx-text: #2B211D;
+  --eskolx-text-muted: rgba(43, 33, 29, 0.65);
+  --eskolx-text-faint: rgba(43, 33, 29, 0.4);
+  --eskolx-border: rgba(43, 33, 29, 0.15);
+  --eskolx-hover: rgba(110, 59, 104, 0.12);
+  --eskolx-grape: #6E3B68;
+  --eskolx-clay: #A74F43;
+  --eskolx-green: #66725D;
+  --eskolx-accent: #6E3B68;
+}
+
+/* Dark mode (Core) */
+.theme-dark {
+  --eskolx-bg: #100C0B;
+  --eskolx-surface: #1B1513;
+  --eskolx-text: #E7D4B2;
+  --eskolx-text-muted: rgba(231, 212, 178, 0.65);
+  --eskolx-text-faint: rgba(231, 212, 178, 0.4);
+  --eskolx-border: rgba(231, 212, 178, 0.15);
+  --eskolx-hover: rgba(111, 58, 103, 0.25);
+  --eskolx-grape: #6F3A67;
+  --eskolx-clay: #A74B43;
+  --eskolx-green: #69705C;
+  --eskolx-accent: #6F3A67;
+}
+
+body {
+  --background-primary: var(--eskolx-bg);
+  --background-primary-alt: var(--eskolx-surface);
+  --background-secondary: var(--eskolx-bg);
+  --background-secondary-alt: var(--eskolx-surface);
+  --background-modifier-border: var(--eskolx-border);
+  --background-modifier-hover: var(--eskolx-hover);
+  --text-normal: var(--eskolx-text);
+  --text-muted: var(--eskolx-text-muted);
+  --text-faint: var(--eskolx-text-faint);
+  --text-accent: var(--eskolx-grape);
+  --interactive-accent: var(--eskolx-grape);
+  --interactive-accent-hover: #7e4280;
+  --titlebar-background: var(--eskolx-bg);
+  --ribbon-background: var(--eskolx-bg);
+  --code-background: var(--eskolx-surface);
+}
+
+/* Frosted glass (Core default — only when translucency is on) */
+body.translucent {
+  --workspace-background-translucent: color-mix(in srgb, var(--eskolx-bg) 75%, transparent);
+}
+body.translucent .workspace-split.mod-root,
+body.translucent .workspace-tab-header-container,
+body.translucent .workspace-ribbon {
+  backdrop-filter: blur(12px);
+  background-color: color-mix(in srgb, var(--eskolx-bg) 65%, transparent) !important;
+}
+
+/* Headings */
+.markdown-preview-view h1,
+.markdown-source-view.mod-cm6 .cm-content .cm-header-1 {
+  color: var(--eskolx-text);
+  border-bottom: 1px solid var(--eskolx-border);
+  padding-bottom: 0.2em;
+}
+.markdown-preview-view h2,
+.markdown-source-view.mod-cm6 .cm-content .cm-header-2 {
+  color: var(--eskolx-text);
+}
+.markdown-preview-view h3,
+.markdown-source-view.mod-cm6 .cm-content .cm-header-3 {
+  color: var(--eskolx-grape);
+}
+
+/* Links */
+a.internal-link,
+.markdown-preview-view .internal-link {
+  color: var(--eskolx-grape);
+}
+a.internal-link:hover {
+  color: var(--eskolx-text);
+}
+a.external-link {
+  color: var(--eskolx-green);
+}
+
+/* Callouts */
+.callout {
+  background-color: var(--eskolx-surface);
+  border: 1px solid var(--eskolx-border);
+}
+.callout[data-callout="question"] { border-left: 3px solid var(--eskolx-grape); }
+.callout[data-callout="insight"] { border-left: 3px solid var(--eskolx-green); }
+.callout[data-callout="decision"] { border-left: 3px solid var(--eskolx-clay); }
+.callout[data-callout="warning"] { border-left: 3px solid #c9a227; }
+
+/* Status pills */
+.markdown-preview-view [data-property-key="status"] .multi-select-pill,
+.multi-select-pill[data-property-key="status"] {
+  border-radius: 999px;
+  padding: 0 0.6em;
+}
+
+/* Dashboard */
+body.dashboard {
+  --file-header-font-size: 1.4em;
+}
+body.dashboard .markdown-preview-view h2 {
+  margin-top: 1.4em;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+/* Graph */
+.graph-view.color-fill {
+  color: var(--eskolx-grape);
+}
+.graph-view.color-line {
+  color: var(--eskolx-border);
+}
