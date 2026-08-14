@@ -6,8 +6,8 @@ This is the **public** Eskolx knowledge vault. Agents working here must follow t
 
 - **Vault**: Eskolx-Open (public: statistics/computing knowledge, tutorials, learning paths, community)
 - **Repo**: `Natnael-Getahun/Eskolx-Open-Knowledge` (public)
-- **Git flow**: **one topic branch per contribution** (`natnael/student-t`, `barkilign/distributions`, ...). `main` is protected — PR-only, 1 review required. Never push to `main`.
-- **Auto-sync**: Obsidian Git auto-commits/pushes to your current branch every ~15 min. To publish: open a PR from your branch → `main`.
+- **Git flow**: **building phase — commits go straight to `main`** (small trusted group). Later, when outside contributors arrive: `main` becomes protected (PR-only, 1 review) and work moves to topic branches (`yourname/topic`).
+- **Auto-sync**: Obsidian Git auto-commits/pushes every ~15 min. Don't fight it — commit deliberately with meaningful messages.
 
 ## Non-negotiables
 
@@ -61,4 +61,4 @@ obsidian tags counts                  # tag frequency
 4. Frontmatter has `type`, `status`, `author`, `created`, `updated`, `tags`, `publish-status`
 5. Note is in the correct folder per the table above
 6. No secrets grep hits
-7. Work is on a topic branch (`yourname/topic`), not `main`
+7. Work is on `main` (building phase) — or on a topic branch once protection is on

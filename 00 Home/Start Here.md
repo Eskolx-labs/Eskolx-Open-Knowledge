@@ -46,15 +46,11 @@ Use the **QuickAdd** menu (`Mod+Shift+A`): New Research / New Concept / New Proj
 | research | `07 Research/` |
 | idea | `08 Lounge/` |
 
-## The Git Workflow (Important)
+## The Git Workflow (Building Phase)
 
-This vault uses **topic branches + PR**. Every piece of work goes on its own branch; when done, you open a **pull request** against the public GitHub repo, and a maintainer reviews and merges it (1 approval required). The PR *is* the review step. Never commit directly to `main`.
+**While we're building, commits go straight to `main`** — pull → work → commit → push. No branch ceremony yet.
 
-1. Pull the latest `main`
-2. Create a topic branch: `git checkout -b yourname/topic` (e.g. `natnael/student-t`)
-3. Write your note (from a template)
-4. Commit with a meaningful message
-5. Push the branch and open a PR
+**Later (when outside contributors arrive):** `main` becomes protected (PR-only, 1 review required) and work moves to topic branches (`yourname/topic`). The PR *is* the review step. We'll flip that switch when the first outside contributor shows up.
 
 ## How To Learn With Eskolx
 
@@ -73,4 +69,4 @@ These are per-machine, so every new machine needs them once:
 1. **Enable the CLI**: Settings → General → **Command line interface** → follow the on-screen instructions to register `obsidian` on your PATH. See [[Obsidian CLI]].
 2. **Enable plugins**: when Obsidian asks "Trust author and enable plugins?" → **Trust**.
 3. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the line-author gutter.
-4. **Create a topic branch** (Open vault only): `git checkout -b yourname/topic` — one branch per piece of work, e.g. `natnael/student-t`.
+4. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the line-author gutter.

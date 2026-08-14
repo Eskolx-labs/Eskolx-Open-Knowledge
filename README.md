@@ -1,6 +1,6 @@
 # Eskolx-Open
 
-**Version 0.2** — public, continuously growing learning library for statistics, statistical computing, programming, and data analysis automation.
+**Version 0.3** — public, continuously growing learning library for statistics, statistical computing, programming, and data analysis automation.
 
 ## System
 
@@ -26,18 +26,11 @@ Clippings/        web clippings from the Obsidian Web Clipper extension
 
 No nesting beyond this — except `06 Publishing/` may use draft/review/published subfolders because publication state is operationally meaningful.
 
-## Git Workflow (Important)
+## Git Workflow (Building Phase)
 
-**One topic branch per contribution. `main` is protected (PR-only, 1 review required).**
+**While we're building, commits go straight to `main`** — same as Core. Small trusted group, pull → work → commit → push. No branch ceremony yet.
 
-1. Clone the repo. GitHub does **not** give you push access to `main`.
-2. For each piece of work, create a topic branch: `git checkout -b yourname/topic` (e.g. `natnael/student-t`).
-3. Work on that branch. Obsidian Git's auto-sync (every 15 min) commits and pushes to *your current* branch automatically — never to `main`.
-4. When the work is ready, open a **pull request** from your branch against `main`. A maintainer reviews and merges (1 approval required).
-
-Why topic branches, not one branch per person: each PR stays small, reviewable, and mergeable on its own — you can publish a finished `student-t` note without dragging along an unrelated half-finished `distributions` note. Attribution comes from git history + the `author` property on every note + git line author.
-
-The PR *is* the review step of the `private thought → research → validation → public rewrite → review → public knowledge` pipeline. Never commit directly to `main` — it's blocked at GitHub, not just by convention.
+**Later (when outside contributors arrive):** `main` becomes protected (PR-only, 1 review required), and work moves to topic branches (`yourname/topic`). The PR *is* the review step of the `private thought → research → validation → public rewrite → review → public knowledge` pipeline. We'll flip that switch when the first outside contributor shows up — the docs and tests already cover it.
 
 ## Animation / tldraw Portability Rules
 
