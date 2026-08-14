@@ -39,3 +39,13 @@ Your theme, font, and window preferences are personal — stored in `.obsidian/a
 ## Changing keys
 
 Settings → Hotkeys → search the command name → click the `+` → press your keys.
+
+
+## Authorship dots (Eskolx Authorship plugin)
+
+No hotkey needed — the right-margin dots are always visible in edit mode.
+
+- A dot marks the start of a contiguous chunk written by one person in one sitting.
+- Color = author (consistent across the whole vault).
+- Hover a dot to see author, date, branch, merge status, and commit subject.
+- The `participants` frontmatter property is machine-generated (scripts/authorship.py) — never hand-edit it.
