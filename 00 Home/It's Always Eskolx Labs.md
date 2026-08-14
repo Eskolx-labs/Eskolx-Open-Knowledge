@@ -8,7 +8,6 @@ author: Natnael
 tags: [onboarding]
 publish-status: published
 participants: ["Natnael-Getahun"]
-participants: ["Natnael-Getahun"]
 ---
 
 # It's Always Eskolx Labs

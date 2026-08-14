@@ -7,6 +7,7 @@ updated: 2026-08-14
 author: Natnael
 tags: [research, tooling]
 publish-status: draft
+participants: ["Natnael-Getahun"]
 ---
 
 # Citations Convention

@@ -8,7 +8,6 @@ author: Natnael
 tags: [tooling, onboarding, agentic-ai]
 publish-status: published
 participants: ["Natnael-Getahun"]
-participants: ["Natnael-Getahun"]
 ---
 
 # Obsidian CLI

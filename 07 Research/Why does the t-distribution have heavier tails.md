@@ -8,7 +8,6 @@ created: 2026-08-13
 updated: 2026-08-13
 publish-status: draft
 participants: ["Natnael-Getahun"]
-participants: ["Natnael-Getahun"]
 ---
 
 # Why does the t-distribution have heavier tails?
