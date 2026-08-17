@@ -41,6 +41,45 @@ not done
 sort by urgency
 ```
 
+## Vault Health
+
+```dataviewjs
+const reviews = dv.pages('"00 Home"')
+  .where(p => p.file.name.startsWith('Weekly Review'))
+  .sort(p => p.file.name, 'desc');
+if (reviews.length === 0) {
+  dv.paragraph('No **Weekly Review** yet. Open the **Eskolx Command Center** (Ctrl+Shift+A) → **New Weekly Review**.');
+} else {
+  const last = reviews[0];
+  const lastDate = dv.date(last.file.name.slice('Weekly Review — '.length));
+  const days = Math.floor(dv.luxon.DateTime.now().diff(lastDate, 'days').days);
+  dv.paragraph(days > 10
+    ? '**Weekly review overdue** — last was ' + last.file.link + ' (' + days + ' days ago).'
+    : '**Weekly review current** — last was ' + last.file.link + ' (' + days + ' days ago).');
+}
+```
+
+```base
+filters:
+  and:
+    - type == "decision"
+    - status == "proposed"
+    - created < now() - "14 days"
+views:
+  - type: table
+    name: Stale Decisions (proposed over 14 days)
+    order:
+      - created
+      - file.name
+      - area
+```
+
+```tasks
+not done
+due before today
+sort by due
+```
+
 ## Needs Attention
 
 ```base

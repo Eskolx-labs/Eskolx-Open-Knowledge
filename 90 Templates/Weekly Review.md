@@ -2,7 +2,7 @@
 type: concept
 status: active
 area: operations
-cover: 
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Calendar_icon_%28rubin-Calendar-icon%29.jpg/500px-Calendar_icon_%28rubin-Calendar-icon%29.jpg 
 date: <% tp.date.now("YYYY-MM-DD") %>
 author: 
 tags: [review]
@@ -15,6 +15,8 @@ publish-status: draft
 # Weekly Review — <% tp.date.now("YYYY-MM-DD") %>
 
 > One rhythm: what moved forward, what's stuck, what do we decide next.
+
+![Weekly Review cover](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Calendar_icon_%28rubin-Calendar-icon%29.jpg/500px-Calendar_icon_%28rubin-Calendar-icon%29.jpg)
 
 ## This Week's Changes
 
