@@ -64,5 +64,5 @@ Testing.
 
 To assign a task to someone, add `#assignee/name` and an optional due date. It then appears on **their** My Tasks section on Home (and on yours if it's you).
 
-- [ ] Example task for Natnael #assignee/natnael 📅 2026-08-20
-- [ ] Example task for Barkilign #assignee/barkilign 📅 2026-08-25
+- [x] Example task for Natnael #assignee/natnael 📅 2026-08-20 ✅ 2026-08-17
+- [x] Example task for Barkilign #assignee/barkilign 📅 2026-08-25 ✅ 2026-08-17

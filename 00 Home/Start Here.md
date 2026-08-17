@@ -76,3 +76,4 @@ These are per-machine, so every new machine needs them once:
 2. **Enable plugins**: when Obsidian asks "Trust author and enable plugins?" → **Trust**.
 3. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the line-author gutter.
 4. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the line-author gutter.
+[[Random Variables]]
