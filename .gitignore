@@ -35,3 +35,6 @@ secrets/
 # Related Notes local cache (machine state, regenerated on open)
 .obsidian/plugins/obsidian-related-notes/
 
+# obsidian-git runtime credential helper (regenerated on sync)
+.obsidian/plugins/obsidian-git/obsidian_askpass.sh
+

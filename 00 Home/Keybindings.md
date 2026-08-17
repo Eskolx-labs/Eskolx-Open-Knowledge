@@ -27,7 +27,7 @@ The Eskolx keyboard map. Same in both vaults.
 | `Ctrl+Shift+H` | Open Home                                                  |
 | `Ctrl+O`       | Quick switcher (open any note)                             |
 | `Ctrl+E`       | Toggle edit / reading view                                 |
-| `Ctrl+Shift+E` | Highlightr color menu (Grape, Wine, Forest, Soil, Harvest) |
+| `Ctrl+Shift+E` | Highlightr color menu (Soil, Wine, Grape, Forest, Harvest, Sky, Slate, Rose, Mint, Amber) |
 
 ## Editing
 
@@ -37,7 +37,7 @@ The Eskolx keyboard map. Same in both vaults.
 
 ## Personal keys
 
-Your theme, font, and window preferences are personal — stored in `.obsidian/appearance.json`, which is gitignored and never pushed. Other people's theme choices never affect you.
+Your theme, accent, translucency, and enabled snippets live in `.obsidian/appearance.json`, which is **committed** so a fresh install looks right immediately. Personal overrides go in `.obsidian/snippets/eskolx-personal.css` — that one is gitignored and never pushed, so your individual tweaks never affect anyone else.
 
 ## Changing keys
 

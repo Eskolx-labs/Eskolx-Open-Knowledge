@@ -74,6 +74,4 @@ These are per-machine, so every new machine needs them once:
 
 1. **Enable the CLI**: Settings → General → **Command line interface** → follow the on-screen instructions to register `obsidian` on your PATH. See [[Obsidian CLI]].
 2. **Enable plugins**: when Obsidian asks "Trust author and enable plugins?" → **Trust**.
-3. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the line-author gutter.
-4. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the line-author gutter.
-[[Random Variables]]
+3. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the authorship dots.

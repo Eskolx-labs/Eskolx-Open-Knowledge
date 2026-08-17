@@ -10,8 +10,6 @@ tags: [ideas]
 
 ![Idea — Test Idea cover](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Idea_lightbulb_silhouette.svg/500px-Idea_lightbulb_silhouette.svg.png)
 
-![Idea — Test Idea cover|75](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Idea_lightbulb_silhouette.svg/500px-Idea_lightbulb_silhouette.svg.png)
-
 # Idea — Test Idea
 
 ## What

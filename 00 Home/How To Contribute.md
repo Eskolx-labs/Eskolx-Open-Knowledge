@@ -5,7 +5,7 @@ area: community
 created: 2026-08-13
 updated: 2026-08-13
 
-cover: https://upload.wikimedia.org/wikipedia/commons/b/bc/Chart_bar_edit.png
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png
 
 tags: [community]
 participants: ["Natnael-Getahun"]

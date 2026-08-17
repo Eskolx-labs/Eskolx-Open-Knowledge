@@ -13,8 +13,6 @@ participants: ["Natnael-Getahun"]
 
 ![Contributor Guide cover](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
 
-![Contributor Guide cover|243](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Codex_icon_puzzle.svg/500px-Codex_icon_puzzle.svg.png)
-
 # Contributor Guide
 
 The full guide for contributors to Eskolx-Open.
