@@ -17,16 +17,16 @@ participants: ["Natnael-Getahun"]
 
 The Eskolx keyboard map. Same in both vaults.
 
-| Keys | Command |
-|---|---|
-| `Ctrl+T` | Templater: Create new note from template |
-| `Ctrl+Shift+A` | QuickAdd: Eskolx Command Center |
-| `Ctrl+Shift+P` | Git: Pull |
-| `Ctrl+Shift+S` | Git: Commit-and-sync |
-| `Ctrl+Shift+U` | Git: Push |
-| `Ctrl+Shift+H` | Open Home |
-| `Ctrl+O` | Quick switcher (open any note) |
-| `Ctrl+E` | Toggle edit / reading view |
+| Keys           | Command                                                    |
+| -------------- | ---------------------------------------------------------- |
+| `Ctrl+T`       | Templater: Create new note from template                   |
+| `Ctrl+Shift+A` | QuickAdd: Eskolx Command Center                            |
+| `Ctrl+Shift+P` | Git: Pull                                                  |
+| `Ctrl+Shift+S` | Git: Commit-and-sync                                       |
+| `Ctrl+Shift+U` | Git: Push                                                  |
+| `Ctrl+Shift+H` | Open Home                                                  |
+| `Ctrl+O`       | Quick switcher (open any note)                             |
+| `Ctrl+E`       | Toggle edit / reading view                                 |
 | `Ctrl+Shift+E` | Highlightr color menu (Grape, Wine, Forest, Soil, Harvest) |
 
 ## Editing
