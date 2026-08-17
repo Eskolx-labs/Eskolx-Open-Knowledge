@@ -5,6 +5,7 @@ featured: false
 id: EDR-<% tp.date.now("YYYY-MM-DD") %>-<% tp.date.now("HHmm") %>
 status: proposed
 date: <% tp.date.now("YYYY-MM-DD") %>
+revisit: 
 area: 
 author: 
 tags: [decisions]

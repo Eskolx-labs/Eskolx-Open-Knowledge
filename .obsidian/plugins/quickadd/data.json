@@ -14,7 +14,7 @@
           "templatePath": "90 Templates/Project.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "Project — {{VALUE:Project name}}"
+            "format": "Project \u2014 {{VALUE:Project name}}"
           },
           "folder": {
             "enabled": true,
@@ -107,7 +107,7 @@
           "templatePath": "90 Templates/Decision.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "EDR — {{DATE:YYYY-MM-DD}} — {{VALUE:Title}}"
+            "format": "EDR \u2014 {{DATE:YYYY-MM-DD}} \u2014 {{VALUE:Title}}"
           },
           "folder": {
             "enabled": true,
@@ -138,7 +138,7 @@
           "templatePath": "90 Templates/Meeting.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "Meeting — {{DATE:YYYY-MM-DD}} {{VALUE:Topic}}"
+            "format": "Meeting \u2014 {{DATE:YYYY-MM-DD}} {{VALUE:Topic}}"
           },
           "folder": {
             "enabled": true,
@@ -169,7 +169,7 @@
           "templatePath": "90 Templates/Person.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "{{VALUE:Role}} — {{VALUE:Name}}"
+            "format": "{{VALUE:Role}} \u2014 {{VALUE:Name}}"
           },
           "folder": {
             "enabled": true,
@@ -231,7 +231,7 @@
           "templatePath": "90 Templates/Idea.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "Idea — {{VALUE:Title}}"
+            "format": "Idea \u2014 {{VALUE:Title}}"
           },
           "folder": {
             "enabled": true,
@@ -262,7 +262,7 @@
           "templatePath": "90 Templates/Tutorial.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "Tutorial — {{VALUE:Title}}"
+            "format": "Tutorial \u2014 {{VALUE:Title}}"
           },
           "folder": {
             "enabled": true,
@@ -419,7 +419,38 @@
           "templatePath": "90 Templates/Daily.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "{{DATE:YYYY-MM-DD}} — {{VALUE:Your name}}"
+            "format": "{{DATE:YYYY-MM-DD}} \u2014 {{VALUE:Your name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "00 Home"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFile": true,
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "mode": "live",
+            "focus": true
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "name": "New Weekly Review",
+          "id": "a1b2c3d4-000e-4000-8000-00000000000e",
+          "type": "Template",
+          "command": false,
+          "templatePath": "90 Templates/Weekly Review.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "Weekly Review \u2014 {{DATE:YYYY-MM-DD}}"
           },
           "folder": {
             "enabled": true,

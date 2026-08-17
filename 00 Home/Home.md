@@ -24,6 +24,7 @@ participants: ["Natnael-Getahun"]
 - [[How To Learn With Eskolx]]
 - [[How To Contribute]]
 - [[Keybindings]]
+- New to Obsidian? Start with the [[Eskolx Guide]].
 
 ## My Tasks
 
@@ -222,5 +223,6 @@ views:
 
 - [[Contributor Guide]] · [[First Contribution]] · [[Code of Conduct]] · [[The Eskolx Labs Rules]]
 - Community Inbox: [[Community Inbox]]
+- Review open PRs: [[Review Queue]] · track decisions: [[Decision Register]]
 
 

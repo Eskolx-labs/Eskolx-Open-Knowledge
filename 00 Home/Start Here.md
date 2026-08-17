@@ -64,6 +64,7 @@ Use the **QuickAdd** menu (`Mod+Shift+A`): New Research / New Concept / New Proj
 
 ## Next Steps
 
+0. New to Obsidian? Walk through the [[Eskolx Guide]] first.
 1. Read the [[Contributor Guide]]
 2. Create a tiny test note via QuickAdd
 3. Make a real contribution
