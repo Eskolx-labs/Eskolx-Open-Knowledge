@@ -7,6 +7,7 @@ updated: 2026-08-17
 author: Natnael
 tags: [dashboard, decisions]
 cover: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Scale_of_justice_2_new.jpeg/500px-Scale_of_justice_2_new.jpeg
+participants: ["Natnael-Getahun"]
 ---
 
 ![Decision Register cover](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Scale_of_justice_2_new.jpeg/500px-Scale_of_justice_2_new.jpeg)

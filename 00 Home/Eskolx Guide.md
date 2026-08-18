@@ -7,6 +7,7 @@ updated: 2026-08-17
 author: Natnael
 tags: [onboarding, tooling]
 cover: https://upload.wikimedia.org/wikipedia/commons/8/8c/Books_icon.png
+participants: ["Natnael-Getahun"]
 ---
 
 ![Eskolx Guide cover](https://upload.wikimedia.org/wikipedia/commons/8/8c/Books_icon.png)
