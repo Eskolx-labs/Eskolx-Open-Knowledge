@@ -24,7 +24,7 @@ Everything in the vault is a Git repo; this plugin makes Git invisible. It **aut
 - **If it disappears:** use command-line Git — the vault is still just a repo.
 
 ### QuickAdd — the command center
-`Ctrl+Shift+A` opens **Eskolx Command Center**: New Project/Research/Concept/Decision/Meeting/Person/Resource/Idea/Tutorial/Daily Note/Weekly Review, Send to Inbox, Insert Dataview Block, Open Home. Every choice applies a template and auto-routes the note.
+`Ctrl+Shift+A` opens **Eskolx Command Center**: New Project/Research/Concept/Resource/Tutorial/Daily Note, Insert Dataview Block, Open Home. Every choice applies a template and auto-routes the note.
 - **If it disappears:** use `Ctrl+T` (Templater) for templates and the command palette for everything else.
 
 ### Templater — the template engine
@@ -32,15 +32,15 @@ Everything in the vault is a Git repo; this plugin makes Git invisible. It **aut
 - **If it disappears:** Obsidian's built-in core Templates plugin covers basic insertion (no routing/auto-fill).
 
 ### Tasks — the query language for checkboxes
-Notes use plain `- [ ]` checkboxes; the Tasks plugin turns them into **live filtered lists** on dashboards (Home, My Work, Weekly Review). Queries filter by `#assignee/`, due dates, and done state.
+Notes use plain `- [ ]` checkboxes; the Tasks plugin turns them into **live filtered lists** on dashboards (Home). Queries filter by `#assignee/`, due dates, and done state.
 - **If it disappears:** checkboxes still work as normal Markdown; you just lose the filtered views.
 
 ### Dataview — query your own vault
-The `dataview` and `dataviewjs` code blocks turn notes into tables and lists by querying properties: `TABLE status, area FROM "07 Research" WHERE type = "research"`. Used heavily by dashboards.
+The `dataview` and `dataviewjs` code blocks turn notes into tables and lists by querying properties: `TABLE status, area FROM "05 Research" WHERE type = "research"`. Used heavily by dashboards.
 - **If it disappears:** Obsidian's **Bases** (see below) covers most of the same needs.
 
 ### Bases (built-in, not a plugin)
-Obsidian 1.9+ ships **Bases** — visual, queryable views of notes defined in `base` code blocks (the ```` ```base ```` blocks on Home and the dashboards). Query properties like `type == "decision"` and render as table/cards/list.
+Obsidian 1.9+ ships **Bases** — visual, queryable views of notes defined in `base` code blocks (the ```` ```base ```` blocks on Home and the shelves). Query properties like `type == "research"` and render as table/cards/list.
 - **If Dataview disappears:** Bases keeps the dashboards working.
 
 ### Highlightr — the 10-color highlighter

@@ -1,6 +1,6 @@
 # Eskolx-Open
 
-**Version 0.0.1** — public, continuously growing learning library for statistics, statistical computing, programming, and data analysis automation.
+**Version 0.0.1** — public, continuously growing research publications + learning library for statistics, statistical computing, programming, and data analysis automation.
 
 ## Quick Start (if you've never used Obsidian)
 
@@ -8,15 +8,11 @@ Obsidian is a free note-taking app that reads and writes plain Markdown files �
 
 1. **Install Obsidian** → https://obsidian.md/download (Windows / macOS / Linux). Version **1.9+** is required (for the card shelves). You do NOT need an Obsidian account or sync.
 2. **Open this vault:** Obsidian → **Open another vault** → **Open folder as vault** → select the `Eskolx-Open` folder.
-3. **Trust the author:** when prompted "Trust author and enable plugins?", click **Trust**. This enables the 12 community plugins.
+3. **Trust the author:** when prompted "Trust author and enable plugins?", click **Trust**. This enables the community plugins.
 4. **Done.** The theme, accent, translucency, and the `eskolx` snippet load automatically. Your personal tweaks go in `.obsidian/snippets/eskolx-personal.css` (gitignored, stays yours).
-5. **Start here:** press `Ctrl+Shift+H` to open Home, then `Ctrl+Shift+A` for the **Eskolx Command Center** menu (new notes, send to inbox, etc.).
+5. **Start here:** press `Ctrl+Shift+H` to open Home, then `Ctrl+Shift+A` for the **Eskolx Command Center** menu.
 
-**Never used Obsidian?** Open `00 Home/Eskolx Guide.md` in the vault — a five-guide course from "what is a vault?" to running the weekly review. There's also a guided verification tour in `USER_CHECKLIST.md` at the repository root.
-
-## Org Tools (built-in)
-
-The vault also runs the lab's public operations: **[[Decision Register]]** (every EDR at a glance), **[[Review Queue]]** (open PRs and what's waiting on your review), and a self-populating **Weekly Review** (`Ctrl+Shift+A` → New Weekly Review). See `00 Home/Eskolx Guide.md`.
+**Never used Obsidian?** Open `00 Home/Eskolx Guide.md` in the vault — a five-guide course from "what is a vault?" to publishing research. There's also a guided verification tour in `USER_CHECKLIST.md` at the repository root.
 
 ## System
 
@@ -25,24 +21,23 @@ Read the system plan documents at the repository root (one level up from this va
 ## Folder Structure
 
 ```
-00 Home/           entry point (Home.md, Start Here.md, Learning Paths.md)
+00 Home/           entry point (Home.md, Eskolx Guide, Keybindings)
 01 Projects/       public project pages
 02 Knowledge/      settled atomic concept notes
 03 Learning/       tutorials, learning paths, exercises
-04 Community/      contributor docs, meetings, people
-05 Resources/      curated external resources (books, papers, courses, tools)
-06 Publishing/     drafts, editorial review, published material
-07 Research/       exploratory, in-progress research
-08 Lounge/         informal community discussion (template-free, no review needed)
+04 Resources/      curated external resources (books, papers, courses, tools)
+05 Research/       exploratory, in-progress research + published papers
 90 Attachments/    all attachments, including animations/
 90 Templates/      Templater + QuickAdd templates (visible folder, not hidden)
-99 Archive/        inactive public material
+99 Archive/        inactive material (incl. former community/org machinery)
 Clippings/        web clippings from the Obsidian Web Clipper extension
 ```
 
-No nesting beyond this — except `06 Publishing/` may use draft/review/published subfolders because publication state is operationally meaningful.
+No nesting beyond this.
 
 ## Git Workflow (Building Phase)
+
+This repo lives in the **Eskolx Labs GitHub org** (`Eskolx-labs/Eskolx-Open-Knowledge`, public). Access via the `owners` (admin) and `researchers` (write) teams.
 
 **While we're building, commits go straight to `main`** — same as Core. Small trusted group, pull → work → commit → push. No branch ceremony yet.
 

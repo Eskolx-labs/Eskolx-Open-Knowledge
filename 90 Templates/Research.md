@@ -16,7 +16,7 @@ participants: []
 publish-status: draft
 ---
 
-<%* await tp.file.move("07 Research/" + tp.file.title + ".md") %>
+<%* await tp.file.move("05 Research/" + tp.file.title + ".md") %>
 
 # <% tp.file.title %>
 

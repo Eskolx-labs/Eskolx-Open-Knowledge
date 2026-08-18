@@ -13,16 +13,12 @@ participants: ["Natnael-Getahun"]
 
 # Eskolx Labs — Open
 
-> **Build. Understand. Share.** A public learning library for statistics, statistical computing, and data analysis automation.
+> **Build. Understand. Share.** A public research + learning library for statistics, statistical computing, and data analysis automation.
 
 > [!insight] It's always **Eskolx Labs** — never Eskol or Eskolx. [[It's Always Eskolx Labs]]
 
 ## Start Here
 
-- [[Start Here]]
-- [[What Is Eskolx]]
-- [[How To Learn With Eskolx]]
-- [[How To Contribute]]
 - [[Keybindings]]
 - New to Obsidian? Start with the [[Eskolx Guide]].
 
@@ -43,42 +39,7 @@ sort by urgency
 
 ## Vault Health
 
-```dataviewjs
-const reviews = dv.pages('"00 Home"')
-  .where(p => p.file.name.startsWith('Weekly Review'))
-  .sort(p => p.file.name, 'desc');
-if (reviews.length === 0) {
-  dv.paragraph('No **Weekly Review** yet. Open the **Eskolx Command Center** (Ctrl+Shift+A) → **New Weekly Review**.');
-} else {
-  const last = reviews[0];
-  const lastDate = dv.date(last.file.name.slice('Weekly Review — '.length));
-  const days = Math.floor(dv.luxon.DateTime.now().diff(lastDate, 'days').days);
-  dv.paragraph(days > 10
-    ? '**Weekly review overdue** — last was ' + last.file.link + ' (' + days + ' days ago).'
-    : '**Weekly review current** — last was ' + last.file.link + ' (' + days + ' days ago).');
-}
-```
-
-```base
-filters:
-  and:
-    - type == "decision"
-    - status == "proposed"
-    - created < now() - "14 days"
-views:
-  - type: table
-    name: Stale Decisions (proposed over 14 days)
-    order:
-      - created
-      - file.name
-      - area
-```
-
-```tasks
-not done
-due before today
-sort by due
-```
+> [!tip] **Research publications + learning.** This public vault is intentionally lean. See [[Eskolx Guide]].
 
 ## Needs Attention
 
@@ -97,11 +58,7 @@ views:
 
 ## What Eskolx Is
 
-A small lab rebuilding statistical/computing tools from first principles and publishing what it learns. Code lives in the Eskolx GitHub repos; this vault is the knowledge. See [[What Is Eskolx]].
-
-## Learning
-
-[[Learning Paths]]
+A small lab rebuilding statistical/computing tools from first principles and publishing what it learns. Code lives in the Eskolx GitHub repos; this vault is the knowledge.
 
 ## Featured
 
@@ -179,89 +136,5 @@ views:
 ```
 
 ## Recent Knowledge
-
-```base
-filters:
-  and:
-    - type == "concept"
-    - note["publish-status"] == "published"
-views:
-  - type: table
-    name: Recently Published Knowledge
-    order:
-      - updated
-      - area
-      - file.name
-```
-
-## Recently Published
-
-```base
-filters:
-  and:
-    - note["publish-status"] == "published"
-views:
-  - type: table
-    name: Recently Published
-    order:
-      - updated
-      - file.folder
-      - type
-```
-
-## Writing Pipeline
-
-```base
-filters:
-  and:
-    - note["publish-status"] != "published"
-    - note["publish-status"] != "archived"
-views:
-  - type: table
-    name: In Progress (draft / review / approved)
-    order:
-      - note["publish-status"]
-      - updated
-      - file.folder
-```
-
-## Open PRs Awaiting Review
-
-```dataviewjs
-const repo = 'Natnael-Getahun/Eskolx-Open-Knowledge';
-const res = await fetch(`https://api.github.com/repos/${repo}/pulls?state=open&per_page=20`);
-if (res.ok) {
-  const prs = await res.json();
-  if (prs.length === 0) {
-    dv.paragraph('No open PRs.');
-  } else {
-    dv.table(['PR', 'Author', 'Title'],
-      prs.map(p => [dv.el('a', '#' + p.number, { href: p.html_url, style: 'color: var(--eskolx-grape)' }),
-                    p.user.login,
-                    p.title]));
-  }
-} else {
-  dv.paragraph('Could not fetch PRs (offline?). Open the repo directly: https://github.com/Natnael-Getahun/Eskolx-Open-Knowledge/pulls');
-}
-```
-
-## Lounge Highlights
-
-```base
-filters:
-  and:
-    - file.folder == "08 Lounge"
-views:
-  - type: list
-    name: Lounge
-    order:
-      - file.mtime
-```
-
-## Contribute
-
-- [[Contributor Guide]] · [[First Contribution]] · [[Code of Conduct]] · [[The Eskolx Labs Rules]]
-- Community Inbox: [[Community Inbox]]
-- Review open PRs: [[Review Queue]] · track decisions: [[Decision Register]]
 
 

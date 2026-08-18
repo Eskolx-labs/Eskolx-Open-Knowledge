@@ -31,6 +31,7 @@ Obsidian Git handles the plumbing:
 - **Pulls** on boot and every ~15 min.
 - **Commits and pushes** every ~15 min (and on demand).
 - The **status bar** (bottom right) shows the last sync time.
+- **Obsidian closed?** `scripts/sync.sh` from the vault root does the same pull → commit → push via the command line (`gh` credential helper — no stored tokens).
 
 Your deliberate hotkeys:
 
@@ -51,6 +52,11 @@ Auto-sync handles trivial edits, but **deliberate commits win**:
 - **Don't leave uncommitted work sitting overnight** — the vault is the shared record; if it's not committed and pushed, it doesn't exist for anyone else.
 
 ## Who Can Change What
+
+Both vaults live in the **Eskolx Labs GitHub org** (`Eskolx-labs/Eskolx-Open-Knowledge` public, `Eskolx-labs/Eskolx-Core-Knowledge` private). Team access:
+
+- **owners** — admin on both repos (Natnael + Barkilign).
+- **researchers** — write on Open, read on Core.
 
 - **Core (private)** — trusted founders only. Commits go **straight to `main`**. Small group; pull → work → commit → push.
 - **Open (public)** — **building phase**: commits also go straight to `main`. **When outside contributors arrive**: `main` becomes **protected** (PR-only, 1 review), and work moves to topic branches (`yourname/topic`). The PR *is* the review step.

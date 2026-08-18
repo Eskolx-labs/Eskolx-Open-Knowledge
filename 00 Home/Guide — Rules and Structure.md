@@ -36,14 +36,13 @@ The vault runs on a small set of rules (full text: [[The Eskolx Labs Rules]]). T
 **Eskolx-Core (private):**
 
 ```text
-00 Home/        command center (Home, Current Focus, Founder Inbox, dashboards)
+00 Home/        command center (Home, Current Focus, dashboards)
 01 Direction/   mission, vision, roadmap, long-term goals
 02 Operations/  working agreement, security policy, meetings
 03 Projects/    private project pages
 04 Knowledge/   settled atomic concept notes
 05 People/      private people info
-06 Decisions/   decision records (EDR)
-07 Research/    exploratory, in-progress research
+06 Research/    exploratory, in-progress research
 90 Attachments/ attachments + animations/
 90 Templates/   Templater + QuickAdd templates
 99 Archive/     inactive material
@@ -53,15 +52,12 @@ Clippings/      web clippings
 **Eskolx-Open (public):**
 
 ```text
-00 Home/        entry point (Home, Start Here, Learning Paths)
+00 Home/        entry point (Home, Eskolx Guide, Keybindings)
 01 Projects/    public project pages
 02 Knowledge/   settled atomic concept notes
 03 Learning/    tutorials, learning paths, exercises
-04 Community/   contributor docs, meetings, people
-05 Resources/   curated external resources
-06 Publishing/  drafts, editorial review, published material
-07 Research/    exploratory, in-progress research
-08 Lounge/      informal community discussion
+04 Resources/   curated external resources
+05 Research/    exploratory, in-progress research + published papers
 90 Attachments/ + animations/ · 90 Templates/ · 99 Archive/ · Clippings/
 ```
 
@@ -70,14 +66,11 @@ Clippings/      web clippings
 | type | Core folder | Open folder |
 |---|---|---|
 | project | `03 Projects/` | `01 Projects/` |
-| research | `07 Research/` | `07 Research/` |
+| research | `06 Research/` | `05 Research/` |
 | concept | `04 Knowledge/` | `02 Knowledge/` |
-| decision | `06 Decisions/` | `06 Publishing/` |
-| meeting | `02 Operations/` | `04 Community/` |
-| person | `05 People/` | `04 Community/` |
-| resource | `04 Knowledge/` | `05 Resources/` |
+| resource | `04 Knowledge/` | `04 Resources/` |
 | tutorial | `04 Knowledge/` | `03 Learning/` |
-| idea | `00 Home/` | `08 Lounge/` |
+| idea | `00 Home/` | `00 Home/` |
 | daily | `00 Home/` | `00 Home/` |
 
 Templates self-route to these folders — you almost never choose.
@@ -87,9 +80,9 @@ Templates self-route to these folders — you almost never choose.
 Canonical properties every note can carry:
 
 ```yaml
-type:        concept   # project | research | concept | decision | meeting | person | resource | tutorial | idea | daily
+type:        concept   # project | research | concept | resource | tutorial | idea | daily
 status:      active    # controlled per type (see below)
-area:        statistics # domain bucket — statistics | numerical-methods | computing | operations | community | …
+area:        statistics # domain bucket — statistics | numerical-methods | computing | …
 owner:       natnaelg  # who owns it (when relevant)
 author:      Natnael   # who wrote it
 created:     2026-08-17
@@ -107,15 +100,14 @@ participants: []       # machine-generated — never edit
 - **Research status**: question, active, needs-review, validated, published, archived
 - **Publishing status** (Open): draft, review, approved, published, archived
 - **Priority**: low, normal, high, critical
-- **Decision status**: proposed (then approved / declined / archived), plus optional `revisit:` date
 
-The automated suite (T01–T116) enforces these — a note with `status: maybe` fails the build.
+The automated suite enforces these — a note with `status: maybe` fails the build.
 
 ## Why It's Built This Way
 
-- **Queryable** — dashboards (Home, My Work, Decision Register, Weekly Review) are just property queries. Messy properties = broken dashboards.
+- **Queryable** — dashboards (Home, Research Papers Shelf, Published Shelf) are just property queries. Messy properties = broken dashboards.
 - **Portable** — plain Markdown + Git means the knowledge outlives any tool.
-- **Honest** — `publish-status` and EDRs make the lab's state visible instead of assumed.
+- **Honest** — `publish-status` makes the lab's publication state visible instead of assumed.
 - **Testable** — 300+ checks run in a container against fresh clones, so a "fresh install" is guaranteed to work, not hoped to.
 
 ## The Quality Gate (Open)
@@ -124,4 +116,4 @@ Before a knowledge note is **published**, it must be: **correct, understandable,
 
 ## Where To Go Next
 
-You've completed the guide. Put it to work: open **[[Home]]**, run a **New Weekly Review**, and if you're verifying a fresh install, walk through `USER_CHECKLIST.md`.
+You've completed the guide. Put it to work: open **[[Home]]**, and if you're verifying a fresh install, walk through `USER_CHECKLIST.md`.

@@ -50,7 +50,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "07 Research"
+              "05 Research"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -100,99 +100,6 @@
           }
         },
         {
-          "name": "New Decision",
-          "id": "d8e3b2f1-0004-4000-8000-000000000004",
-          "type": "Template",
-          "command": false,
-          "templatePath": "90 Templates/Decision.md",
-          "fileNameFormat": {
-            "enabled": true,
-            "format": "EDR \u2014 {{DATE:YYYY-MM-DD}} \u2014 {{VALUE:Title}}"
-          },
-          "folder": {
-            "enabled": true,
-            "folders": [
-              "06 Publishing"
-            ],
-            "chooseWhenCreatingNote": false,
-            "createInSameFolderAsActiveFile": false,
-            "chooseFromSubfolders": false
-          },
-          "appendLink": false,
-          "openFile": true,
-          "fileOpening": {
-            "location": "tab",
-            "direction": "vertical",
-            "mode": "live",
-            "focus": true
-          },
-          "fileExistsBehavior": {
-            "kind": "prompt"
-          }
-        },
-        {
-          "name": "New Meeting",
-          "id": "d8e3b2f1-0005-4000-8000-000000000005",
-          "type": "Template",
-          "command": false,
-          "templatePath": "90 Templates/Meeting.md",
-          "fileNameFormat": {
-            "enabled": true,
-            "format": "Meeting \u2014 {{DATE:YYYY-MM-DD}} {{VALUE:Topic}}"
-          },
-          "folder": {
-            "enabled": true,
-            "folders": [
-              "04 Community"
-            ],
-            "chooseWhenCreatingNote": false,
-            "createInSameFolderAsActiveFile": false,
-            "chooseFromSubfolders": false
-          },
-          "appendLink": false,
-          "openFile": true,
-          "fileOpening": {
-            "location": "tab",
-            "direction": "vertical",
-            "mode": "live",
-            "focus": true
-          },
-          "fileExistsBehavior": {
-            "kind": "prompt"
-          }
-        },
-        {
-          "name": "New Person",
-          "id": "d8e3b2f1-0006-4000-8000-000000000006",
-          "type": "Template",
-          "command": false,
-          "templatePath": "90 Templates/Person.md",
-          "fileNameFormat": {
-            "enabled": true,
-            "format": "{{VALUE:Role}} \u2014 {{VALUE:Name}}"
-          },
-          "folder": {
-            "enabled": true,
-            "folders": [
-              "04 Community"
-            ],
-            "chooseWhenCreatingNote": false,
-            "createInSameFolderAsActiveFile": false,
-            "chooseFromSubfolders": false
-          },
-          "appendLink": false,
-          "openFile": true,
-          "fileOpening": {
-            "location": "tab",
-            "direction": "vertical",
-            "mode": "live",
-            "focus": true
-          },
-          "fileExistsBehavior": {
-            "kind": "prompt"
-          }
-        },
-        {
           "name": "New Resource",
           "id": "d8e3b2f1-0007-4000-8000-000000000007",
           "type": "Template",
@@ -205,38 +112,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "05 Resources"
-            ],
-            "chooseWhenCreatingNote": false,
-            "createInSameFolderAsActiveFile": false,
-            "chooseFromSubfolders": false
-          },
-          "appendLink": false,
-          "openFile": true,
-          "fileOpening": {
-            "location": "tab",
-            "direction": "vertical",
-            "mode": "live",
-            "focus": true
-          },
-          "fileExistsBehavior": {
-            "kind": "prompt"
-          }
-        },
-        {
-          "name": "New Idea",
-          "id": "d8e3b2f1-0008-4000-8000-000000000008",
-          "type": "Template",
-          "command": false,
-          "templatePath": "90 Templates/Idea.md",
-          "fileNameFormat": {
-            "enabled": true,
-            "format": "Idea \u2014 {{VALUE:Title}}"
-          },
-          "folder": {
-            "enabled": true,
-            "folders": [
-              "08 Lounge"
+              "04 Resources"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -283,59 +159,6 @@
           },
           "fileExistsBehavior": {
             "kind": "prompt"
-          }
-        },
-        {
-          "name": "Send to Inbox",
-          "id": "d8e3b2f1-000a-4000-8000-00000000000a",
-          "type": "Capture",
-          "command": false,
-          "captureTo": "00 Home/Community Inbox.md",
-          "captureToActiveFile": false,
-          "captureToCanvasNodeId": "",
-          "activeFileWritePosition": "cursor",
-          "createFileIfItDoesntExist": {
-            "enabled": true,
-            "createWithTemplate": false,
-            "template": ""
-          },
-          "format": {
-            "enabled": false,
-            "format": ""
-          },
-          "insertAfter": {
-            "enabled": true,
-            "after": "## Quick Captures",
-            "insertAtEnd": false,
-            "considerSubsections": false,
-            "createIfNotFound": true,
-            "createIfNotFoundLocation": "top",
-            "inline": false,
-            "replaceExisting": false,
-            "blankLineAfterMatchMode": "auto",
-            "promptHeading": false
-          },
-          "insertBefore": {
-            "enabled": false,
-            "before": "",
-            "createIfNotFound": false,
-            "createIfNotFoundLocation": "top"
-          },
-          "newLineCapture": {
-            "enabled": false,
-            "direction": "below"
-          },
-          "prepend": false,
-          "task": true,
-          "openFile": false,
-          "fileOpening": {
-            "location": "tab",
-            "direction": "vertical",
-            "mode": "live",
-            "focus": true
-          },
-          "templater": {
-            "afterCapture": "none"
           }
         },
         {
@@ -420,37 +243,6 @@
           "fileNameFormat": {
             "enabled": true,
             "format": "{{DATE:YYYY-MM-DD}} \u2014 {{VALUE:Your name}}"
-          },
-          "folder": {
-            "enabled": true,
-            "folders": [
-              "00 Home"
-            ],
-            "chooseWhenCreatingNote": false,
-            "createInSameFolderAsActiveFile": false,
-            "chooseFromSubfolders": false
-          },
-          "appendLink": false,
-          "openFile": true,
-          "fileOpening": {
-            "location": "tab",
-            "direction": "vertical",
-            "mode": "live",
-            "focus": true
-          },
-          "fileExistsBehavior": {
-            "kind": "prompt"
-          }
-        },
-        {
-          "name": "New Weekly Review",
-          "id": "a1b2c3d4-000e-4000-8000-00000000000e",
-          "type": "Template",
-          "command": false,
-          "templatePath": "90 Templates/Weekly Review.md",
-          "fileNameFormat": {
-            "enabled": true,
-            "format": "Weekly Review \u2014 {{DATE:YYYY-MM-DD}}"
           },
           "folder": {
             "enabled": true,

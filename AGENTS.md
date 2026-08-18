@@ -4,8 +4,8 @@ This is the **public** Eskolx knowledge vault. Agents working here must follow t
 
 ## Identity
 
-- **Vault**: Eskolx-Open (public: statistics/computing knowledge, tutorials, learning paths, community)
-- **Repo**: `Natnael-Getahun/Eskolx-Open-Knowledge` (public)
+- **Vault**: Eskolx-Open (public: statistics/computing research publications, knowledge, tutorials)
+- **Repo**: `Eskolx-labs/Eskolx-Open-Knowledge` (public, GitHub org)
 - **Git flow**: **building phase — commits go straight to `main`** (small trusted group). Later, when outside contributors arrive: `main` becomes protected (PR-only, 1 review) and work moves to topic branches (`yourname/topic`).
 - **Auto-sync**: Obsidian Git auto-commits/pushes every ~15 min. Don't fight it — commit deliberately with meaningful messages.
 
@@ -32,14 +32,12 @@ This is the **public** Eskolx knowledge vault. Agents working here must follow t
 |---|---|
 | project | `01 Projects/` |
 | concept | `02 Knowledge/` |
-| research | `07 Research/` |
-| decision | `06 Publishing/` |
-| meeting | `04 Community/` |
-| person | `04 Community/` |
-| resource | `05 Resources/` |
+| research | `05 Research/` |
+| resource | `04 Resources/` |
 | tutorial | `03 Learning/` |
-| idea | `08 Lounge/` |
 | daily | `00 Home/` |
+
+> Community/people/lounge/publishing/decision folders were archived to `99 Archive/`. This public vault is focused on research publications + learning.
 
 ## Template routing
 

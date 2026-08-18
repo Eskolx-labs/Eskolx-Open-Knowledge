@@ -13,7 +13,7 @@ cover: https://upload.wikimedia.org/wikipedia/commons/8/8c/Books_icon.png
 
 # Eskolx Guide
 
-> Everything you need to use an Eskolx vault — from "what is Obsidian?" to running the weekly review. New to Obsidian? Start with **Guide — Obsidian Basics** and work through in order.
+> Everything you need to use an Eskolx vault — from "what is Obsidian?" to publishing research. New to Obsidian? Start with **Guide — Obsidian Basics** and work through in order.
 
 ## Reading Path
 
@@ -33,7 +33,7 @@ Start here and follow the order — each guide assumes the previous one:
 | Any command | `Ctrl+P` (command palette) |
 | Open any note | `Ctrl+O` (quick switcher) |
 | Create a note | `Ctrl+Shift+A` → Eskolx Command Center |
-| Capture a thought | `Ctrl+Shift+A` → Send to Inbox |
+| Capture a thought | `Ctrl+Shift+A` → New Daily Note |
 | Create from template | `Ctrl+T` |
 | Daily note | `Ctrl+P` → "Daily notes: Open today's daily note" |
 | Pull / commit-sync / push | `Ctrl+Shift+P` / `Ctrl+Shift+S` / `Ctrl+Shift+U` |
@@ -42,20 +42,19 @@ Start here and follow the order — each guide assumes the previous one:
 
 Full map: [[Keybindings]].
 
-## Org Tools (built for how the lab works)
+## Built For Research Publications
 
-- **[[Decision Register]]** — every EDR at a glance: open, approved, and revisit-due decisions.
-- **My Work — Natnael / Barkilign** (Core vault) — per-person dashboards: your tasks, blockers, decisions, questions, and review queue.
-- **[[Review Queue]]** — open PRs and what's waiting on your review.
-- **Weekly Review** — `Ctrl+Shift+A` → **New Weekly Review**: a self-populating note of the last 7 days' changes, decisions, tasks, and blockers.
+- **Research → published pipeline** — notes start `publish-status: draft`, move through review, and become `published` (the PR is the review). See **Guide — Workflows**.
+- **Vault Health / Reviews** — the PR review queue. Nothing informal lives here anymore.
+- **Manual sync** — if Obsidian isn't open, `scripts/sync.sh` pulls/commits/pushes for you.
 
 ## Vault-Specific Entry Points
 
-- **This vault is Eskolx-Open** (public — the learning library). Your starting notes: [[Start Here]], [[How To Contribute]], [[Community Inbox]].
+- **This vault is Eskolx-Open** (public — research publications + learning library). Start with [[Home]], [[Eskolx Guide]], [[Keybindings]].
 - The private sibling vault (Eskolx-Core) is for founders only. The two vaults share the same tooling and rules; only the content is private vs public.
 
 ## Reference
 
-- [[Keybindings]] · [[Obsidian CLI]] · [[The Eskolx Labs Rules]] · [[Contributor Guide]] · [[First Contribution]]
+- [[Keybindings]] · [[Obsidian CLI]] · [[The Eskolx Labs Rules]]
 - Verification checklist for fresh installs: `USER_CHECKLIST.md` at the repository root.
 - **The test suite** — `bash tests/run_tests.sh` (from the repo root) runs 300+ checks against fresh clones in a container. If you're ever unsure whether the vault is healthy, run it.
