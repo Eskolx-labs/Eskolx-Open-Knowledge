@@ -38,3 +38,6 @@ secrets/
 # obsidian-git runtime credential helper (regenerated on sync)
 .obsidian/plugins/obsidian-git/obsidian_askpass.sh
 
+# Downloaded themes (machine state — each user picks their own)
+.obsidian/themes/
+
