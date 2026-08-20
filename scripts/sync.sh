@@ -7,8 +7,8 @@
 #   - NEVER pushes to main or develop. Both are protected; only merge-holders
 #     touch them.
 #   - On main or a detached HEAD: pulls main (read-only) and stops.
-#   - On a develop/<username> subbranch: pulls develop (to stay current with
-#     everyone), commits, pushes the subbranch.
+#   - On a participants/<username> subbranch: pulls develop (to stay current
+#     with everyone), commits, pushes the subbranch.
 #   - On any other branch: pulls that branch's upstream, commits, pushes to it.
 #
 # Usage:
@@ -58,7 +58,7 @@ if ! "${GITC[@]}" pull --ff-only origin develop 2>/dev/null; then
   "${GITC[@]}" pull --no-rebase --no-edit origin develop 2>/dev/null \
     || echo "warn: pull from develop failed" >&2
 fi
-if [[ "$branch" == develop/* ]]; then
+if [[ "$branch" == participants/* ]]; then
   git fetch -q origin "$branch" 2>/dev/null || true
 fi
 

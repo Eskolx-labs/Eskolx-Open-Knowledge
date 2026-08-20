@@ -3,9 +3,9 @@
 #
 #  1. Installs the pre-push guard into .git/hooks/.
 #  2. Creates the participant's personal subbranch off `develop`
-#     (develop/<git-user-name>) and checks it out. Auto-sync then pushes
-#     to that subbranch and pulls from it. Participants never push to
-#     `develop` or `main` directly.
+#     (participants/<git-user-name>) and checks it out. Auto-sync then
+#     pushes to that subbranch and pulls from it. Participants never push
+#     to `develop` or `main` directly.
 #
 # Usage:  scripts/install-hooks.sh
 set -euo pipefail
@@ -25,7 +25,7 @@ fi
 who="$(git config user.name || true)"
 [[ -z "$who" ]] && who="$(git config --global user.name || true)"
 [[ -z "$who" ]] && who="participant"
-branch="develop/${who// /-}"
+branch="participants/${who// /-}"
 
 current="$(git symbolic-ref --short HEAD 2>/dev/null || echo detached)"
 if [[ "$current" == "$branch" ]]; then

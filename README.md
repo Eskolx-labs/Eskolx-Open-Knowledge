@@ -41,7 +41,7 @@ This repo lives in the **Eskolx Labs GitHub org** (`Eskolx-labs/Eskolx-Open-Know
 
 - **`main` is protected.** Only the merge-holders (the org owners, Natnael and Barkilign) can merge to `main`.
 - **`develop` is the integration branch.** Merge-holders keep it current and merge it to `main`.
-- **Every participant works on their own subbranch: `develop/<username>`.** Auto-sync pulls `develop` (staying current with everyone) and pushes the subbranch. Onboarding (`scripts/install-hooks.sh`) creates the subbranch automatically.
+- **Every participant works on their own subbranch: `participants/<username>`.** Auto-sync pulls `develop` (staying current with everyone) and pushes the subbranch. Onboarding (`scripts/install-hooks.sh`) creates the subbranch automatically.
 - Participants never push to `main` or `develop`. Their work reaches `develop` (then `main`) through the merge-holders, using GitHub's native compare-and-merge. The merge is the review.
 - **Merge ≠ publish.** Notes start `publish-status: draft`; a maintainer flips them to `published` after checking the quality gate below.
 - Locked paths (`.obsidian/`, `90 Templates/`, `scripts/`, executable files) are only changed by merge-holders via `main`, so the executable surface everyone pulls from stays reviewed.

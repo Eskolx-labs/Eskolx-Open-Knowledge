@@ -3,7 +3,7 @@
 #
 # Blocks a push when it would:
 #   1. touch `main` or `develop` (only merge-holders may; participants push
-#      to their own subbranch develop/<username>)
+#      to their own subbranch participants/<username>)
 #   2. modify a locked path (the executable surface: .obsidian/, templates,
 #      scripts, executable files, cache.json) on any branch
 #   3. contain obvious secrets (value-shaped, in any changed file)
@@ -50,7 +50,7 @@ while read -r local_ref local_sha remote_ref remote_sha; do
     refs/heads/main|refs/heads/develop)
       if [[ "${ESKOLX_ALLOW_MAIN:-0}" != "1" ]]; then
         echo "BLOCKED: you cannot push to ${remote_ref#refs/heads/}." >&2
-        echo "Participants push to their own subbranch: develop/<your-username>" >&2
+        echo "Participants push to their own subbranch: participants/<your-username>" >&2
         echo "Only merge-holders touch develop and main." >&2
         blocked=1
         continue
