@@ -15,7 +15,7 @@ participants: ["Natnael-Getahun"]
 
 > **Build. Understand. Share.** A public learning library for statistics, statistical computing, and data analysis automation.
 
-> [!insight] It's always **Eskolx Labs**. Never Eskol or Eskolx. [[It's Always Eskolx Labs]]
+> [!insight] It's always **Eskolx Labs**, never "Eskol" or "Eskolx" alone. [[It's Always Eskolx Labs]]
 
 ## Start Here
 
