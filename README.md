@@ -1,6 +1,6 @@
 # Eskolx-Open
 
-**Version 0.0.1.** Public, continuously growing research publications + learning library for statistics, statistical computing, programming, and data analysis automation.
+**Version 0.0.1.** Public, continuously growing learning library for statistics, statistical computing, programming, and data analysis automation. Notes are sourced from books and papers and feed the libraries Eskolx builds from scratch.
 
 ## System
 
@@ -26,7 +26,8 @@ Obsidian is a free note-taking app that reads and writes plain Markdown files. T
 02 Knowledge/      settled atomic concept notes
 03 Learning/       tutorials, learning paths, exercises
 04 Resources/      curated external resources (books, papers, courses, tools)
-05 Research/       exploratory, in-progress research + published papers
+05 Research/       exploratory and in-progress research notes
+05 People/         person pages for participants and maintainers
 90 Attachments/    all attachments, including animations/
 90 Templates/      Templater + QuickAdd templates (visible folder, not hidden)
 99 Archive/        inactive material (incl. former community/org machinery)
@@ -100,7 +101,7 @@ These fallbacks don't reproduce every feature. They keep the underlying knowledg
 
 One shared theme (`eskolx.css` snippet) with two modes: the same visual family, different atmosphere.
 
-- **Dark** = Core palette (near-black, parchment, grape purple, harvest red, muted green). This is the private research lab and operations console.
+- **Dark** = Core palette (near-black, parchment, grape purple, harvest red, muted green). This is the private org-management vault.
 - **Light** = Open palette (warm cream/beige, grape, clay, muted green). This is the public learning library.
 
 Core defaults to **dark**; Open defaults to **light**. In either vault, switch Appearance → Theme (dark/light) to see the other palette. The snippet is identical in both vaults and version-controlled.

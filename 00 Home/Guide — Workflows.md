@@ -3,7 +3,7 @@ type: concept
 status: active
 area: tooling
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-20
 author: Natnael
 tags: [onboarding, tooling]
 cover: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Checklist.svg/500px-Checklist.svg.png
@@ -13,11 +13,11 @@ cover: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Checklist.svg/5
 
 # Guide — Workflows
 
-> How the vault is actually used day to day: the capture → create → review → publish loop. This is the "operating system" of the lab.
+> How the vault is actually used day to day: capture → create → review → publish. This is the operating system of the learning library.
 
 ## The loop in one sentence
 
-Capture everything → create atomic notes from templates → assign tasks → research and validate → review → publish. Nothing that matters is allowed to live only in someone's head.
+Capture everything → create atomic notes from templates → assign tasks → research and validate → review → publish. Nothing that matters lives only in someone's head.
 
 ## 1. Start the day: Home
 
@@ -26,7 +26,7 @@ Capture everything → create atomic notes from templates → assign tasks → r
 - **My Tasks / Tasks** show what's assigned to you and to anyone (`#assignee/name`).
 - **Recent Changes** lists the 20 most recently edited notes. This is how you catch up without asking.
 - **Needs Attention** shows what's stuck (`publish-status: review`) and what's moving.
-- **Research Papers Shelf / Published Shelf** show in-progress and published research.
+- **Research Shelf / Published Shelf** show in-progress and published notes.
 
 ## 2. Create: the command center
 
@@ -34,11 +34,12 @@ Capture everything → create atomic notes from templates → assign tasks → r
 
 | Choice | Creates | Lands in |
 |---|---|---|
-| New Project | project page | `01 Projects/` (Open) / `03 Projects/` (Core) |
-| New Research | research note (abstract/keywords, Motivation→References) | `05 Research/` (Open) / `06 Research/` (Core) |
-| New Concept | atomic concept note | `02 Knowledge/` (Open) / `04 Knowledge/` (Core) |
+| New Project | project page | `01 Projects/` |
+| New Research | research note (abstract/keywords, Motivation→References) | `05 Research/` |
+| New Concept | atomic concept note | `02 Knowledge/` |
 | New Resource | curated external resource | `04 Resources/` |
 | New Tutorial | tutorial note | `03 Learning/` |
+| New Person | person page | `05 People/` |
 | New Daily Note | today's daily note | `00 Home/` |
 
 Every choice asks for a name, applies the template, and **auto-routes the note to the right folder** (`Ctrl+T` opens the same template picker). Never hand-write a note from scratch. Always start from a template so the schema stays consistent.
@@ -59,13 +60,13 @@ Tasks are plain checkboxes anywhere in a note. Eskolx makes them queryable:
 
 ## 4. Research → Publish
 
-The pipeline is `private thought → research → validation → public rewrite → review → public knowledge`:
+The flow is `research → validate → review → publish`:
 
 1. `Ctrl+Shift+A` → **New Research** → lands in `05 Research/` as `publish-status: draft`.
 2. Work through the sections: abstract/keywords, Motivation, Approach, Results, Validation, References.
-3. When it's ready to go public, set `publish-status: review`.
-4. **The PR is the review** when a pull request to `main` with 1 review is the review step.
-5. Set `publish-status: published`. It appears on the **Published Shelf** and in **Needs Attention** → review while pending.
+3. When it's ready for review, set `publish-status: review`.
+4. **The merge is the review.** Your notes live on your `participants/<username>` subbranch; a merge-holder merges them to `develop` and then to `main`, checking them against the quality gate on the way.
+5. A maintainer sets `publish-status: published` once the note passes the gate. It appears on the **Published Shelf**.
 
 ## 5. The Daily Note
 

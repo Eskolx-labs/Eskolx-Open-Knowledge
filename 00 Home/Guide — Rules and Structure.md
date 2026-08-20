@@ -24,7 +24,7 @@ The vault runs on a small set of rules (full text: [[The Eskolx Labs Rules]]). T
 3. **Properties are canonical.** `type`, `status`, `area`, `owner`, `author`, `created`, `updated`, `tags`. Never duplicate a fact in folder + tag + property. `participants` is machine-generated. Never hand-edit.
 4. **Embed by URL by default.** Every note has a feature image embedded from the internet (`![Title](https://…)`), and the `cover` property holds the same URL. Local attachments **only** for Eskolx-made media (own diagrams, tldraw scenes). Cover style: a clean, flat icon or diagram, **not** a literal photo of people/places.
 5. **Always work from a template.** Templates live in `90 Templates/` and self-route. Never hand-write from scratch.
-6. **Folders are broad buckets.** No deep nesting. `04 Knowledge/`, never `04 Knowledge/Statistics/Probability/…`.
+6. **Folders are broad buckets.** No deep nesting. `02 Knowledge/`, never `02 Knowledge/Statistics/Probability/…`.
 7. **Tags are topical only.** `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding`. `type`/`status`/`area` never become tags.
 8. **Link meaningful concepts.** `[[Monte Carlo]]`, not every common word.
 9. **Tasks live in their note.** In the project/decision/meeting note they're about, with `#assignee/name` and `📅` dates. Home surfaces them.
@@ -33,16 +33,15 @@ The vault runs on a small set of rules (full text: [[The Eskolx Labs Rules]]). T
 
 ## Folder Map
 
-**Eskolx-Core (private):**
+**Eskolx-Core (private, org management):**
 
 ```text
-00 Home/        command center (Home, Current Focus, dashboards)
-01 Direction/   mission, vision, roadmap, long-term goals
-02 Operations/  working agreement, security policy, meetings
-03 Projects/    private project pages
-04 Knowledge/   settled atomic concept notes
-05 People/      private people info
-06 Research/    exploratory, in-progress research
+00 Home/        command center (Home, daily notes)
+01 Direction/   mission, long-term goals, learning philosophy, roadmap
+02 Operations/  rules, working agreement, security policy, citations, meetings
+03 Projects/    project pages
+04 Decisions/   the decision register and EDRs
+05 People/      people info
 90 Attachments/ attachments + animations/
 90 Templates/   Templater + QuickAdd templates
 99 Archive/     inactive material
@@ -57,7 +56,8 @@ Clippings/      web clippings
 02 Knowledge/   settled atomic concept notes
 03 Learning/    tutorials, learning paths, exercises
 04 Resources/   curated external resources
-05 Research/    exploratory, in-progress research + published papers
+05 Research/    exploratory and in-progress research notes
+05 People/      person pages for participants and maintainers
 90 Attachments/ + animations/ · 90 Templates/ · 99 Archive/ · Clippings/
 ```
 
@@ -66,10 +66,12 @@ Clippings/      web clippings
 | type | Core folder | Open folder |
 |---|---|---|
 | project | `03 Projects/` | `01 Projects/` |
-| research | `06 Research/` | `05 Research/` |
-| concept | `04 Knowledge/` | `02 Knowledge/` |
-| resource | `04 Knowledge/` | `04 Resources/` |
-| tutorial | `04 Knowledge/` | `03 Learning/` |
+| decision | `04 Decisions/` | (private only) |
+| research | (not in Core) | `05 Research/` |
+| concept | (not in Core) | `02 Knowledge/` |
+| resource | (not in Core) | `04 Resources/` |
+| tutorial | (not in Core) | `03 Learning/` |
+| person | `05 People/` | `05 People/` |
 | idea | `00 Home/` | `00 Home/` |
 | daily | `00 Home/` | `00 Home/` |
 
@@ -105,7 +107,7 @@ The automated suite enforces these. A note with `status: maybe` fails the build.
 
 ## Why it's built this way
 
-- **Queryable** because dashboards (Home, Research Papers Shelf, Published Shelf) are just property queries. Messy properties = broken dashboards.
+- **Queryable** because dashboards (Home, Research Shelf, Published Shelf) are just property queries. Messy properties = broken dashboards.
 - **Portable** because plain Markdown + Git means the knowledge outlives any tool.
 - **Honest** because `publish-status` makes the lab's publication state visible instead of assumed.
 - **Testable** because 300+ checks run in a container against fresh clones, so a "fresh install" is guaranteed to work, not hoped to.

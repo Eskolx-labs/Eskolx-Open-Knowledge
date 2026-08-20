@@ -13,7 +13,7 @@ participants: ["Natnael-Getahun"]
 
 # Eskolx Labs Open
 
-> **Build. Understand. Share.** A public research + learning library for statistics, statistical computing, and data analysis automation.
+> **Build. Understand. Share.** A public learning library for statistics, statistical computing, and data analysis automation.
 
 > [!insight] It's always **Eskolx Labs**. Never Eskol or Eskolx. [[It's Always Eskolx Labs]]
 
@@ -39,7 +39,7 @@ sort by urgency
 
 ## Vault Health
 
-> [!tip] **Research publications + learning.** This public vault is intentionally lean. See [[Eskolx Guide]].
+> [!tip] **Learning library.** Source-grounded notes behind everything Eskolx builds. See [[Eskolx Guide]].
 
 ## Needs Attention
 
@@ -58,7 +58,7 @@ views:
 
 ## What Eskolx Is
 
-A small lab rebuilding statistical/computing tools from first principles and publishing what it learns. Code lives in the Eskolx GitHub repos; this vault is the knowledge.
+A small lab rebuilding statistical and computing tools from first principles. Participants record notes from books and papers before implementing anything in our libraries. Code lives in the Eskolx GitHub repos; this vault holds the sourced notes that drive the libraries.
 
 ## Featured
 
@@ -92,7 +92,7 @@ views:
       - author
 ```
 
-## Research Papers Shelf
+## Research Shelf
 
 ```base
 filters:
@@ -100,7 +100,7 @@ filters:
     - type == "research"
 views:
   - type: cards
-    name: Research Papers
+    name: Research Notes
     order:
       - updated
 ```
@@ -113,7 +113,7 @@ filters:
     - note["publish-status"] == "published"
 views:
   - type: cards
-    name: Published Writing
+    name: Published Notes
     order:
       - updated
 ```

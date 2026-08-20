@@ -18,7 +18,7 @@ publish-status: published
 
 ## Role at Eskolx
 
-## Current Focus
+## What I'm Working On
 
 ## Notes
 

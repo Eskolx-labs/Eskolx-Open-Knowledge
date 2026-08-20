@@ -128,7 +128,7 @@ Eskolx keeps these roles strict: `type`/`status`/`area` never become tags, and t
 
 - **`Ctrl+Shift+F`** does full-text search across the vault.
 - The search box on the left also searches filenames as you type.
-- Advanced: `path:"04 Knowledge"` or `tag:#tooling` or `"exact phrase"`. Most of the time plain words are enough.
+- Advanced: `path:"02 Knowledge"` or `tag:#tooling` or `"exact phrase"`. Most of the time plain words are enough.
 
 ## Graph View
 
