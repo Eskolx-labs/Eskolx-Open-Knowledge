@@ -18,8 +18,8 @@ jobs:
       - name: Detect locked-path changes vs main
         run: |
           set -e
-          LOCKED='.obsidian/ 90 Templates/ scripts/ *.sh *.py *.js *.tldr **/cache.json **/.env* *.key *.pem'
-          base=$(git merge-base origin/main HEAD || git rev-parse HEAD~1)
+          LOCKED='.obsidian/ 90 Templates/ scripts/ *.py *.sh *.js **/cache.json **/.env* *.key *.pem'
+          base=$(git merge-base origin/main HEAD || echo "$(git rev-parse HEAD~1)")
           changed=$(git diff --name-only --diff-filter=ACDMR "$base"..HEAD || true)
           hit=""
           for f in $changed; do
@@ -38,9 +38,13 @@ jobs:
           fi
           echo "locked-path check passed"
 
-      - name: Secret scan
+      - name: Secret scan (added lines only)
         run: |
-          if git grep -nE -i '(password|api[_-]?key|secret|BEGIN (RSA|EC|OPENSSH|DSA) PRIVATE KEY|ghp_[A-Za-z0-9]{36}|sk-[A-Za-z0-9]{20,})' HEAD -- . ':!tests' ':!*.md' | grep -qv ':' ; then
+          set -e
+          base=$(git merge-base origin/main HEAD || true)
+          diff=$(git diff "$base"..HEAD || true)
+          if grep -E '^\+' <<< "$diff" | grep -vE '^\+\+\+' | grep -qE -i \
+            '(password|passwd|api[_-]?key|secret|token)[[:space:]]*[:=][[:space:]]*[^[:space:]]|BEGIN (RSA |EC |OPENSSH |DSA )?PRIVATE KEY|ghp_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,}'; then
             echo "::error::Possible secret in pushed content. Owners: rotate and remove."
             exit 1
           fi

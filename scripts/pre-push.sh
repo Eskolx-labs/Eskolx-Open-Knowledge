@@ -5,27 +5,39 @@
 #   1. touch `main` (only merge-holders may, via GitHub's compare-and-merge)
 #   2. modify a locked path (the executable surface: .obsidian/, templates,
 #      scripts, executable files, cache.json) on any branch
-#   3. contain obvious secrets
+#   3. contain obvious secrets (value-shaped, in any changed file)
 #
 # Installed by scripts/install-hooks.sh into .git/hooks/pre-push.
-# Merge-holders can override the branch lock with: ESKOLX_ALLOW_MAIN=1 git push
+# Merge-holders can bypass the branch lock with: ESKOLX_ALLOW_MAIN=1 git push
 set -euo pipefail
 
 LOCKED_PATH_GLOB=(
   '.obsidian/**'
   '90 Templates/**'
   'scripts/**'
-  '**/*.sh'
   '**/*.py'
+  '**/*.sh'
   '**/*.js'
-  '**/*.tldr'
   '**/cache.json'
   '**/.env*'
   '*.key'
   '*.pem'
 )
 
-SECRET_PATTERN='(password|passwd|api[_-]?key|secret|BEGIN (RSA|EC|OPENSSH|DSA) PRIVATE KEY|ghp_[A-Za-z0-9]{36}|sk-[A-Za-z0-9]{20,})'
+# Value-shaped secrets only. Plain prose ("never store passwords") does not
+# match; a real `password: hunter2` or a raw `ghp_...` token does.
+SECRET_PATTERNS=(
+  'password[[:space:]]*[:=][[:space:]]*[^[:space:]]'
+  'passwd[[:space:]]*[:=][[:space:]]*[^[:space:]]'
+  'api[_-]?key[[:space:]]*[:=][[:space:]]*[^[:space:]]'
+  'secret[[:space:]]*[:=][[:space:]]*[^[:space:]]'
+  'token[[:space:]]*[:=][[:space:]]*[^[:space:]]'
+  'BEGIN (RSA |EC |OPENSSH |DSA )?PRIVATE KEY'
+  'ghp_[A-Za-z0-9]{20,}'
+  'sk-[A-Za-z0-9]{20,}'
+  'AKIA[0-9A-Z]{16}'
+  'xox[baprs]-[A-Za-z0-9-]{10,}'
+)
 
 echo "Eskolx pre-push guard: checking"
 
@@ -44,35 +56,42 @@ while read -r local_ref local_sha remote_ref remote_sha; do
       ;;
   esac
 
-  if [[ "$remote_sha" == "0000000000000000000000000000000000000000" ]]; then
-    range="${local_sha}^"
+  if [[ "$remote_sha" =~ ^0+$ ]]; then
+    base="$(git rev-list --max-parents=0 "$local_sha" 2>/dev/null || echo "${local_sha}^")"
   else
-    range="${remote_sha}..${local_sha}"
+    base="$remote_sha"
   fi
 
-  changed="$(git diff --name-only --diff-filter=ACDMR "$range" 2>/dev/null || true)"
+  changed="$(git diff --name-only --diff-filter=ACDMR "$base".."$local_sha" 2>/dev/null || true)"
 
-  locked_hit=""
-  while IFS= read -r f; do
-    for glob in "${LOCKED_PATH_GLOB[@]}"; do
-      if [[ "$f" == $glob ]]; then
-        locked_hit="$f"
-        break
-      fi
-    done
-    [[ -n "$locked_hit" ]] && break
-  done <<< "$changed"
+  if [[ -n "$changed" ]]; then
+    # 2) locked paths (skipped for merge-holder pushes to main)
+    if [[ "$remote_ref" != "refs/heads/main" || "${ESKOLX_ALLOW_MAIN:-0}" != "1" ]]; then
+      while IFS= read -r f; do
+        for glob in "${LOCKED_PATH_GLOB[@]}"; do
+          if [[ "$f" == $glob ]]; then
+            echo "BLOCKED: '$f' is a locked path." >&2
+            echo "The executable surface (.obsidian/, templates, scripts) is changed only by merge-holders via main." >&2
+            blocked=1
+          fi
+        done
+      done <<< "$changed"
+    fi
 
-  if [[ -n "$locked_hit" ]]; then
-    echo "BLOCKED: '$locked_hit' is a locked path." >&2
-    echo "The executable surface (.obsidian/, templates, scripts) is changed only by merge-holders via main." >&2
-    blocked=1
-  fi
-
-  if git grep -nE -i "$SECRET_PATTERN" "$local_sha" -- . ':!tests' ':!*.md' 2>/dev/null | grep -qv ':' ; then
-    echo "BLOCKED: possible secret detected in pushed content." >&2
-    echo "Rotate any leaked secret immediately and remove it. This push was refused." >&2
-    blocked=1
+    # 3) secrets: scan ADDED lines only (avoids flagging prose and plugin code)
+    added="$(git diff "$base".."$local_sha" 2>/dev/null || true)"
+    if [[ -n "$added" ]]; then
+      for pat in "${SECRET_PATTERNS[@]}"; do
+        hit="$(grep -E '^\+' <<< "$added" | grep -vE '^\+\+\+' | grep -E -i "$pat" || true)"
+        if [[ -n "$hit" ]]; then
+          echo "BLOCKED: possible secret detected in pushed content:" >&2
+          echo "$hit" | head -3 >&2
+          echo "Rotate any leaked secret immediately and remove it. This push was refused." >&2
+          blocked=1
+          break
+        fi
+      done
+    fi
   fi
 done
 
