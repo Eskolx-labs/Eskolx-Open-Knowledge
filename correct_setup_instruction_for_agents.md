@@ -22,7 +22,7 @@ git remote get-url origin
 | Vault | Repo | Branch to work on | Theme | Accent |
 |---|---|---|---|---|
 | Eskolx-Core | `Eskolx-labs/Eskolx-Core-Knowledge` (private) | `main` | dark (`obsidian`) | `#6F3A67` |
-| Eskolx-Open | `Eskolx-labs/Eskolx-Open-Knowledge` (public) | `develop` (never `main`) | light (`moonstone`) | `#6E3B68` |
+| Eskolx-Open | `Eskolx-labs/Eskolx-Open-Knowledge` (public) | `develop/<username>` (never `main`/`develop`) | light (`moonstone`) | `#6E3B68` |
 
 ---
 
@@ -59,26 +59,19 @@ If any requirement is missing, install it before continuing. Do not proceed with
 
 ## Step 2 - Correct branch (critical)
 
-**Eskolx-Open: must be on `develop`, never `main`.** A fresh clone lands on `main`; fix it:
-
-```bash
-git fetch origin develop:refs/remotes/origin/develop
-git checkout -B develop origin/develop
-```
-
-Never push to `main`. `main` is protected: only the merge-holders (Natnael, Barkilign) merge to it via GitHub's compare-and-merge (a PR). Everyone else works on `develop` and auto-syncs to it.
-
-Then install the guard hooks:
+**Eskolx-Open: must be on your personal subbranch `develop/<your-username>`, never `main` or `develop`.** A fresh clone lands on `main`; fix it with the onboarding script:
 
 ```bash
 bash scripts/install-hooks.sh
 ```
 
-Expected output: `installed .git/hooks/pre-push` and `on develop (live shared branch)`.
+Expected output: `installed .git/hooks/pre-push`, then `created develop/<username> off develop` (first time) or `on develop/<username> (your subbranch)` (later).
+
+Never push to `main` or `develop`. `main` is protected: only the merge-holders (Natnael, Barkilign) merge to it via GitHub's compare-and-merge (a PR). `develop` is the integration branch that only merge-holders update. Participants work on their own subbranch.
 
 What the guard does (do not disable it):
 
-- Blocks any push to `main`.
+- Blocks any push to `main` or `develop`.
 - Blocks changes to locked paths on any branch: `.obsidian/`, `90 Templates/`, `scripts/`, any `*.py`, `*.sh`, `*.js`, `**/cache.json`. The executable surface changes only via `main` (merge-holders).
 - Blocks pushes containing obvious secrets.
 
@@ -113,7 +106,7 @@ Test that sync actually works before opening Obsidian. A clean round-trip:
 bash scripts/sync.sh
 ```
 
-Expected: a pull happens; if there are local changes they are committed and pushed. On Open while on `main` it prints `sync.sh: on main - pulling read-only` and exits 0 - that is correct behavior, but you must still switch to `develop` (Step 2).
+Expected: a pull from `develop` happens; if there are local changes they are committed and pushed to your subbranch. On Open while on `main` or `develop` it prints `sync.sh: on <branch> - pulling read-only` and exits 0 - that is correct behavior, but you must still run `scripts/install-hooks.sh` (Step 2) so you are on your subbranch.
 
 The user must also add a GitHub Personal Access Token for Obsidian Git if `gh` is not usable inside Obsidian's terminal. Do this only if the in-app push fails:
 
@@ -200,7 +193,7 @@ git status --short          # expect: empty or only personal gitignored files
 bash scripts/sync.sh        # expect: pull, commit if needed, "ok: pushed" or "up to date"
 ```
 
-Then in Obsidian: bottom-right status bar shows the branch name (`develop`). Open the command palette (`Ctrl+P`) → "Git: Pull" → green notice "Pulled" or "Already up to date".
+Then in Obsidian: bottom-right status bar shows the branch name (`develop/<username>`). Open the command palette (`Ctrl+P`) → "Git: Pull" → green notice "Pulled" or "Already up to date".
 
 ### 5e. Templates, QuickAdd, routing
 
@@ -223,9 +216,10 @@ Then in Obsidian: bottom-right status bar shows the branch name (`develop`). Ope
 
 ```bash
 git push origin main 2>&1 | grep -qi "BLOCKED" && echo "guard blocks main" || echo "GUARD FAILED"
+git push origin develop 2>&1 | grep -qi "BLOCKED" && echo "guard blocks develop" || echo "GUARD FAILED"
 ```
 
-Expected: `guard blocks main`. If it prints `GUARD FAILED`, re-run `bash scripts/install-hooks.sh` and check that `.git/hooks/pre-push` exists and is executable.
+Expected: both `guard blocks main` and `guard blocks develop`. If either prints `GUARD FAILED`, re-run `bash scripts/install-hooks.sh` and check that `.git/hooks/pre-push` exists and is executable.
 
 ---
 
@@ -253,11 +247,11 @@ If any check fails, fix the cause before reporting. Do not report success with a
 | Symptom | Cause | Fix |
 |---|---|---|
 | Plugins greyed out / theme not applied | Community plugins not trusted | Settings → Community plugins → enable, or reopen vault and click **Trust** |
-| `Push to main` rejected (Open) | main is protected | Work on `develop`. Only merge-holders merge main via PR |
+| `Push to main`/`develop` rejected (Open) | both branches are protected | Work on your subbranch `develop/<username>`. Only merge-holders update develop/main |
 | Guard blocks my push (Open) | pre-push hook | `scripts/install-hooks.sh` should already have installed it; read the block message: main push, locked path (`.obsidian/`, `90 Templates/`, `scripts/`, `*.py`, `*.sh`, `*.js`, `cache.json`), or a possible secret. Fix the cause and push again |
 | `gh` not authenticated | no login | `gh auth login` |
 | `sync.sh: gh: not found` | gh not on PATH for the script | install gh, or run the sync from Obsidian Git instead |
-| `error: src refspec develop does not match any` | branch missing locally | `git fetch origin develop:refs/remotes/origin/develop && git checkout -B develop origin/develop` |
+| `error: src refspec develop does not match any` | branch missing locally | `bash scripts/install-hooks.sh` recreates your subbranch; for the integration branch: `git fetch origin develop:refs/remotes/origin/develop` |
 | Vault shows wrong theme colors | appearance.json overwritten | `git checkout -- .obsidian/appearance.json` then reopen vault |
 | Dots missing | cache missing or plugin off | restore cache from git; ensure Eskolx Authorship enabled |
 | Template picker empty | Templater not enabled or templates folder unset | enable Templater; Settings → Templater → Template folder location: `90 Templates` |

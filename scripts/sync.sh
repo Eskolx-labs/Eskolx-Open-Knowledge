@@ -4,9 +4,11 @@
 # safe in background jobs / cron / systemd timers — no SSH passphrase needed).
 #
 # Branch policy (Eskolx-Open):
-#   - NEVER pushes to main. main is protected and merge-holders only.
+#   - NEVER pushes to main or develop. Both are protected; only merge-holders
+#     touch them.
 #   - On main or a detached HEAD: pulls main (read-only) and stops.
-#   - On develop: pulls from develop, commits, pushes to develop.
+#   - On a develop/<username> subbranch: pulls develop (to stay current with
+#     everyone), commits, pushes the subbranch.
 #   - On any other branch: pulls that branch's upstream, commits, pushes to it.
 #
 # Usage:
@@ -20,7 +22,7 @@ cd "$(dirname "$0")/.."
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --once) shift ;;
-    -h|--help) sed -n '1,40p' "$0"; exit 0 ;;
+    -h|--help) sed -n '1,44p' "$0"; exit 0 ;;
     *) echo "sync.sh: unknown option '$1'" >&2; exit 2 ;;
   esac
 done
@@ -39,14 +41,25 @@ if [[ "$branch" == "main" ]]; then
 fi
 
 if [[ "$branch" == "detached" ]]; then
-  echo "sync.sh: detached HEAD - no-op (check out develop to sync your work)" >&2
+  echo "sync.sh: detached HEAD - no-op (check out your subbranch to sync)" >&2
   exit 0
 fi
 
-# 1. pull remote changes (ff; on divergence try a plain merge)
-if ! "${GITC[@]}" pull --ff-only origin "$branch" 2>/dev/null; then
-  "${GITC[@]}" pull --no-rebase --no-edit origin "$branch" 2>/dev/null \
-    || echo "warn: pull failed (will retry next tick)" >&2
+if [[ "$branch" == "develop" ]]; then
+  echo "sync.sh: on develop - pulling read-only (participants push their own subbranches)" >&2
+  "${GITC[@]}" pull --ff-only origin develop 2>/dev/null \
+    || "${GITC[@]}" pull --no-rebase --no-edit origin develop 2>/dev/null \
+    || echo "warn: pull failed" >&2
+  exit 0
+fi
+
+# 1. pull remote changes: stay current with develop, then your own branch
+if ! "${GITC[@]}" pull --ff-only origin develop 2>/dev/null; then
+  "${GITC[@]}" pull --no-rebase --no-edit origin develop 2>/dev/null \
+    || echo "warn: pull from develop failed" >&2
+fi
+if [[ "$branch" == develop/* ]]; then
+  git fetch -q origin "$branch" 2>/dev/null || true
 fi
 
 # 2/3. stage everything (incl. new files), commit only if something changed
@@ -56,9 +69,9 @@ if ! git diff --cached --quiet; then
     || echo "warn: commit failed" >&2
 fi
 
-# 4. push (no-op if nothing to push)
+# 4. push the subbranch (no-op if nothing to push)
 if git rev-parse --verify HEAD >/dev/null 2>&1 \
    && [[ -n "$(git log --oneline "@{u}"..HEAD 2>/dev/null)" ]]; then
   "${GITC[@]}" push -q origin "$branch" \
-    && echo "ok: pushed" || echo "warn: push failed" >&2
+    && echo "ok: pushed $branch" || echo "warn: push failed" >&2
 fi
