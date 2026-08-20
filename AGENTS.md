@@ -24,7 +24,7 @@ This is the **public** Eskolx learning library. Agents working here must follow 
 7. **Folders are broad buckets.** Never deep subfolders.
 8. **Tags are topical only.** `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding`. `type`/`status`/`area` never become tags.
 9. **Publishing pipeline.** New notes start `publish-status: draft`. They become `published` only after a maintainer reviews them against the quality gate.
-10. **Run the test suite before finishing.** `bash tests/run_tests.sh` from the repo root.
+10. **Run the test suite before finishing.** `bash tests/run_tests.sh` from the `Eskolx-labs/eskolx-tests` repo (clone it locally).
 11. **Grep for secrets before any push.** `rg -i "password|api[_-]?key|token|BEGIN.*PRIVATE KEY" .`
 
 ## Branch model
