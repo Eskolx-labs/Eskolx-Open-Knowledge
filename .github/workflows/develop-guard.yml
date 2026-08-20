@@ -2,7 +2,9 @@ name: develop-guard
 
 on:
   push:
-    branches: [develop]
+    branches:
+      - develop
+      - develop/**
 
 permissions:
   contents: read
@@ -15,11 +17,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Detect locked-path changes vs main
+      - name: Detect locked-path changes
         run: |
           set -e
           LOCKED='.obsidian/ 90 Templates/ scripts/ *.py *.sh *.js **/cache.json **/.env* *.key *.pem'
-          base=$(git merge-base origin/main HEAD || echo "$(git rev-parse HEAD~1)")
+          # base: develop for subbranches, main for develop itself
+          if git show-ref --verify -q refs/remotes/origin/develop; then
+            base=$(git merge-base origin/develop HEAD || echo "$(git rev-parse HEAD~1)")
+          else
+            base=$(git merge-base origin/main HEAD || echo "$(git rev-parse HEAD~1)")
+          fi
           changed=$(git diff --name-only --diff-filter=ACDMR "$base"..HEAD || true)
           hit=""
           for f in $changed; do
@@ -31,9 +38,9 @@ jobs:
             [ -n "$hit" ] && break
           done
           if [ -n "$hit" ]; then
-            echo "::error::Locked path changed on develop: $hit"
+            echo "::error::Locked path changed: $hit"
             echo "The executable surface is only changed by merge-holders via main."
-            echo "::error::Owners: review and revert $hit on develop."
+            echo "::error::Owners: review and revert $hit."
             exit 1
           fi
           echo "locked-path check passed"
@@ -41,7 +48,11 @@ jobs:
       - name: Secret scan (added lines only)
         run: |
           set -e
-          base=$(git merge-base origin/main HEAD || true)
+          if git show-ref --verify -q refs/remotes/origin/develop; then
+            base=$(git merge-base origin/develop HEAD || true)
+          else
+            base=$(git merge-base origin/main HEAD || true)
+          fi
           diff=$(git diff "$base"..HEAD || true)
           if grep -E '^\+' <<< "$diff" | grep -vE '^\+\+\+' | grep -qE -i \
             '(password|passwd|api[_-]?key|secret|token)[[:space:]]*[:=][[:space:]]*[^[:space:]]|BEGIN (RSA |EC |OPENSSH |DSA )?PRIVATE KEY|ghp_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,}'; then

@@ -2,7 +2,8 @@
 # pre-push guard for Eskolx-Open participants.
 #
 # Blocks a push when it would:
-#   1. touch `main` (only merge-holders may, via GitHub's compare-and-merge)
+#   1. touch `main` or `develop` (only merge-holders may; participants push
+#      to their own subbranch develop/<username>)
 #   2. modify a locked path (the executable surface: .obsidian/, templates,
 #      scripts, executable files, cache.json) on any branch
 #   3. contain obvious secrets (value-shaped, in any changed file)
@@ -46,10 +47,11 @@ blocked=0
 # stdin: <local ref> <local sha> <remote ref> <remote sha> per pushed ref
 while read -r local_ref local_sha remote_ref remote_sha; do
   case "$remote_ref" in
-    refs/heads/main)
+    refs/heads/main|refs/heads/develop)
       if [[ "${ESKOLX_ALLOW_MAIN:-0}" != "1" ]]; then
-        echo "BLOCKED: you cannot push to main. Push to develop instead." >&2
-        echo "Only merge-holders merge to main (GitHub native compare-and-merge)." >&2
+        echo "BLOCKED: you cannot push to ${remote_ref#refs/heads/}." >&2
+        echo "Participants push to their own subbranch: develop/<your-username>" >&2
+        echo "Only merge-holders touch develop and main." >&2
         blocked=1
         continue
       fi

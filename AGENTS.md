@@ -6,7 +6,7 @@ This is the **public** Eskolx learning library. Agents working here must follow 
 
 - **Vault**: Eskolx-Open (public: statistics/computing knowledge, research, tutorials)
 - **Repo**: `Eskolx-labs/Eskolx-Open-Knowledge` (public, GitHub org)
-- **Git flow**: `main` is protected. Only merge-holders (the org owners, Natnael and Barkilign) merge to `main`. Everyone else works on branches. Auto-sync: auto-commit + auto-push to your branch, auto-pull from `develop`. Never push to `main`.
+- **Git flow**: `main` is protected. Only merge-holders (the org owners, Natnael and Barkilign) merge to `main`. `develop` is the integration branch. **Every participant works on their own subbranch `develop/<username>`.** Auto-sync pulls `develop` and pushes the subbranch. Never push to `main` or `develop`.
 - **Merge ≠ publish.** A note that reaches `main` is in the library. It is only `published` when a maintainer has reviewed it against the quality gate and flipped `publish-status`.
 - **Auto-sync**: Obsidian Git auto-commits/pushes every ~15 min. Don't fight it. Commit deliberately with meaningful messages.
 
@@ -30,7 +30,8 @@ This is the **public** Eskolx learning library. Agents working here must follow 
 ## Branch model
 
 - `main` is protected. Only merge-holders (Nat, Barkilign) push to it.
-- `develop` is the live shared branch: participants auto-push to `develop` and auto-pull from `develop`.
+- `develop` is the integration branch, maintained by merge-holders.
+- Every participant has a personal subbranch `develop/<username>`, created by `scripts/install-hooks.sh`. Auto-sync: pull `develop`, push your subbranch.
 - Locked paths (`.obsidian/`, `90 Templates/`, `scripts/`, any `*.py`, `*.sh`, `*.js`, `**/cache.json`) can only be changed by merge-holders via `main`. Participants never modify them.
 
 ## Note types and folders
