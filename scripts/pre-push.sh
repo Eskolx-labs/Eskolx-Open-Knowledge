@@ -59,7 +59,18 @@ while read -r local_ref local_sha remote_ref remote_sha; do
   esac
 
   if [[ "$remote_sha" =~ ^0+$ ]]; then
-    base="$(git rev-list --max-parents=0 "$local_sha" 2>/dev/null || echo "${local_sha}^")"
+    # New branch: diff against what it was forked from, so the whole repo
+    # history is not treated as "changed". Fall back to origin/main when
+    # origin/develop is absent; abort with guidance if neither exists.
+    base="$(git merge-base origin/develop "$local_sha" 2>/dev/null \
+            || git merge-base origin/main "$local_sha" 2>/dev/null \
+            || true)"
+    if [[ -z "$base" ]]; then
+      echo "BLOCKED: cannot determine base for a new branch push." >&2
+      echo "Fetch develop and main first: git fetch origin develop:refs/remotes/origin/develop main:refs/remotes/origin/main" >&2
+      blocked=1
+      continue
+    fi
   else
     base="$remote_sha"
   fi
