@@ -22,7 +22,7 @@ git remote get-url origin
 | Vault | Repo | Branch to work on | Theme | Accent |
 |---|---|---|---|---|
 | Eskolx-Core | `Eskolx-labs/Eskolx-Core-Knowledge` (private) | `main` | dark (`obsidian`) | `#6F3A67` |
-| Eskolx-Open | `Eskolx-labs/Eskolx-Open-Knowledge` (public) | `develop/<username>` (never `main`/`develop`) | light (`moonstone`) | `#6E3B68` |
+| Eskolx-Open | `Eskolx-labs/Eskolx-Open-Knowledge` (public) | `participants/<username>` (never `main`/`develop`) | light (`moonstone`) | `#6E3B68` |
 
 ---
 
@@ -59,13 +59,13 @@ If any requirement is missing, install it before continuing. Do not proceed with
 
 ## Step 2 - Correct branch (critical)
 
-**Eskolx-Open: must be on your personal subbranch `develop/<your-username>`, never `main` or `develop`.** A fresh clone lands on `main`; fix it with the onboarding script:
+**Eskolx-Open: must be on your personal subbranch `participants/<your-username>`, never `main` or `develop`.** A fresh clone lands on `main`; fix it with the onboarding script:
 
 ```bash
 bash scripts/install-hooks.sh
 ```
 
-Expected output: `installed .git/hooks/pre-push`, then `created develop/<username> off develop` (first time) or `on develop/<username> (your subbranch)` (later).
+Expected output: `installed .git/hooks/pre-push`, then `created participants/<username> off develop` (first time) or `on participants/<username> (your subbranch)` (later).
 
 Never push to `main` or `develop`. `main` is protected: only the merge-holders (Natnael, Barkilign) merge to it via GitHub's compare-and-merge (a PR). `develop` is the integration branch that only merge-holders update. Participants work on their own subbranch.
 
@@ -193,7 +193,7 @@ git status --short          # expect: empty or only personal gitignored files
 bash scripts/sync.sh        # expect: pull, commit if needed, "ok: pushed" or "up to date"
 ```
 
-Then in Obsidian: bottom-right status bar shows the branch name (`develop/<username>`). Open the command palette (`Ctrl+P`) → "Git: Pull" → green notice "Pulled" or "Already up to date".
+Then in Obsidian: bottom-right status bar shows the branch name (`participants/<username>`). Open the command palette (`Ctrl+P`) → "Git: Pull" → green notice "Pulled" or "Already up to date".
 
 ### 5e. Templates, QuickAdd, routing
 
@@ -247,7 +247,7 @@ If any check fails, fix the cause before reporting. Do not report success with a
 | Symptom | Cause | Fix |
 |---|---|---|
 | Plugins greyed out / theme not applied | Community plugins not trusted | Settings → Community plugins → enable, or reopen vault and click **Trust** |
-| `Push to main`/`develop` rejected (Open) | both branches are protected | Work on your subbranch `develop/<username>`. Only merge-holders update develop/main |
+| `Push to main`/`develop` rejected (Open) | both branches are protected | Work on your subbranch `participants/<username>`. Only merge-holders update develop/main |
 | Guard blocks my push (Open) | pre-push hook | `scripts/install-hooks.sh` should already have installed it; read the block message: main push, locked path (`.obsidian/`, `90 Templates/`, `scripts/`, `*.py`, `*.sh`, `*.js`, `cache.json`), or a possible secret. Fix the cause and push again |
 | `gh` not authenticated | no login | `gh auth login` |
 | `sync.sh: gh: not found` | gh not on PATH for the script | install gh, or run the sync from Obsidian Git instead |
