@@ -8,6 +8,10 @@
 #      scripts, executable files, cache.json) on any branch
 #   3. contain obvious secrets (value-shaped, in any changed file)
 #
+# When a push is blocked, every flagged file is listed in
+# .git/eskolx-quarantine.txt so sync.sh can roll back the commit that
+# staged them. The hook never modifies the working tree or the index.
+#
 # Installed by scripts/install-hooks.sh into .git/hooks/pre-push.
 # Merge-holders can bypass the branch lock with: ESKOLX_ALLOW_MAIN=1 git push
 set -euo pipefail
@@ -21,6 +25,7 @@ LOCKED_PATH_GLOB=(
   '**/*.js'
   '**/cache.json'
   '**/.env*'
+  '.env*'
   '*.key'
   '*.pem'
 )
@@ -43,6 +48,8 @@ SECRET_PATTERNS=(
 echo "Eskolx pre-push guard: checking"
 
 blocked=0
+quarantine_file="$(git rev-parse --git-dir)/eskolx-quarantine.txt"
+rm -f "$quarantine_file"
 
 # stdin: <local ref> <local sha> <remote ref> <remote sha> per pushed ref
 while read -r local_ref local_sha remote_ref remote_sha; do
@@ -85,6 +92,7 @@ while read -r local_ref local_sha remote_ref remote_sha; do
           if [[ "$f" == $glob ]]; then
             echo "BLOCKED: '$f' is a locked path." >&2
             echo "The executable surface (.obsidian/, templates, scripts) is changed only by merge-holders via main." >&2
+            echo "$f" >> "$quarantine_file"
             blocked=1
           fi
         done
@@ -100,6 +108,12 @@ while read -r local_ref local_sha remote_ref remote_sha; do
           echo "BLOCKED: possible secret detected in pushed content:" >&2
           echo "$hit" | head -3 >&2
           echo "Rotate any leaked secret immediately and remove it. This push was refused." >&2
+          # record which changed files contain the secret pattern
+          while IFS= read -r f; do
+            if git diff "$base".."$local_sha" -- "$f" 2>/dev/null | grep -E '^\+' | grep -vE '^\+\+\+' | grep -E -i -q "$pat"; then
+              echo "$f" >> "$quarantine_file"
+            fi
+          done <<< "$changed"
           blocked=1
           break
         fi
@@ -109,9 +123,13 @@ while read -r local_ref local_sha remote_ref remote_sha; do
 done
 
 if [[ "$blocked" == "1" ]]; then
+  if [[ ! -s "$quarantine_file" ]]; then
+    rm -f "$quarantine_file"
+  fi
   echo "push aborted by the Eskolx guard" >&2
   exit 1
 fi
 
+rm -f "$quarantine_file"
 echo "guard passed"
 exit 0
