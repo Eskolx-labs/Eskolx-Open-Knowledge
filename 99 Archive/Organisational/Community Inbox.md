@@ -19,7 +19,7 @@ Quick thoughts, half-baked ideas, and discussion that isn't part of the formal k
 
 ## How to track attended items
 
-Each inbox line is a checkbox. When you've dealt with it, tick it (`- [x]`) — it moves to the **Attended** list below and stays out of the **Needs Attention** view. Untick to bring it back. This works for both the community inbox and the founder inbox.
+Each inbox line is a checkbox. When you've dealt with it, tick it (`- [x]`). It moves to the **Attended** list below and stays out of the **Needs Attention** view. Untick to bring it back. This works for both the community inbox and the founder inbox.
 
 ## Needs Attention
 

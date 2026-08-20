@@ -1,0 +1,47 @@
+name: develop-guard
+
+on:
+  push:
+    branches: [develop]
+
+permissions:
+  contents: read
+
+jobs:
+  locked-paths-and-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect locked-path changes vs main
+        run: |
+          set -e
+          LOCKED='.obsidian/ 90 Templates/ scripts/ *.sh *.py *.js *.tldr **/cache.json **/.env* *.key *.pem'
+          base=$(git merge-base origin/main HEAD || git rev-parse HEAD~1)
+          changed=$(git diff --name-only --diff-filter=ACDMR "$base"..HEAD || true)
+          hit=""
+          for f in $changed; do
+            for glob in $LOCKED; do
+              case "$f" in
+                $glob) hit="$f"; break;;
+              esac
+            done
+            [ -n "$hit" ] && break
+          done
+          if [ -n "$hit" ]; then
+            echo "::error::Locked path changed on develop: $hit"
+            echo "The executable surface is only changed by merge-holders via main."
+            echo "::error::Owners: review and revert $hit on develop."
+            exit 1
+          fi
+          echo "locked-path check passed"
+
+      - name: Secret scan
+        run: |
+          if git grep -nE -i '(password|api[_-]?key|secret|BEGIN (RSA|EC|OPENSSH|DSA) PRIVATE KEY|ghp_[A-Za-z0-9]{36}|sk-[A-Za-z0-9]{20,})' HEAD -- . ':!tests' ':!*.md' | grep -qv ':' ; then
+            echo "::error::Possible secret in pushed content. Owners: rotate and remove."
+            exit 1
+          fi
+          echo "secret scan passed"

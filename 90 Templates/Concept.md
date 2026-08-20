@@ -21,9 +21,9 @@ publish-status: draft
 
 ## Intuition
 
-## Why It Matters
+## Why it matters
 
-## How It Works
+## How it works
 
 ## Example
 

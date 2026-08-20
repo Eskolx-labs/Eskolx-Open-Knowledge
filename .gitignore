@@ -33,7 +33,8 @@ secrets/
 .obsidian/plugins/highlightr-plugin/data.json
 
 # Related Notes local cache (machine state, regenerated on open)
-.obsidian/plugins/obsidian-related-notes/
+.obsidian/plugins/obsidian-related-notes/.bloom-filter-cache.json
+.obsidian/plugins/related-notes/.bloom-filter-cache.json
 
 # obsidian-git runtime credential helper (regenerated on sync)
 .obsidian/plugins/obsidian-git/obsidian_askpass.sh

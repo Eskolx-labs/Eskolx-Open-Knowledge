@@ -17,29 +17,29 @@ participants: ["Natnael-Getahun"]
 
 A tiny, real contribution in under 30 minutes.
 
-## Step 1 — Read
+## Step 1: Read
 
 [[Start Here]] and the [[Contributor Guide]].
 
-## Step 2 — Branch
+## Step 2: Branch
 
 ```bash
 git pull
 git checkout -b yourname/first-note
 ```
 
-## Step 3 — Write A Note
+## Step 3: Write A Note
 
-Use QuickAdd (`Mod+Shift+A`) → **New Concept** (or New Research). A good first contribution: a short atomic concept note in `02 Knowledge/` — e.g. *"What is the difference between a population and a sample?"* Fill in every section, even briefly.
+Use QuickAdd (`Mod+Shift+A`) → **New Concept** (or New Research). A good first contribution: a short atomic concept note in `02 Knowledge/`, e.g. *"What is the difference between a population and a sample?"* Fill in every section, even briefly.
 
-## Step 4 — Commit
+## Step 4: Commit
 
 ```bash
 git add .
 git commit -m "docs: add first contribution note"
 ```
 
-## Step 5 — Push And PR
+## Step 5: Push And PR
 
 ```bash
 git push -u origin yourname/first-note

@@ -67,10 +67,10 @@ views:
 ## How Decisions Work
 
 1. **Create** an EDR with QuickAdd → **New Decision** (`Ctrl+Shift+A`). It lands in `06 Publishing/` with the `EDR — YYYY-MM-DD — Title` name and `status: proposed`.
-2. **Write it up** — Context → Problem → Options Considered → Decision → Why → Consequences → Revisit Conditions. This is the decision log of the lab: if it's not in an EDR, it didn't happen.
-3. **Close the loop** — change `status` when the call is made (approved / declined / archived). A decision that stays `proposed` forever is a decision that never happened.
-4. **Set a `revisit:` date** (YYYY-MM-DD in frontmatter) when the call should be re-evaluated — it shows up under **Revisit Due** when the date passes. Use it for reversible or time-sensitive calls.
-5. **Link it** — from the EDR's `## Related` section, and to any note that the decision affects.
+2. **Write it up.** Context → Problem → Options Considered → Decision → Why → Consequences → Revisit Conditions. This is the decision log of the lab: if it's not in an EDR, it didn't happen.
+3. **Close the loop.** Change `status` when the call is made (approved / declined / archived). A decision that stays `proposed` forever is a decision that never happened.
+4. **Set a `revisit:` date** (YYYY-MM-DD in frontmatter) when the call should be re-evaluated. It shows up under **Revisit Due** when the date passes. Use it for reversible or time-sensitive calls.
+5. **Link it** from the EDR's `## Related` section, and to any note that the decision affects.
 
 ## Related
 

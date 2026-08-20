@@ -14,7 +14,7 @@ participants: ["Natnael-Getahun"]
 
 # What Is Eskolx
 
-Eskolx is a small research lab working toward **automated data analysis** — by rebuilding the tools analysts and statisticians normally use as black boxes, and teaching everything we learn.
+Eskolx is a small research lab working toward **automated data analysis** by rebuilding the tools analysts and statisticians normally use as black boxes, and teaching everything we learn.
 
 ## What We Do
 
@@ -29,8 +29,8 @@ Eskolx is a small research lab working toward **automated data analysis** — by
 
 ## What Eskolx Is Not
 
-- Not a content farm — public notes are curated and reviewed, never raw internal dumps
-- Not a big company — a small, focused lab
+- Not a content farm. Public notes are curated and reviewed, never raw internal dumps
+- Not a big company. A small, focused lab
 
 ## Where The Code Lives
 

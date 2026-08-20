@@ -15,7 +15,7 @@ participants: ["Natnael-Getahun"]
 
 # Obsidian CLI
 
-Obsidian ships an official CLI — anything you can do in Obsidian, you can do from the terminal. This is how agents (and you) script the vaults.
+Obsidian ships an official CLI. Anything you can do in Obsidian, you can do from the terminal. This is how agents (and you) script the vaults.
 
 ## Setup (one time)
 
@@ -67,4 +67,4 @@ Rules for agents: always work from a template, respect the folder routing in the
 
 ## Headless Sync
 
-Obsidian Sync can run without a GUI (headless) — useful for automated backups and server-side vault access. See https://obsidian.md/help/sync/headless
+Obsidian Sync can run without a GUI (headless). Useful for automated backups and server-side vault access. See https://obsidian.md/help/sync/headless

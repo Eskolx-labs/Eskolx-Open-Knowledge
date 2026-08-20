@@ -21,7 +21,7 @@ Be excellent to each other. Learning in public is collaborative.
 
 - Be respectful and constructive in reviews and discussion
 - Critique ideas, not people
-- Assume good faith — public notes are written by learners, not experts
+- Assume good faith. Public notes are written by learners, not experts
 - Flag errors in a helpful way (open an issue, propose a fix)
 
 ## Unacceptable

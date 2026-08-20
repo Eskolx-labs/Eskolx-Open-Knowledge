@@ -19,7 +19,7 @@ The full guide for contributors to Eskolx-Open.
 
 ## Required Reading First
 
-- [[Start Here]] — the non-negotiables (properties, tags, links, templates, note placement, atomic notes)
+- [[Start Here]] covers the non-negotiables (properties, tags, links, templates, note placement, atomic notes)
 - [[How To Contribute]]
 
 ## Note Standards
@@ -58,7 +58,7 @@ Never duplicate the same fact across folder + tag + property. Properties are can
 
 ## Tags
 
-Tags are only for topical/domain discovery that cuts across folders and projects — never for anything already captured by a property. Starter set (expand only when a real gap shows up):
+Tags are only for topical/domain discovery that cuts across folders and projects. Never for anything already captured by a property. Starter set (expand only when a real gap shows up):
 
 `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding #core-only`
 

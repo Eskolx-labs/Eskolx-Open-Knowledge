@@ -22,8 +22,8 @@ The Eskolx keyboard map. Same in both vaults.
 | `Ctrl+T`       | Templater: Create new note from template                   |
 | `Ctrl+Shift+A` | QuickAdd: Eskolx Command Center                            |
 | `Ctrl+Shift+P` | Git: Pull                                                  |
-| `Ctrl+Shift+S` | Git: Commit-and-sync                                       |
-| `Ctrl+Shift+U` | Git: Push                                                  |
+| `Ctrl+Shift+S` | Git: Push (auto-commit covers saving; see Guide — Git and Sync) |
+| `Ctrl+Shift+U` | Git: Push (alias)                                             |
 | `Ctrl+Shift+H` | Open Home                                                  |
 | `Ctrl+O`       | Quick switcher (open any note)                             |
 | `Ctrl+E`       | Toggle edit / reading view                                 |
@@ -37,24 +37,24 @@ The Eskolx keyboard map. Same in both vaults.
 
 ## Personal keys
 
-Your theme, accent, translucency, and enabled snippets live in `.obsidian/appearance.json`, which is **committed** so a fresh install looks right immediately. Personal overrides go in `.obsidian/snippets/eskolx-personal.css` — that one is gitignored and never pushed, so your individual tweaks never affect anyone else.
+Your theme, accent, translucency, and enabled snippets live in `.obsidian/appearance.json`, which is **committed** so a fresh install looks right immediately. Personal overrides go in `.obsidian/snippets/eskolx-personal.css`. That one is gitignored and never pushed, so your individual tweaks never affect anyone else.
 
 ## Changing keys
 
 Settings → Hotkeys → search the command name → click the `+` → press your keys.
 
 
-## Related Notes (Related Notes plugin)
+## Related notes (Related Notes plugin)
 
-- No hotkey by default — open the panel from the ribbon (paper-plane icon) or command palette ("Related Notes: Open related notes panel").
+- No hotkey by default. Open the panel from the ribbon (paper-plane icon) or command palette ("Related Notes: Open related notes panel").
 - Offline similarity search; no API key needed.
 
 ## Authorship dots (Eskolx Authorship plugin)
 
-**Dots are the only authorship display.** The per-line name/date gutter is OFF — the left margin is empty; the right margin carries the dots.
+**Dots are the only authorship display.** The per-line name/date gutter is OFF. The left margin is empty; the right margin carries the dots.
 
 - A dot marks the start of a contiguous chunk written by one person in one sitting.
 - Color = author (consistent across the whole vault).
 - Hover a dot to see author, date, branch, merge status, and commit subject.
-- The `participants` frontmatter property is machine-generated (scripts/authorship.py) — never hand-edit it.
-- Git blame / history still hold the full record (author + date per commit) — see Obsidian Git's History view.
+- The `participants` frontmatter property is machine-generated (scripts/authorship.py). Never hand-edit it.
+- Git blame / history still hold the full record (author + date per commit). See Obsidian Git's History view.

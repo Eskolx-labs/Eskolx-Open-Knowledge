@@ -17,11 +17,11 @@ publish-status: draft
 
 # <% tp.file.title %>
 
-## What It Is
+## What it is
 
-## Why We Recommend It
+## Why we recommend it
 
-## How To Use It
+## How to use it
 
 ## Related Concepts
 

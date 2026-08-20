@@ -20,7 +20,7 @@ Curated sequences through the vault. Start at the beginning of a path; each step
 
 1. [[Probability]] foundations
 2. Random variables and [[Expectation]]
-3. [[Distributions]] — build each one from scratch
+3. [[Distributions]]: build each one from scratch
 4. [[Monte Carlo]] methods
 5. [[Numerical Methods]]
 
@@ -37,4 +37,4 @@ Curated sequences through the vault. Start at the beginning of a path; each step
 2. Implement a data analysis pipeline from scratch
 3. Automate the pipeline
 
-> Each path is a suggestion, not a contract. Questions drive research — follow what interests you.
+> Each path is a suggestion, not a contract. Questions drive research. Follow what interests you.

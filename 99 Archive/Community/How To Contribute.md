@@ -29,7 +29,7 @@ Anyone can contribute. Start here.
 - Answer a research question ([[First Contribution]])
 - Write or improve a concept note in `02 Knowledge/`
 - Review open PRs on the GitHub repository
-- Point out errors in published notes — open an issue or PR
+- Point out errors in published notes. Open an issue or PR
 
 ## The Public Knowledge Pipeline
 
@@ -50,6 +50,6 @@ Before a knowledge note is published, it must be:
 
 If any answer is no, keep it in draft/review.
 
-## Git Workflow
+## Git workflow
 
 Branch-per-edit + PR. See [[Start Here]] for the exact steps. Never commit to `main`.

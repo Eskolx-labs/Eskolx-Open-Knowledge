@@ -16,7 +16,7 @@ participants: ["Natnael-Getahun"]
 
 Welcome to Eskolx. Read this before contributing.
 
-> [!insight] It's always **Eskolx Labs** — never Eskol or Eskolx. [[It's Always Eskolx Labs]]
+> [!insight] It's always **Eskolx Labs**. Never Eskol or Eskolx. [[It's Always Eskolx Labs]]
 
 ## What Eskolx Is
 
@@ -25,14 +25,14 @@ Welcome to Eskolx. Read this before contributing.
 ## The 3 Rules
 
 1. **If it matters, write it down.**
-2. **One note, one job** — atomic notes.
-3. **Properties are the canonical metadata** — `type`, `status`, `area`, `owner`, `created`, `updated`.
+2. **One note, one job.** Atomic notes.
+3. **Properties are the canonical metadata.** `type`, `status`, `area`, `owner`, `created`, `updated`.
 
 ## How Notes Work
 
-- **Folders** are broad domain buckets — `02 Knowledge/`, `07 Research/`, `01 Projects/` etc. Never deep subfolders.
+- **Folders** are broad domain buckets like `02 Knowledge/`, `07 Research/`, `01 Projects/`. Never deep subfolders.
 - **Properties** (YAML frontmatter) say what a note is. Query them with Bases and Dataview.
-- **Links** say what a note connects to — link meaningful concepts as you write: `[[Student t distribution]]`.
+- **Links** say what a note connects to. Link meaningful concepts as you write: `[[Student t distribution]]`.
 - **Tags** are only for cross-cutting topical discovery: `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding #core-only`. `type`, `status`, `area` never become tags.
 
 ## Always Work From A Template
@@ -52,9 +52,9 @@ Use the **QuickAdd** menu (`Mod+Shift+A`): New Research / New Concept / New Proj
 | research | `07 Research/` |
 | idea | `08 Lounge/` |
 
-## The Git Workflow (Building Phase)
+## The git workflow (building phase)
 
-**While we're building, commits go straight to `main`** — pull → work → commit → push. No branch ceremony yet.
+**While we're building, commits go straight to `main`**: pull → work → commit → push. No branch ceremony yet.
 
 **Later (when outside contributors arrive):** `main` becomes protected (PR-only, 1 review required) and work moves to topic branches (`yourname/topic`). The PR *is* the review step. We'll flip that switch when the first outside contributor shows up.
 
@@ -75,4 +75,4 @@ These are per-machine, so every new machine needs them once:
 
 1. **Enable the CLI**: Settings → General → **Command line interface** → follow the on-screen instructions to register `obsidian` on your PATH. See [[Obsidian CLI]].
 2. **Enable plugins**: when Obsidian asks "Trust author and enable plugins?" → **Trust**.
-3. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"` — this is what shows up in commit attribution and the authorship dots.
+3. **Set your git identity** (if not already): `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"`. This is what shows up in commit attribution and the authorship dots.

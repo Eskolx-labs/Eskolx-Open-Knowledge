@@ -264,6 +264,37 @@
           "fileExistsBehavior": {
             "kind": "prompt"
           }
+        },
+        {
+          "name": "New Person",
+          "id": "c7d2a1e0-0006-4000-8000-000000000006",
+          "type": "Template",
+          "command": false,
+          "templatePath": "90 Templates/Person.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Role}} \u2014 {{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "05 People"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFile": true,
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "mode": "live",
+            "focus": true
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
         }
       ],
       "collapsed": false,

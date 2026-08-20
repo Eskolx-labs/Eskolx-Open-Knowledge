@@ -14,7 +14,7 @@ participants: ["Natnael-Getahun"]
 
 # Review Queue
 
-> Open pull requests on Eskolx-Open and what's waiting on your review. The PR *is* the review step — nothing merges to `main` without one once branch protection is on.
+> Open pull requests on Eskolx-Open and what's waiting on your review. The PR *is* the review step. Nothing merges to `main` without one once branch protection is on.
 
 ## PRs Awaiting My Review
 
@@ -59,13 +59,13 @@ if (res.ok) {
 
 ## How To Review
 
-1. **Open the PR** (link above) and read the note it adds — the diff is the note file.
+1. **Open the PR** (link above) and read the note it adds. The diff is the note file.
 2. **Check the quality gate**: is it correct, understandable, referenced, self-contained, free of private info and secrets, and learnable by another student? See [[Start Here]] and [[Contributor Guide]].
 3. **Check the mechanics**: properties follow the schema, `publish-status` is `draft` or `review`, tags are topical only, no duplicate content, no secrets.
-4. **Approve or request changes** with a specific note — one concrete comment beats three vague ones.
+4. **Approve or request changes** with a specific note. One concrete comment beats three vague ones.
 5. **Merge** when green. The author is done when the maintainer says so.
 
-> First time? The perfect first contribution is a tiny, real fix — see [[First Contribution]].
+> First time? The perfect first contribution is a tiny, real fix. See [[First Contribution]].
 
 ## Related
 

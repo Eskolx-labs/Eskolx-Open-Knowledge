@@ -15,7 +15,7 @@ participants: ["Natnael-Getahun"]
 
 # It's Always Eskolx Labs
 
-**Eskolx Labs** — never "Eskol", never "Eskolx" alone, never "Eskolx Lab".
+**Eskolx Labs**. Never "Eskol", never "Eskolx" alone, never "Eskolx Lab".
 
 One line, everywhere: docs, notes, talks, code comments, commit messages.
 

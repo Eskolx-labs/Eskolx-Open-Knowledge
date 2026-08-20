@@ -11,11 +11,11 @@ participants: ["Natnael-Getahun"]
 
 ![Home cover|78](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
 
-# Eskolx Labs — Open
+# Eskolx Labs Open
 
 > **Build. Understand. Share.** A public research + learning library for statistics, statistical computing, and data analysis automation.
 
-> [!insight] It's always **Eskolx Labs** — never Eskol or Eskolx. [[It's Always Eskolx Labs]]
+> [!insight] It's always **Eskolx Labs**. Never Eskol or Eskolx. [[It's Always Eskolx Labs]]
 
 ## Start Here
 
@@ -75,7 +75,7 @@ views:
 
 ## Recent Changes
 
-The 20 most recently edited notes. Scroll the table to see further back — it lists every change, not just since your last visit.
+The 20 most recently edited notes. Scroll the table to see further back. It lists every change, not just since your last visit.
 
 ```base
 filters:
