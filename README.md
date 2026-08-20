@@ -16,7 +16,7 @@ Obsidian is a free note-taking app that reads and writes plain Markdown files. T
 4. **Done.** The theme, accent, translucency, and the `eskolx` snippet load automatically. Your personal tweaks go in `.obsidian/snippets/eskolx-personal.css` (gitignored, stays yours).
 5. **Start here:** press `Ctrl+Shift+H` to open Home, then `Ctrl+Shift+A` for the **Eskolx Command Center** menu.
 
-**Never used Obsidian?** Open `00 Home/Eskolx Guide.md` in the vault. It's a five-guide course from "what is a vault?" to publishing research. There's also a guided verification tour in `USER_CHECKLIST.md` in the `eskolx-tests` repo.
+**Never used Obsidian?** Open `00 Home/Eskolx Guide.md` in the vault. It's a five-guide course from "what is a vault?" to writing sourced notes. There's also a guided verification tour in `USER_CHECKLIST.md` in the `eskolx-tests` repo.
 
 ## Folder Structure
 
