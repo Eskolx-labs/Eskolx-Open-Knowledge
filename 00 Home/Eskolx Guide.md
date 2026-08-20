@@ -57,5 +57,5 @@ Full map: [[Keybindings]].
 ## Reference
 
 - [[Keybindings]] · [[Obsidian CLI]] · [[The Eskolx Labs Rules]]
-- Verification checklist for fresh installs: `USER_CHECKLIST.md` at the repository root.
+- Verification checklist for fresh installs: `USER_CHECKLIST.md` in the `eskolx-tests` repo.
 - **The test suite** `bash tests/run_tests.sh` (from the repo root) runs 300+ checks against fresh clones in a container. If you're ever unsure whether the vault is healthy, run it.
