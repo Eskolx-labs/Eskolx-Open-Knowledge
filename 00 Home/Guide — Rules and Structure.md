@@ -26,7 +26,7 @@ The vault runs on a small set of rules (full text: [[The Eskolx Labs Rules]]). T
 5. **Always work from a template.** Templates live in `90 Templates/` and self-route. Never hand-write from scratch.
 6. **Folders are broad buckets.** No deep nesting. `02 Knowledge/`, never `02 Knowledge/Statistics/Probability/…`.
 7. **Tags are topical only.** `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding`. `type`/`status`/`area` never become tags.
-8. **Link meaningful concepts.** `[[Monte Carlo]]`, not every common word.
+8. **Link meaningful concepts.** `[[Eskolx Guide]]`, not every common word.
 9. **Tasks live in their note.** In the project/decision/meeting note they're about, with `#assignee/name` and `📅` dates. Home surfaces them.
 10. **Run the test suite before finishing.** `bash tests/run_tests.sh`.
 11. **Grep for secrets before any push.**
@@ -109,7 +109,7 @@ The automated suite enforces these. A note with `status: maybe` fails the build.
 
 - **Queryable** because dashboards (Home, Research Shelf, Published Shelf) are just property queries. Messy properties = broken dashboards.
 - **Portable** because plain Markdown + Git means the knowledge outlives any tool.
-- **Honest** because `publish-status` makes the lab's publication state visible instead of assumed.
+- **Honest** because `publish-status` makes the library's published vs in-progress state visible instead of assumed.
 - **Testable** because 300+ checks run in a container against fresh clones, so a "fresh install" is guaranteed to work, not hoped to.
 
 ## The Quality Gate (Open)

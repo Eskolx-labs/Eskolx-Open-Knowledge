@@ -119,7 +119,7 @@ cover: https://…
 | Tool | Use for | Example |
 |---|---|---|
 | **Properties** | Canonical facts you query | `status: active`, `type: decision` |
-| **Links** | Connections between notes | `[[Monte Carlo]]` |
+| **Links** | Connections between notes | `[[Eskolx Guide]]` |
 | **Tags** | Topical discovery across folders | `#distributions`, `#tooling` |
 
 Eskolx keeps these roles strict: `type`/`status`/`area` never become tags, and tags are topical only. That keeps the dashboards reliable.

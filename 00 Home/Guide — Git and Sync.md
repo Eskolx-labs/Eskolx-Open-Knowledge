@@ -38,8 +38,8 @@ Your deliberate hotkeys:
 | Hotkey | Command | When to use |
 |---|---|---|
 | `Ctrl+Shift+P` | Git: Pull | Before a long work session |
-| `Ctrl+Shift+S` | Commit-and-sync | After finishing a chunk of work |
-| `Ctrl+Shift+U` | Git: Push | When you want it on GitHub now |
+| `Ctrl+Shift+S` | Git: Push (auto-commit covers saving) | When you want it on GitHub now |
+| `Ctrl+Shift+U` | Git: Push (alias) | Same as above |
 
 ## The commit discipline
 
