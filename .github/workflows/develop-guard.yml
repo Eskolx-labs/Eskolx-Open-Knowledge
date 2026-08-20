@@ -21,11 +21,12 @@ jobs:
         run: |
           set -e
           LOCKED='.obsidian/ 90 Templates/ scripts/ *.py *.sh *.js **/cache.json **/.env* *.key *.pem'
-          # base: develop for subbranches, main for develop itself
-          if git show-ref --verify -q refs/remotes/origin/develop; then
-            base=$(git merge-base origin/develop HEAD || echo "$(git rev-parse HEAD~1)")
-          else
+          # base: for develop pushes diff against main (the reviewed baseline);
+          # for subbranches diff against develop (the fork point).
+          if [ "$GITHUB_REF_NAME" = "develop" ]; then
             base=$(git merge-base origin/main HEAD || echo "$(git rev-parse HEAD~1)")
+          else
+            base=$(git merge-base origin/develop HEAD || git merge-base origin/main HEAD || echo "$(git rev-parse HEAD~1)")
           fi
           changed=$(git diff --name-only --diff-filter=ACDMR "$base"..HEAD || true)
           hit=""
@@ -48,10 +49,10 @@ jobs:
       - name: Secret scan (added lines only)
         run: |
           set -e
-          if git show-ref --verify -q refs/remotes/origin/develop; then
-            base=$(git merge-base origin/develop HEAD || true)
-          else
+          if [ "$GITHUB_REF_NAME" = "develop" ]; then
             base=$(git merge-base origin/main HEAD || true)
+          else
+            base=$(git merge-base origin/develop HEAD || git merge-base origin/main HEAD || true)
           fi
           diff=$(git diff "$base"..HEAD || true)
           if grep -E '^\+' <<< "$diff" | grep -vE '^\+\+\+' | grep -qE -i \
