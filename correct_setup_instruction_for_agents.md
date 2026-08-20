@@ -1,4 +1,15 @@
+---
+type: concept
+status: active
+area: tooling
+cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Gear_icon.svg/500px-Gear_icon.svg.png
+tags: [tooling, onboarding]
+publish-status: published
+---
+
 # Correct Setup Instructions for Agents
+
+![Correct Setup Instructions cover](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Gear_icon.svg/500px-Gear_icon.svg.png)
 
 Purpose: bring a fresh clone of an Eskolx vault on a new machine to a fully working state: correct branch, authenticated git sync, all plugins enabled, correct theme, working tldraw, templates, QuickAdd, authorship dots. Follow every step. Do not skip verification.
 
