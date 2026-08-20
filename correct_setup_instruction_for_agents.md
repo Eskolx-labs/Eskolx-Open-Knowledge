@@ -108,6 +108,8 @@ bash scripts/sync.sh
 
 Expected: a pull from `develop` happens; if there are local changes they are committed and pushed to your subbranch. On Open while on `main` or `develop` it prints `sync.sh: on <branch> - pulling read-only` and exits 0 - that is correct behavior, but you must still run `scripts/install-hooks.sh` (Step 2) so you are on your subbranch.
 
+If sync.sh exits non-zero with "push blocked by the guard", a note contains a secret or a locked path was touched. sync.sh rolled back its backup commit (the blocked content is not in local history). Fix the flagged file and run sync.sh again.
+
 The user must also add a GitHub Personal Access Token for Obsidian Git if `gh` is not usable inside Obsidian's terminal. Do this only if the in-app push fails:
 
 1. GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic), scope `repo`.
@@ -248,7 +250,8 @@ If any check fails, fix the cause before reporting. Do not report success with a
 |---|---|---|
 | Plugins greyed out / theme not applied | Community plugins not trusted | Settings → Community plugins → enable, or reopen vault and click **Trust** |
 | `Push to main`/`develop` rejected (Open) | both branches are protected | Work on your subbranch `participants/<username>`. Only merge-holders update develop/main |
-| Guard blocks my push (Open) | pre-push hook | `scripts/install-hooks.sh` should already have installed it; read the block message: main push, locked path (`.obsidian/`, `90 Templates/`, `scripts/`, `*.py`, `*.sh`, `*.js`, `cache.json`), or a possible secret. Fix the cause and push again |
+| Guard blocks my push (Open) | pre-push hook | `scripts/install-hooks.sh` should already have installed it; read the block message: main push, locked path (`.obsidian/`, `90 Templates/`, `scripts/`, `*.py`, `*.sh`, `*.js`, `cache.json`, `.env*`), or a possible secret. Fix the cause and push again |
+| `sync.sh` exits non-zero "push blocked by the guard" | secret or locked path in the push | sync.sh rolled back its backup commit. The flagged file is still on disk. Fix it and run `sync.sh` again |
 | `gh` not authenticated | no login | `gh auth login` |
 | `sync.sh: gh: not found` | gh not on PATH for the script | install gh, or run the sync from Obsidian Git instead |
 | `error: src refspec develop does not match any` | branch missing locally | `bash scripts/install-hooks.sh` recreates your subbranch; for the integration branch: `git fetch origin develop:refs/remotes/origin/develop` |

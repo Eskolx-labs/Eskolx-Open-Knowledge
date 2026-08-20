@@ -117,8 +117,9 @@ GitHub is a backup, not *the* backup. Target the 3-2-1 mindset: **Laptop A + Lap
 1. **Check the status bar.** Is it stuck on "Pull failed" or "Push failed"?
 2. **Authentication.** GitHub may be asking for credentials. Use a personal access token with repo scope, or SSH keys. Never paste a token into the vault.
 3. **Conflicts.** A conflicted file blocks sync until resolved (see above).
-4. **Network.** Offline means no sync; everything still works locally.
-5. Still stuck → run `bash tests/run_tests.sh` to check vault health, and read the git error in Settings → Obsidian Git.
+4. **Guard block.** If `sync.sh` exits non-zero with "push blocked by the guard", a note contains a secret or a locked path was touched. `sync.sh` rolled back its own backup commit, so the blocked content is not in local history. The note is still on disk. Fix the flagged file (listed in the error output) and run `sync.sh` again.
+5. **Network.** Offline means no sync; everything still works locally.
+6. Still stuck → run `bash tests/run_tests.sh` to check vault health, and read the git error in Settings → Obsidian Git.
 
 ## Where to go next
 

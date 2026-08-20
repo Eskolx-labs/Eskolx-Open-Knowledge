@@ -30,6 +30,7 @@ jobs:
           *.js
           **/cache.json
           **/.env*
+          .env*
           *.key
           *.pem
           '
