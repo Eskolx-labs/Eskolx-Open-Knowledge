@@ -4,7 +4,7 @@
 
 ## System
 
-The full system architecture lives in `spec.md` at the repository root. This vault is the public learning library; the private org-management vault is Eskolx-Core.
+The full system architecture lives in `spec.md` in the `Eskolx-labs/eskolx-tests` repo. This vault is the public learning library; the private org-management vault is Eskolx-Core.
 
 ## Quick Start (if you've never used Obsidian)
 
@@ -16,11 +16,7 @@ Obsidian is a free note-taking app that reads and writes plain Markdown files. T
 4. **Done.** The theme, accent, translucency, and the `eskolx` snippet load automatically. Your personal tweaks go in `.obsidian/snippets/eskolx-personal.css` (gitignored, stays yours).
 5. **Start here:** press `Ctrl+Shift+H` to open Home, then `Ctrl+Shift+A` for the **Eskolx Command Center** menu.
 
-**Never used Obsidian?** Open `00 Home/Eskolx Guide.md` in the vault. It's a five-guide course from "what is a vault?" to publishing research. There's also a guided verification tour in `USER_CHECKLIST.md` at the repository root.
-
-## System
-
-Read the system plan documents at the repository root (one level up from this vault). The newer plan is authoritative; the earlier draft is kept for reference.
+**Never used Obsidian?** Open `00 Home/Eskolx Guide.md` in the vault. It's a five-guide course from "what is a vault?" to publishing research. There's also a guided verification tour in `USER_CHECKLIST.md` in the `eskolx-tests` repo.
 
 ## Folder Structure
 
