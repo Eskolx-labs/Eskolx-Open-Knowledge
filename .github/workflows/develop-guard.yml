@@ -20,7 +20,19 @@ jobs:
       - name: Detect locked-path changes
         run: |
           set -e
-          LOCKED='.obsidian/ 90 Templates/ scripts/ *.py *.sh *.js **/cache.json **/.env* *.key *.pem'
+          # line-separated so paths with spaces (90 Templates/) survive the loop
+          LOCKED='
+          .obsidian/**
+          90 Templates/**
+          scripts/**
+          *.py
+          *.sh
+          *.js
+          **/cache.json
+          **/.env*
+          *.key
+          *.pem
+          '
           # base: for develop pushes diff against main (the reviewed baseline);
           # for subbranches diff against develop (the fork point).
           if [ "$GITHUB_REF_NAME" = "develop" ]; then
@@ -30,14 +42,16 @@ jobs:
           fi
           changed=$(git diff --name-only --diff-filter=ACDMR "$base"..HEAD || true)
           hit=""
-          for f in $changed; do
-            for glob in $LOCKED; do
+          while IFS= read -r glob; do
+            [ -z "$glob" ] && continue
+            while IFS= read -r f; do
+              [ -z "$f" ] && continue
               case "$f" in
                 $glob) hit="$f"; break;;
               esac
-            done
+            done <<< "$changed"
             [ -n "$hit" ] && break
-          done
+          done <<< "$LOCKED"
           if [ -n "$hit" ]; then
             echo "::error::Locked path changed: $hit"
             echo "The executable surface is only changed by merge-holders via main."
