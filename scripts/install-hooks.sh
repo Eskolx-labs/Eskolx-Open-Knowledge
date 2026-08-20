@@ -17,7 +17,7 @@ echo "installed .git/hooks/pre-push"
 
 current="$(git symbolic-ref --short HEAD 2>/dev/null || echo detached)"
 if [[ "$current" != "develop" ]]; then
-  git fetch origin develop 2>/dev/null || true
+  git fetch origin develop:refs/remotes/origin/develop 2>/dev/null || true
   if git show-ref --verify refs/remotes/origin/develop >/dev/null 2>&1; then
     git checkout -q -B develop origin/develop
     echo "on develop (live shared branch)"
