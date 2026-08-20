@@ -11,6 +11,12 @@
 #     with everyone), commits, pushes the subbranch.
 #   - On any other branch: pulls that branch's upstream, commits, pushes to it.
 #
+# Rollback: if the pre-push guard blocks the push (secret or locked path),
+# sync.sh undoes its own backup commit so the blocked content does not linger
+# in local history. The working tree is preserved (the user's note is still on
+# disk); only the auto-commit is removed. The user can fix the note and the
+# next sync.sh run will commit and push the fixed version.
+#
 # Usage:
 #   scripts/sync.sh            # pull, commit if changed, push
 #   scripts/sync.sh --once     # same (used by timers)
@@ -22,7 +28,7 @@ cd "$(dirname "$0")/.."
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --once) shift ;;
-    -h|--help) sed -n '1,44p' "$0"; exit 0 ;;
+    -h|--help) sed -n '1,52p' "$0"; exit 0 ;;
     *) echo "sync.sh: unknown option '$1'" >&2; exit 2 ;;
   esac
 done
@@ -64,14 +70,48 @@ fi
 
 # 2/3. stage everything (incl. new files), commit only if something changed
 git add -A
+committed=0
 if ! git diff --cached --quiet; then
   "${GITC[@]}" commit -q -m "vault backup: $(date +%Y-%m-%d)" \
-    || echo "warn: commit failed" >&2
+    && committed=1 || echo "warn: commit failed" >&2
 fi
 
 # 4. push the subbranch (no-op if nothing to push)
 if git rev-parse --verify HEAD >/dev/null 2>&1 \
    && [[ -n "$(git log --oneline "@{u}"..HEAD 2>/dev/null)" ]]; then
-  "${GITC[@]}" push -q origin "$branch" \
-    && echo "ok: pushed $branch" || echo "warn: push failed" >&2
+  if "${GITC[@]}" push -q origin "$branch" 2>&1; then
+    echo "ok: pushed $branch"
+  else
+    # Push failed. If the pre-push guard blocked it, roll back our backup
+    # commit so the blocked content (secret, locked path) does not sit in
+    # local history waiting for the next sync to retry.
+    quarantine="$(git rev-parse --git-dir)/eskolx-quarantine.txt"
+    if [[ -f "$quarantine" ]]; then
+      if [[ "$committed" == "1" ]]; then
+        git reset -q --soft HEAD~1
+        # unstage the quarantined files so they don't get recommitted
+        # immediately on the next run; the user needs to fix them first
+        while IFS= read -r f; do
+          [[ -n "$f" ]] && git reset -q HEAD -- "$f" 2>/dev/null || true
+        done < "$quarantine"
+        echo "error: push blocked by the guard. Backup commit rolled back." >&2
+        echo "Fix these files and sync again:" >&2
+        cat "$quarantine" >&2
+      else
+        echo "error: push blocked by the guard." >&2
+        echo "Blocked files:" >&2
+        cat "$quarantine" >&2
+      fi
+      rm -f "$quarantine"
+      exit 1
+    fi
+    echo "error: push failed (not a guard block). Check gh auth and network." >&2
+    exit 1
+  fi
 fi
+
+# clean up any stale quarantine file from a previous run
+quarantine="$(git rev-parse --git-dir)/eskolx-quarantine.txt"
+rm -f "$quarantine"
+
+exit 0

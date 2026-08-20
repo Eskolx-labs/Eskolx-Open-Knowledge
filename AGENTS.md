@@ -23,7 +23,7 @@ This is the **public** Eskolx learning library. Agents working here must follow 
 6. **Always work from a template.** Templates live in `90 Templates/` and self-route via `tp.file.move`. Never hand-write from scratch.
 7. **Folders are broad buckets.** Never deep subfolders.
 8. **Tags are topical only.** `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding`. `type`/`status`/`area` never become tags.
-9. **Review flow.** New notes start `publish-status: draft`. They become `published` only after a maintainer reviews them against the quality gate.
+9. **Review flow.** New notes start `publish-status: draft`. A maintainer flips to `review` when they start checking the note against the quality gate, then to `published` when it passes. Home's Needs Attention shelf surfaces notes in `review`.
 10. **Run the test suite before finishing.** `bash tests/run_tests.sh` from the `Eskolx-labs/eskolx-tests` repo (clone it locally).
 11. **Grep for secrets before any push.** `rg -i "password|api[_-]?key|token|BEGIN.*PRIVATE KEY" .`
 
@@ -32,7 +32,8 @@ This is the **public** Eskolx learning library. Agents working here must follow 
 - `main` is protected. Only merge-holders (Nat, Barkilign) push to it.
 - `develop` is the integration branch, maintained by merge-holders.
 - Every participant has a personal subbranch `participants/<username>`, created by `scripts/install-hooks.sh`. Auto-sync: pull `develop`, push your subbranch.
-- Locked paths (`.obsidian/`, `90 Templates/`, `scripts/`, any `*.py`, `*.sh`, `*.js`, `**/cache.json`) can only be changed by merge-holders via `main`. Participants never modify them.
+- Locked paths (`.obsidian/`, `90 Templates/`, `scripts/`, any `*.py`, `*.sh`, `*.js`, `**/cache.json`, `.env*`) can only be changed by merge-holders via `main`. Participants never modify them.
+- If the pre-push guard blocks a push (secret, locked path), it writes the flagged files to `.git/eskolx-quarantine.txt`. `sync.sh` then rolls back its own backup commit so the blocked content does not linger in local history, and exits non-zero. The note is still on disk. Fix the flagged file and run `sync.sh` again. Do not force anything.
 
 ## Note types and folders
 
