@@ -14,7 +14,7 @@ participants: ["Natnael-Getahun"]
 
 # Eskolx Guide
 
-> Everything you need to use an Eskolx vault, from "what is Obsidian?" to publishing research. New to Obsidian? Start with **Guide — Obsidian Basics** and work through in order.
+> Everything you need to use an Eskolx vault, from "what is Obsidian?" to writing sourced notes for the library. New to Obsidian? Start with **Guide — Obsidian Basics** and work through in order.
 
 ## Reading Path
 
@@ -43,15 +43,15 @@ Start here and follow the order. Each guide assumes the previous one:
 
 Full map: [[Keybindings]].
 
-## Built for research publications
+## Built as a learning library
 
-- **Research → published pipeline.** Notes start `publish-status: draft`, move through review, and become `published` (the PR is the review). See **Guide — Workflows**.
-- **Vault Health / Reviews.** The PR review queue. Nothing informal lives here anymore.
+- **Review flow.** Notes start `publish-status: draft`, move through review, and become `published` when a maintainer has checked them against the quality gate. The merge to `main` is the review. See **Guide — Workflows**.
+- **Vault Health / Reviews.** The review queue. Nothing informal lives here.
 - **Manual sync.** If Obsidian isn't open, `scripts/sync.sh` pulls/commits/pushes for you.
 
 ## Vault-specific entry points
 
-- **This vault is Eskolx-Open** (public research publications + learning library). Start with [[Home]], [[Eskolx Guide]], [[Keybindings]].
+- **This vault is Eskolx-Open** (public learning library). Start with [[Home]], [[Eskolx Guide]], [[Keybindings]].
 - The private sibling vault (Eskolx-Core) is for founders only. The two vaults share the same tooling and rules; only the content is private vs public.
 
 ## Reference

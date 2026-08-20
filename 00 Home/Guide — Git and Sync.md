@@ -55,16 +55,16 @@ Auto-sync handles trivial edits, but **deliberate commits win**:
 
 Both vaults live in the **Eskolx Labs GitHub org** (`Eskolx-labs/Eskolx-Open-Knowledge` public, `Eskolx-labs/Eskolx-Core-Knowledge` private). Access:
 
-- **Merge-holders** (Natnael + Barkilign, the org owners) can merge to `main` in both repos.
-- **Participants** have write access to Open: push to `develop`, never to `main`.
+- **Merge-holders** (Natnael + Barkilign, the org owners) merge to `main` in both repos.
+- **Participants** have write access to Open: their own subbranch `participants/<username>`, never `main` or `develop`.
 - **Core (private)** is for the core team only. Commits go **straight to `main`**. Small group; pull → work → commit → push.
 
 **Open branch model:**
 
-- `main` is **protected**: only merge-holders merge to it, via GitHub's native compare-and-merge. The merge is the review.
-- `develop` is the **live shared branch**: participants auto-push to `develop` and auto-pull from it. Everyone sees everyone's research and implementations live.
+- `main` and `develop` are **protected**: only merge-holders push to them, via GitHub's native compare-and-merge. The merge is the review.
+- Every participant works on their own subbranch `participants/<username>`, created by `scripts/install-hooks.sh` off `develop`. Auto-sync pulls `develop` (staying current with everyone) and pushes the subbranch.
 - **Merge ≠ publish.** Merging gets a note into the library; a maintainer flips `publish-status` to `published` after checking the quality gate.
-- **Locked paths** (`.obsidian/`, `90 Templates/`, `scripts/`, executable files) change only via `main`. Participants never modify them. The pre-push guard (`scripts/install-hooks.sh`) enforces this locally; CI re-checks on `develop`.
+- **Locked paths** (`.obsidian/`, `90 Templates/`, `scripts/`, executable files) change only via `main`. Participants never modify them. The pre-push guard (`scripts/install-hooks.sh`) enforces this locally; CI re-checks on every push.
 
 ## Conflicts: what they are, what to do
 
@@ -78,7 +78,7 @@ their version
 >>>>>>> branch-name
 ```
 
-**Don't panic.** Follow the conflict protocol (the Core vault's Founder Working Agreement documents it):
+**Don't panic.** Follow the conflict protocol:
 
 1. **Stop** editing the conflicted file.
 2. **Back up** the vault first.
@@ -87,7 +87,7 @@ their version
 5. **Verify** the file renders and links work in Obsidian.
 6. **Commit the resolution and push.**
 
-**Prevention beats resolution.** Pull before editing shared notes (`Home.md`, `Roadmap.md`), and don't have two people editing the same hot notes at once. Auto-commit runs before auto-pull, so the working tree is always clean and a pull is a merge, never a reset.
+**Prevention beats resolution.** Pull before editing shared notes (`Home.md`), and don't have two people editing the same hot notes at once. Auto-commit runs before auto-pull, so the working tree is always clean and a pull is a merge, never a reset.
 
 ## What must never go in the vault
 

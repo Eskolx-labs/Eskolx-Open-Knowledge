@@ -24,7 +24,7 @@ Everything in the vault is a Git repo; this plugin makes Git invisible. It **aut
 - **If it disappears:** use command-line Git. The vault is still just a repo.
 
 ### QuickAdd: the command center
-`Ctrl+Shift+A` opens **Eskolx Command Center**: New Project/Research/Concept/Resource/Tutorial/Daily Note, Insert Dataview Block, Open Home. Every choice applies a template and auto-routes the note.
+`Ctrl+Shift+A` opens **Eskolx Command Center**: New Project/Research/Concept/Resource/Tutorial/Person/Daily Note, Insert Dataview Block, Open Home. Every choice applies a template and auto-routes the note.
 - **If it disappears:** use `Ctrl+T` (Templater) for templates and the command palette for everything else.
 
 ### Templater: the template engine
