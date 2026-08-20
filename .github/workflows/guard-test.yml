@@ -1,0 +1,24 @@
+name: guard-test
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - participants/**
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  guard-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run guard test
+        run: bash tests/guard_test.sh
