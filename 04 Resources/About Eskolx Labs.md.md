@@ -12,7 +12,7 @@ tags: [resources]
 participants: []
 publish-status: draft
 ---
-
+Eskolx is an open source 
 
 
 # About Eskolx Labs
