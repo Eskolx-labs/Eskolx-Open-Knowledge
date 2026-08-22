@@ -1,14 +1,14 @@
 ---
-type: resource
-cover: 
-status: active
-area: 
+type:
+cover: https://upload.wikimedia.org/wikipedia/commons/3/31/Key_enter_icon_02.png
+status: draft
+area:
 kind: paper
-url: 
+url:
 created: 2026-08-22
 updated: 2026-08-22
-author: 
-tags: [resources]
+author: barkilign
+tags:
 participants: []
 publish-status: draft
 ---
