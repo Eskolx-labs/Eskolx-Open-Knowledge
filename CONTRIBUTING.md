@@ -7,8 +7,11 @@ Anyone can contribute. This is a public learning library. Notes are written by l
 - Write or improve a concept note in `02 Knowledge/`
 - Answer a research question in `04 Research/`
 - Add a curated resource to `03 Resources/`
+- Add or improve a project page in `01 Projects/`
+- Draw a tldraw diagram for a note that lacks one
 - Review open pull requests
 - Point out errors in published notes. Open an issue or a PR
+- Improve the docs in `docs/` (guides, workflows, how-tos)
 
 ## The quality gate
 
@@ -50,28 +53,47 @@ If any answer is no, keep it in draft/review.
 
 ## Note standards
 
+Templates live in `90 Templates/` and self-route to the right folder. Use them. The sections below are the shape a good note takes, not a checklist you must fill every line of. Write what the note needs.
+
 ### Concept notes (`02 Knowledge/`)
 
-Definition → Intuition → Why It Matters → How It Works → Example → Common Mistakes → Implementation → Related Concepts → References
+Definition, Intuition, Why it matters, How it works, Example, Common Mistakes, Implementation, Related Concepts, References.
 
 ### Research notes (`04 Research/`)
 
-Motivation → Method → Results → Discussion → Open Questions → Related Concepts → References
+Abstract, Motivation, Method, Results, Discussion, Open Questions, Related Concepts, References.
 
 ### Resource notes (`03 Resources/`)
 
-What it is → Why we recommend it → How to use it → Related Concepts → Notes
+What it is, Why we recommend it, How to use it, Related Concepts, Notes.
 
 ### Project notes (`01 Projects/`)
 
-Purpose → Outcome → Current Status → Milestones → Current Work → Blockers → Open Questions → Knowledge → Decisions → Contributors → GitHub → Next Actions
+Purpose, Outcome, Current Status, Milestones, Current Work, Blockers, Open Questions, Knowledge, Decisions, Contributors, GitHub, Next Actions.
+
+## Linking
+
+**Link as much as you can.** Every note should connect to every other note it relates to. Use `[[Note Name]]` for anything already in the vault, and create the note if it does not exist yet. A note that links nothing is a dead end. The graph is the library's index; links are what make it navigable.
+
+- Link related concepts, not just the obvious ones.
+- Link the note that explains a term you use.
+- Link the project a research note feeds into.
+- Link the resource a concept note draws from.
+
+## Diagrams
+
+**Most notes should come with a tldraw diagram.** A picture of the idea beats a paragraph of text. Draw the concept, the flow, the relationship, the mistake. Save it as a real file under `90 Attachments/animations/` and embed it in the note.
+
+- New to tldraw? See [docs/tldraw.md](docs/tldraw.md) for how to create, save, and embed a diagram.
+- Diagrams must survive a fresh clone. Follow the portability rules in [docs/tldraw.md](docs/tldraw.md).
+- If a note already has a diagram, improve it or leave it. Do not duplicate.
 
 ## Properties
 
 Use only properties you will actually query:
 
 ```yaml
-type: concept        # project | concept | resource | research | daily
+type: concept        # project | concept | resource | research
 status: draft        # per-type controlled values
 area: statistics     # statistics | numerical-methods | computing | ...
 created: 2026-09-02
@@ -112,8 +134,9 @@ The PR is the review step. When reviewing:
 
 1. Does it stand on its own for someone outside the room?
 2. Correct, referenced, self-contained, no private info, no secrets?
-3. Properties and links follow the standards above?
-4. Is it atomic (one note, one job)?
+3. Is it well linked? Does it connect to everything it relates to?
+4. Does it have a diagram where one would help?
+5. Is it atomic (one note, one job)?
 
 ## Code of conduct
 

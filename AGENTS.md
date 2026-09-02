@@ -29,7 +29,7 @@ Bring a fresh clone to a working state. Follow every step; do not skip verificat
    ```bash
    touch .obsidian/snippets/eskolx-personal.css
    ```
-6. **Verify templates.** `Ctrl+T` opens the template picker (Concept, Daily, Project, Research, Resource). `Ctrl+Shift+A` opens the Eskolx Command Center. Create one test note from a template; it must auto-route to the correct folder and contain no raw `<% %>` text. Delete the test note afterwards.
+6. **Verify templates.** `Ctrl+T` opens the template picker (Concept, Project, Research, Resource). `Ctrl+Shift+A` opens the Eskolx Command Center. Create one test note from a template; it must auto-route to the correct folder and contain no raw `<% %>` text. Delete the test note afterwards.
 7. **Verify tldraw.** Open `90 Attachments/animations/` in the file explorer; `.tldr` scenes open as tldraw canvases. No scene may depend on local machine settings; if one renders blank, pull again, do not create a local config to "fix" it.
 
 ### Troubleshooting
@@ -54,8 +54,10 @@ Bring a fresh clone to a working state. Follow every step; do not skip verificat
 6. **Always work from a template.** Templates live in `90 Templates/` and self-route via `tp.file.move`. Never hand-write from scratch.
 7. **Folders are broad buckets.** Never deep subfolders.
 8. **Tags are topical only.** `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding`. `type`/`status`/`area` never become tags.
-9. **Review flow.** New notes start `publish-status: draft`. A maintainer flips to `review` when they start checking the note against the quality gate, then to `published` when it passes. Home's Needs Attention shelf surfaces notes in `review`.
-10. **Grep for secrets before any push.** `rg -i "password|api[_-]?key|token|BEGIN.*PRIVATE KEY" .`
+9. **Link as much as you can.** Every note connects to every other note it relates to, with `[[Note Name]]`. A note that links nothing is a dead end. Create the linked note if it does not exist yet.
+10. **Most notes come with a tldraw diagram.** Draw the concept, flow, or relationship. Save it under `90 Attachments/animations/` and embed it. See `docs/tldraw.md` for how.
+11. **Review flow.** New notes start `publish-status: draft`. A maintainer flips to `review` when they start checking the note against the quality gate, then to `published` when it passes. Home's Needs Attention shelf surfaces notes in `review`.
+12. **Grep for secrets before any push.** `rg -i "password|api[_-]?key|token|BEGIN.*PRIVATE KEY" .`
 
 ## Note types and folders
 
@@ -65,7 +67,6 @@ Bring a fresh clone to a working state. Follow every step; do not skip verificat
 | concept | `02 Knowledge/` |
 | resource | `03 Resources/` |
 | research | `04 Research/` |
-| daily | `Home.md` (root) |
 
 ## Template routing
 
@@ -85,9 +86,11 @@ obsidian tags counts                  # tag frequency
 
 ## Verification checklist (before calling work done)
 
-11. `obsidian unresolved` shows no broken links (or intentional)
-12. No raw `<% tp. %>` tags in created notes (templates only)
-13. Frontmatter has `type`, `status`, `author`, `created`, `updated`, `tags`, `publish-status`
-14. Note is in the correct folder per the table above
-15. No secrets grep hits
-16. Never on `main`; your work is on a fork branch, submitted as a PR
+13. `obsidian unresolved` shows no broken links (or intentional)
+14. No raw `<% tp. %>` tags in created notes (templates only)
+15. Frontmatter has `type`, `status`, `author`, `created`, `updated`, `tags`, `publish-status`
+16. Note is in the correct folder per the table above
+17. Note links to everything it relates to
+18. Note has a tldraw diagram where one helps
+19. No secrets grep hits
+20. Never on `main`; your work is on a fork branch, submitted as a PR
