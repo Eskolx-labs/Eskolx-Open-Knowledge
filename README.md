@@ -15,6 +15,18 @@
 
 That's it. No accounts, no sync setup, no tokens. Everything ships in the repo.
 
+## Docs
+
+The vault has a full set of guides in [docs/](docs/README.md). They build on each other, so you can read straight through:
+
+1. [Getting started](docs/getting-started.md) — open the vault, trust the author, take your first look around.
+2. [Keybindings](docs/keybindings.md) — the shortcuts that run this vault.
+3. [Writing notes](docs/writing-notes.md) — templates, properties, tags, and linking.
+4. [tldraw](docs/tldraw.md) — diagrams, the visual language of the library.
+5. [Contributing](docs/contributing.md) — fork, write, open a pull request.
+
+Start at the top. Each guide points to the next.
+
 ## Folder Structure
 
 ```
@@ -37,7 +49,8 @@ No nesting beyond this.
 Anyone can contribute. Fork the repo, make your changes, open a pull request against `main`. A maintainer reviews and merges.
 
 - **`main` is protected.** Only the org owners (Natnael and Barkilign) can merge to it.
-- Full instructions: [CONTRIBUTING.md](CONTRIBUTING.md).
+- Full instructions: [CONTRIBUTING.md](CONTRIBUTING.md) and the deeper [docs/contributing.md](docs/contributing.md).
+- New to the vault? Read the [docs](docs/README.md) first. They take you from first open to first pull request.
 
 ## Plugins
 
@@ -45,9 +58,7 @@ The vault ships with: Obsidian Git, Dataview, Templater, QuickAdd, tldraw, Execu
 
 ### tldraw
 
-tldraw is a core part of this vault. Most notes should come with a diagram. Scenes live as real files under `90 Attachments/animations/` and are embedded in notes. New to tldraw? See [docs/tldraw.md](docs/tldraw.md). Agent-built scenes must survive a fresh clone on another machine:
-
-1. Every scene is saved as a real file in the vault (never left as unsaved local app state).
+tldraw is a core part of this vault. Most notes should come with a diagram. Scenes live as real files under `90 Attachments/animations/` and are embedded in notes. New to tldraw? See [docs/tldraw.md](docs/tldraw.md). Agent-built scenes must survive a fresh clone on another machine:1. Every scene is saved as a real file in the vault (never left as unsaved local app state).
 2. Files live under `90 Attachments/animations/` and are referenced with a normal relative embed link.
 3. No animation depends on a personal/local tldraw setting. Palettes, fonts, and config are defined in the file itself, never in a machine's local app preferences.
 4. Each animation gets a one-line note (frontmatter or caption) describing what it shows and, if an agent built it, what prompt/process would regenerate it.

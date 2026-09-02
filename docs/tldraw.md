@@ -2,6 +2,8 @@
 
 tldraw is the diagram tool built into this vault. Most notes should come with a diagram. This guide covers the basics: create, save, embed, and keep diagrams portable.
 
+Part of the [docs](README.md) set. If you have not read [Writing notes](writing-notes.md) yet, start there. When you are ready to give back, see [Contributing](contributing.md).
+
 ## What tldraw is
 
 tldraw is an Obsidian plugin that gives you an infinite whiteboard. You draw shapes, arrows, text, and freehand sketches. Scenes are saved as real files in the vault, so they live in git like any other note.
@@ -55,6 +57,10 @@ Diagrams must survive a fresh clone on another machine. Follow these rules:
 - A concept that is easier to see than to read. Draw it.
 - A flow or process. Draw the steps.
 - A relationship between ideas. Draw the connection.
-- A common mistake. Draw the wrong way and the right way.
+- When you are asked to do so by the team.
 
 If a note already has a diagram, improve it or leave it. Do not duplicate.
+
+## Next
+
+You can draw. Now learn how to give back in [Contributing](contributing.md).

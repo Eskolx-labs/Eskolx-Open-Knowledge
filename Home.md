@@ -17,6 +17,7 @@ tags: [dashboard]
 ## Start Here
 
 - New to Obsidian? See the [README](README.md) for setup.
+- Read the [docs](docs/README.md) to learn the vault: keybindings, writing notes, tldraw, contributing.
 - Use `Ctrl+Shift+A` for the **Eskolx Command Center** (new notes from templates).
 
 ## Vault Health

@@ -2,13 +2,15 @@
 
 Anyone can contribute. This is a public learning library. Notes are written by learners, not experts. Errors and improvements are welcome.
 
+New to the vault? Read the [docs](docs/README.md) first. They take you from first open to first pull request. This file is the short version; [docs/contributing.md](docs/contributing.md) goes deeper.
+
 ## Ways to contribute
 
 - Write or improve a concept note in `02 Knowledge/`
 - Answer a research question in `04 Research/`
 - Add a curated resource to `03 Resources/`
 - Add or improve a project page in `01 Projects/`
-- Draw a tldraw diagram for a note that lacks one
+- Draw a tldraw diagram for a note that lacks one. See [docs/tldraw.md](docs/tldraw.md)
 - Review open pull requests
 - Point out errors in published notes. Open an issue or a PR
 - Improve the docs in `docs/` (guides, workflows, how-tos)
@@ -53,7 +55,7 @@ If any answer is no, keep it in draft/review.
 
 ## Note standards
 
-Templates live in `90 Templates/` and self-route to the right folder. Use them. The sections below are the shape a good note takes, not a checklist you must fill every line of. Write what the note needs.
+Templates live in `90 Templates/` and self-route to the right folder. Use them. The sections below are the shape a good note takes, not a checklist you must fill every line of. Write what the note needs. For the full guide to writing notes, see [docs/writing-notes.md](docs/writing-notes.md).
 
 ### Concept notes (`02 Knowledge/`)
 

@@ -2,6 +2,8 @@
 
 This is the **public** Eskolx learning library. Agents working here must follow these rules.
 
+For the human-facing guides, see [docs/](docs/README.md). They cover setup, keybindings, writing notes, tldraw, and contributing.
+
 ## Identity
 
 - **Vault**: Eskolx-Open (public: statistics/computing knowledge, research, tutorials)
