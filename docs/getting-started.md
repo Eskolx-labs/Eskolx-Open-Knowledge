@@ -22,9 +22,9 @@ When Obsidian asks **"Trust author and enable plugins?"**, click **Trust**. This
 
 ## 5. Take a look around
 
-- Press `Ctrl+Shift+H` to open Home, the dashboard.
 - Press `Ctrl+Shift+A` to open the **Eskolx Command Center**, the menu for creating new notes.
 - Press `Ctrl+O` to jump to any note by name.
+- Read the [docs](README.md) to learn the vault.
 
 That is it. No accounts, no sync setup, no tokens. Everything ships in the repo.
 

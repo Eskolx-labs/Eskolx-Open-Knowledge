@@ -11,7 +11,7 @@
    ```
 3. **Open the folder as a vault:** Obsidian → **Open another vault** → **Open folder as vault** → select the cloned folder.
 4. **Trust the author:** when prompted, click **Trust**. This enables the plugins and theme.
-5. **Done.** Press `Ctrl+Shift+A` for the **Eskolx Command Center** (new notes from templates), or `Ctrl+Shift+H` to open Home.
+5. **Done.** Press `Ctrl+Shift+A` for the **Eskolx Command Center** (new notes from templates).
 
 That's it. No accounts, no sync setup, no tokens. Everything ships in the repo.
 
@@ -30,7 +30,6 @@ Start at the top. Each guide points to the next.
 ## Folder Structure
 
 ```
-Home.md            entry point (dashboard)
 01 Projects/       public project pages
 02 Knowledge/      settled atomic concept notes
 03 Resources/      curated external resources (books, papers, courses, tools)

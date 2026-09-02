@@ -7,7 +7,6 @@ The shortcuts that run this vault. `Mod` means `Ctrl` on Windows and Linux, `Cmd
 | Shortcut | Action |
 |---|---|
 | `Mod+Shift+A` | **Eskolx Command Center**: create a new note from a template |
-| `Mod+Shift+H` | Open Home, the dashboard |
 | `Mod+T` | Open the template picker |
 | `Mod+O` | Quick switcher: jump to any note by name |
 | `Mod+H` | Toggle highlight on the selected text |

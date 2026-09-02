@@ -58,7 +58,7 @@ Bring a fresh clone to a working state. Follow every step; do not skip verificat
 8. **Tags are topical only.** `#distributions #monte-carlo #numerical-methods #agentic-ai #tooling #onboarding`. `type`/`status`/`area` never become tags.
 9. **Link as much as you can.** Every note connects to every other note it relates to, with `[[Note Name]]`. A note that links nothing is a dead end. Create the linked note if it does not exist yet.
 10. **Most notes come with a tldraw diagram.** Draw the concept, flow, or relationship. Save it under `90 Attachments/animations/` and embed it. See `docs/tldraw.md` for how.
-11. **Review flow.** New notes start `publish-status: draft`. A maintainer flips to `review` when they start checking the note against the quality gate, then to `published` when it passes. Home's Needs Attention shelf surfaces notes in `review`.
+11. **Review flow.** New notes start `publish-status: draft`. A maintainer flips to `review` when they start checking the note against the quality gate, then to `published` when it passes.
 12. **Grep for secrets before any push.** `rg -i "password|api[_-]?key|token|BEGIN.*PRIVATE KEY" .`
 
 ## Note types and folders

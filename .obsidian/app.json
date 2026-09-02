@@ -14,6 +14,5 @@
   "defaultViewMode": "live",
   "promptDelete": true,
   "trashOption": "local",
-  "fileSortOrder": "alphabetical",
-  "defaultNewTabPage": "Home.md"
+  "fileSortOrder": "alphabetical"
 }

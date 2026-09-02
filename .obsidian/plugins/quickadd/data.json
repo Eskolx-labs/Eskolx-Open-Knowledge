@@ -180,28 +180,6 @@
           "templater": {
             "afterCapture": "none"
           }
-        },
-        {
-          "name": "Open Home",
-          "id": "d8e3b2f1-000b-4000-8000-00000000000b",
-          "type": "Macro",
-          "command": true,
-          "macro": {
-            "id": "d8e3b2f1-000c-4000-8000-00000000000c",
-            "name": "Open Home",
-            "commands": [
-              {
-                "type": "OpenFile",
-                "id": "d8e3b2f1-000d-4000-8000-00000000000d",
-                "name": "Open file: Home.md",
-                "filePath": "Home.md",
-                "openInNewTab": false,
-                "location": "tab",
-                "focus": true
-              }
-            ]
-          },
-          "runOnStartup": false
         }
       ],
       "collapsed": false,
@@ -256,21 +234,5 @@
     "refreshStaleDefaultModelSeeds": true,
     "pinAiModelRefs": true
   },
-  "macros": [
-    {
-      "id": "d8e3b2f1-000c-4000-8000-00000000000c",
-      "name": "Open Home",
-      "commands": [
-        {
-          "type": "OpenFile",
-          "id": "d8e3b2f1-000d-4000-8000-00000000000d",
-          "name": "Open file: Home.md",
-          "filePath": "Home.md",
-          "openInNewTab": false,
-          "location": "tab",
-          "focus": true
-        }
-      ]
-    }
-  ]
+  "macros": []
 }
