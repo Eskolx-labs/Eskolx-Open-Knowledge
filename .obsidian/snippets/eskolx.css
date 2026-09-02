@@ -209,14 +209,11 @@ a.external-link {
 .callout[data-callout="decision"] { border-left: 3px solid var(--eskolx-wine); }
 .callout[data-callout="warning"] { border-left: 3px solid #c9a227; }
 
-/* ============ Highlighting (Highlightr + native) ============ */
-mark,
-.highlightr-highlight,
-.highlightr-color-highlight {
+/* ============ Highlighting (native) ============ */
+mark {
   border-radius: 3px;
   padding: 0 2px;
 }
-/* Native Obsidian mark */
 
 /* ============ Status pills ============ */
 .markdown-preview-view [data-property-key="status"] .multi-select-pill,
@@ -239,18 +236,14 @@ body.dashboard .markdown-preview-view h2 {
    Covers are flat icon/diagram SVGs. In dark mode we invert them so
    dark icons render light (and light icons render dark), matching the
    theme instead of clashing. Applied across every surface: note body
-   and Notebook Navigator thumbnails. */
+   and card shelves. */
 .markdown-preview-view .cm-content img:first-of-type,
-.markdown-preview-view img:first-of-type,
-.nn-file-thumbnail-img,
-.nn-file-thumbnail img {
+.markdown-preview-view img:first-of-type {
   border-radius: 8px;
   object-fit: contain;
 }
 .theme-dark .markdown-preview-view img:first-of-type,
-.theme-dark .cm-content img:first-of-type,
-.theme-dark .nn-file-thumbnail-img,
-.theme-dark .nn-file-thumbnail img {
+.theme-dark .cm-content img:first-of-type {
   filter: invert(0.92) hue-rotate(180deg);
   opacity: 0.92;
 }

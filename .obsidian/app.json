@@ -15,5 +15,5 @@
   "promptDelete": true,
   "trashOption": "local",
   "fileSortOrder": "alphabetical",
-  "defaultNewTabPage": "00 Home/Home.md"
+  "defaultNewTabPage": "Home.md"
 }

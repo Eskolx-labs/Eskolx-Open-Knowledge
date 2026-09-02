@@ -9,11 +9,10 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
 author: 
 tags: [resources]
-participants: []
 publish-status: draft
 ---
 
-<%* await tp.file.move("04 Resources/" + tp.file.title + ".md") %>
+<%* await tp.file.move("03 Resources/" + tp.file.title + ".md") %>
 
 # <% tp.file.title %>
 

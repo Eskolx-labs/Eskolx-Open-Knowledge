@@ -6,7 +6,6 @@ cssclasses:
 cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png
 
 tags: [dashboard]
-participants: ["Natnael-Getahun"]
 ---
 
 ![Home cover|78](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg/500px-Target_with_archery_arrow_at_bullseye_Pinhead_icon.svg.png)
@@ -15,12 +14,10 @@ participants: ["Natnael-Getahun"]
 
 > **Build. Understand. Share.** A public learning library for statistics, statistical computing, and data analysis automation.
 
-> [!insight] It's always **Eskolx Labs**, never "Eskol" or "Eskolx" alone. [[It's Always Eskolx Labs]]
-
 ## Start Here
 
-- [[Keybindings]]
-- New to Obsidian? Start with the [[Eskolx Guide]].
+- New to Obsidian? See the [README](README.md) for setup.
+- Use `Ctrl+Shift+A` for the **Eskolx Command Center** (new notes from templates).
 
 ## My Tasks
 
@@ -39,7 +36,7 @@ sort by urgency
 
 ## Vault Health
 
-> [!tip] **Learning library.** Source-grounded notes behind everything Eskolx builds. See [[Eskolx Guide]].
+> [!tip] **Learning library.** Source-grounded notes behind everything Eskolx builds. See the [README](README.md).
 
 ## Needs Attention
 

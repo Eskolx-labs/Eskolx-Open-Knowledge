@@ -7,7 +7,6 @@
   "showViewHeader": true,
   "nativeMenus": false,
   "enabledCssSnippets": [
-    "eskolx",
-    "eskolx-personal"
+    "eskolx"
   ]
 }
