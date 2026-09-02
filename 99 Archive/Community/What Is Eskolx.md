@@ -19,7 +19,7 @@ Eskolx is a small research lab working toward **automated data analysis** by reb
 ## What We Do
 
 - Rebuild statistical and numerical tools from first principles (mathematics → algorithm → implementation → testing → validation)
-- Preserve the whole learning process, not just final answers
+- Preserve the whole learning process, not only final answers
 - Publish what we learn as an open learning library
 
 ## What Eskolx Is

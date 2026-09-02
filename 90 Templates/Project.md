@@ -25,8 +25,6 @@ publish-status: draft
 
 ## Milestones
 
-- [ ] 
-
 ## Current Work
 
 ## Blockers
@@ -47,4 +45,3 @@ publish-status: draft
 
 ## Next Actions
 
-- [ ] 

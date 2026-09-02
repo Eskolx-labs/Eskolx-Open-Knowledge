@@ -40,11 +40,11 @@ Anyone can contribute. Fork the repo, make your changes, open a pull request aga
 
 ## Plugins
 
-The vault ships with: Obsidian Git, Dataview, Templater, QuickAdd, Tasks, tldraw, Execute Code. Everything else is built-in (Properties, Bases, Daily Notes, Backlinks, Search, Canvas, File Recovery). Add a plugin only when it solves a real recurring problem.
+The vault ships with: Obsidian Git, Dataview, Templater, QuickAdd, tldraw, Execute Code. Everything else is built-in (Properties, Bases, Daily Notes, Backlinks, Search, Canvas, File Recovery). Add a plugin only when it solves a real recurring problem.
 
 ### tldraw
 
-The tldraw plugin is a core part of this vault — scenes live as real files under `90 Attachments/animations/` and are embedded in notes. Agent-built scenes must survive a fresh clone on another machine:
+The tldraw plugin is a core part of this vault. Scenes live as real files under `90 Attachments/animations/` and are embedded in notes. Agent-built scenes must survive a fresh clone on another machine:
 
 1. Every scene is saved as a real file in the vault (never left as unsaved local app state).
 2. Files live under `90 Attachments/animations/` and are referenced with a normal relative embed link.
@@ -80,4 +80,4 @@ The theme, accent color, translucency, and the enabled `eskolx` snippet ship in 
 
 ## License
 
-Educational documentation: CC BY 4.0.
+MIT. See [LICENSE](LICENSE).

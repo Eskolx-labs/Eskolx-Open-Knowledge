@@ -1,6 +1,6 @@
 # Contributing to Eskolx-Open
 
-Anyone can contribute. This is a public learning library — notes are written by learners, not experts. Errors and improvements are welcome.
+Anyone can contribute. This is a public learning library. Notes are written by learners, not experts. Errors and improvements are welcome.
 
 ## Ways to contribute
 
@@ -8,7 +8,7 @@ Anyone can contribute. This is a public learning library — notes are written b
 - Answer a research question in `04 Research/`
 - Add a curated resource to `03 Resources/`
 - Review open pull requests
-- Point out errors in published notes — open an issue or a PR
+- Point out errors in published notes. Open an issue or a PR
 
 ## The quality gate
 

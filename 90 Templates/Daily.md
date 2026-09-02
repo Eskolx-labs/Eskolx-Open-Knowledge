@@ -26,10 +26,6 @@ tags: []
 
 - 
 
-## Tasks
-
-- [ ] 
-
 ## Summary
 
 What actually moved forward today?

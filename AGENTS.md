@@ -18,13 +18,13 @@ Bring a fresh clone to a working state. Follow every step; do not skip verificat
    git config --global user.name "Your Name"
    git config --global user.email "your-github-username@users.noreply.github.com"
    ```
-   The noreply address is mandatory for this public vault (never a personal email — this repo is public, everything lands in git history).
+   The noreply address is mandatory for this public vault. Never use a personal email; this repo is public and everything lands in git history.
 2. **Clone.**
    ```bash
    git clone https://github.com/Eskolx-labs/Eskolx-Open-Knowledge.git
    ```
 3. **Open in Obsidian.** Obsidian → **Open another vault** → **Open folder as vault** → select the folder. When asked **"Trust author and enable plugins?"** click **Trust**. Without trust, every community plugin stays disabled and the theme/snippets do not load.
-4. **Verify plugins.** Settings → Community plugins: Obsidian Git, Dataview, Templater, QuickAdd, tldraw, Execute Code, Tasks must all be **Enabled**.
+4. **Verify plugins.** Settings → Community plugins: Obsidian Git, Dataview, Templater, QuickAdd, tldraw, Execute Code must all be **Enabled**.
 5. **Verify appearance.** Settings → Appearance: light theme, grape accent (`#6E3B68`), `eskolx` snippet enabled. If `eskolx-personal.css` is missing, create an empty one so the snippet toggle is not missing:
    ```bash
    touch .obsidian/snippets/eskolx-personal.css

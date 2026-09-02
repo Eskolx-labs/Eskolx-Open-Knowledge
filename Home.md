@@ -19,13 +19,6 @@ tags: [dashboard]
 - New to Obsidian? See the [README](README.md) for setup.
 - Use `Ctrl+Shift+A` for the **Eskolx Command Center** (new notes from templates).
 
-## Tasks
-
-```tasks
-not done
-sort by urgency
-```
-
 ## Vault Health
 
 > [!tip] **Learning library.** Source-grounded notes behind everything Eskolx builds. See the [README](README.md).
@@ -51,7 +44,7 @@ A small lab rebuilding statistical and computing tools from first principles. Pa
 
 ## Recent Changes
 
-The 20 most recently edited notes. Scroll the table to see further back. It lists every change, not just since your last visit.
+The 20 most recently edited notes. Scroll the table to see further back. It lists every change, not only since your last visit.
 
 ```base
 filters:
