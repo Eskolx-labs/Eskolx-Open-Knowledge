@@ -19,14 +19,6 @@ tags: [dashboard]
 - New to Obsidian? See the [README](README.md) for setup.
 - Use `Ctrl+Shift+A` for the **Eskolx Command Center** (new notes from templates).
 
-## My Tasks
-
-```tasks
-not done
-tag includes #assignee/natnael
-sort by urgency
-```
-
 ## Tasks
 
 ```tasks
@@ -56,19 +48,6 @@ views:
 ## What Eskolx Is
 
 A small lab rebuilding statistical and computing tools from first principles. Participants record notes from books and papers before implementing anything in our libraries. Code lives in the Eskolx GitHub repos; this vault holds the sourced notes that drive the libraries.
-
-## Featured
-
-```base
-filters:
-  and:
-    - featured == true
-views:
-  - type: cards
-    name: Featured
-    order:
-      - updated
-```
 
 ## Recent Changes
 
@@ -134,4 +113,15 @@ views:
 
 ## Recent Knowledge
 
-
+```base
+filters:
+  and:
+    - type == "concept"
+views:
+  - type: table
+    name: Recent Knowledge
+    limit: 20
+    order:
+      - updated
+      - file.name
+```

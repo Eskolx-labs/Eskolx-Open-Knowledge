@@ -214,10 +214,8 @@
             "format": "{{DATE:YYYY-MM-DD}} — {{VALUE:Your name}}"
           },
           "folder": {
-            "enabled": true,
-            "folders": [
-              "Home.md"
-            ],
+            "enabled": false,
+            "folders": [],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
             "chooseFromSubfolders": false

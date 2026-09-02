@@ -3,7 +3,7 @@ type: daily
 cover: 
 date: <% tp.date.now("YYYY-MM-DD") %>
 author: 
-tags: [daily]
+tags: []
 ---
 
 <%* await tp.file.move(tp.file.title + ".md") %>

@@ -1,14 +1,12 @@
 ---
 type: concept
 cover: 
-featured: false
 status: draft
 area: 
-topic: 
 created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
 author: 
-tags: [statistics]
+tags: []
 publish-status: draft
 ---
 

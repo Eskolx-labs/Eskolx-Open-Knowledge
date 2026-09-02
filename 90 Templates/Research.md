@@ -1,7 +1,6 @@
 ---
 type: research
 cover: 
-featured: false
 abstract: 
 keywords: []
 status: question
@@ -11,7 +10,7 @@ owner:
 created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
 author: 
-tags: [research, statistics]
+tags: []
 publish-status: draft
 ---
 
@@ -38,6 +37,4 @@ publish-status: draft
 
 ## References
 
-- If the source is free: a summary note with the paper embedded inside it
-- Preferred citation: a link to a summary note with an embedded paper/web-clipping
-- Fallback: plain citation (author, year, title, venue, URL)
+- 

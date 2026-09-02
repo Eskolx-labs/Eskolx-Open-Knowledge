@@ -1,7 +1,6 @@
 ---
 type: project
 cover: 
-featured: false
 status: planned
 priority: normal
 area: 
@@ -9,7 +8,7 @@ owner:
 created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
 author: 
-tags: [projects]
+tags: []
 github: 
 publish-status: draft
 ---
