@@ -130,8 +130,7 @@ Pure Python, standard library only: `welford(data)` returns `(count, mean, varia
 - Non-numbers and `bool` raise `TypeError`; `±inf` raises `ValueError`.
 - Constant data returns variance exactly `0.0`.
 
-Code, tests, demo and numpy reference: [stateskol PR branch](https://github.com/Soloparame/stateskol/tree/applicant/rebika-yihenew/welford) (replace with the PR link once opened).
-
+Code, tests, demo and numpy reference: [stateskol PR branch](https://github.com/Eskolx-labs/stateskol/pull/4) 
 ## Related Concepts
 
 - [[Sampling Bias]]
