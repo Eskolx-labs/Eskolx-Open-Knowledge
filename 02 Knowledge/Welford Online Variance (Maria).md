@@ -12,6 +12,7 @@ tags:
   - welford
 publish-status: draft
 ---
+
 # Welford Online Variance
 
 ## Definition
@@ -42,7 +43,7 @@ Welford’s method avoids this problem by updating the mean and the squared diff
 
 For every valid value `x`:
 
-```text
+````text
 n = n + 1
 
 delta = x - mean
@@ -54,7 +55,7 @@ M2 = M2 + delta * (x - mean)
 After processing all values:
 
 ```text
-sample variance = M2 / (n - 1)
+sample variance = M2 / (n - 1)```
 
 
 The sample standard deviation is:
@@ -73,9 +74,9 @@ For the dataset:
 
 The result is:
 
-count = 8  
-mean = 5.0  
-sample variance = 4.571428571428571  
+count = 8
+mean = 5.0
+sample variance = 4.571428571428571
 sample standard deviation = 2.138089935299395
 
 The sum of squared deviations from the mean is 32.
@@ -111,3 +112,4 @@ The test suite contains 11 tests, and all 11 tests passed.
 
 Welford's algorithm updates the mean and variance as each value arrives. This makes it useful for online data and helps avoid numerical problems that can occur with the naive variance calculation.
 
+````
