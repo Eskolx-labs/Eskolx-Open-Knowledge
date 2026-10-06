@@ -4,418 +4,258 @@ cover: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Variance_visuali
 status: draft
 area: statistics
 created: 2026-10-05
-updated: 2026-10-05
+updated: 2026-10-06
 author: Hanna Desalegn
 tags:
   - statistics
+  - numerical-methods
 publish-status: draft
 ---
-
-
 
 # Welford Online Variance (Hanna Desalegn)
 
 ![Variance visualisation|157](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Variance_visualisation.svg/960px-Variance_visualisation.svg.png)
+
+**Code:** [Eskolx-labs/stateskol PR #6](https://github.com/Eskolx-labs/stateskol/pull/6) · **Paper:** [Welford (1962)](https://doi.org/10.1080/00401706.1962.10490022) · **Diagram:** [[welford (Hanna Desalegn).tldr]]
+
 ## Definition
-Welford's online variance algorithm is a one-pass method for calculating a running mean and sample variance without storing all observations or computing the variance from the difference between two large sums.
 
-For each new observation, the algorithm updates the count, mean, and a running sum of squared deviations called $M_2$. After at least two valid observations, the sample variance is:
+Welford's method is a one-pass way to compute the mean and the **corrected sum of squares** of a set of values, without storing the values and without subtracting two large, nearly equal sums.
+
+For the first $n$ values Welford (1962) defines the running mean and the corrected sum of squares:
 
 $$
-\boxed{s^2 = \frac{M_2}{n-1}}
+m_n = \frac{1}{n}\sum_{i=1}^{n} x_i,
+\qquad
+S_n = \sum_{i=1}^{n} (x_i - m_n)^2
 $$
 
-where $n$ is the number of valid observations and $n-1$ is the sample-variance denominator.
+The paper stops at $S_n$. The **sample** variance and standard deviation follow from it (see [[Population vs Sample]] for why we divide by $n-1$):
+
+$$
+\boxed{s^2 = \frac{S_n}{n-1}}, \qquad s = \sqrt{s^2}
+$$
+
 ## Intuition
-The main idea is to update the statistics as each observation arrives instead of waiting until the entire dataset is available.
 
-Imagine that the current mean is $m$. When a new value $x$ arrives, first measure how far it is from the current mean:
+Imagine the current mean is $m$. When a new value $x$ arrives, measure how far it is from the mean of **all the values before it**. That single number, $x - m_{n-1}$, is enough to update both the mean and $S$. The mean moves toward $x$ by a fraction $1/n$ of that distance, and $S$ grows by a fraction $\tfrac{n-1}{n}$ of its square.
 
-$$
-\delta = x - m
-$$
+Every quantity the update touches is a *deviation*, so it is small when the data is close together, even if the data itself is huge (like values near $10^9$). That is why far fewer significant figures are lost.
 
-The new mean moves toward $x$ by only a fraction of this difference. At the same time, the algorithm uses the old mean and the updated mean to update $M_2$, which keeps track of the total squared deviation needed for the variance.
-
-This avoids calculating variance by subtracting two large quantities. That subtraction can lose precision when the values are large but their actual differences are small.
 ## Why it matters
-Variance is often written using a formula that requires calculating the sum of the observations and the sum of their squared values, then subtracting one large quantity from another. When the observations are large and their actual variation is small, this subtraction can lose significant digits because of floating-point rounding.
 
-Welford's method avoids this cancellation problem by updating the mean and the running squared-deviation total together as each observation arrives.
+The textbook shortcut is
 
-It is also useful when data arrives as a stream. The algorithm only needs the current count, mean, and $M_2$, so it does not need to store the complete dataset in memory or make a second pass through it.
+$$
+s^2 = \frac{\sum x_i^2 - \left(\sum x_i\right)^2 / n}{n-1}
+$$
+
+Welford's paper opens with the problem: the "crude" sum of squares and the correction factor are both huge, and subtracting them throws away significant figures. The paper lists two older fixes, both with a cost:
+
+1. shift the data to an origin near the mean, which needs a guess of the mean first;
+2. compute the mean, then sum squared deviations, which needs **two passes** over the data (store it, or read it twice).
+
+Welford's method needs neither: each value is used once, in one pass, and need not be stored. This makes it the right tool for streams and for data too large to keep in memory.
+
 ## How it works
-Welford's method maintains three main values while processing the observations:
 
-- $n$: the number of valid observations processed so far
+### The identities from the paper
 
-- $m$: the current mean
-
-- $M_2$: the running sum of squared deviations from the current mean
-
-
-For each new observation $x_n$, the update is performed in this order.
-
-### 1. Count the observation
-
-Increase the number of observations:
+Welford (1962) proves these for $n = 1, 2, \dots$:
 
 $$
-n \leftarrow n + 1
+\text{identity (1):}\quad m_n = \frac{n-1}{n}\, m_{n-1} + \frac{x_n}{n}
 $$
 
-### 2. Calculate the difference from the old mean
-
-Before changing the mean, calculate:
-
 $$
-\delta = x_n - m_{n-1}
+\text{identity (2):}\quad x_i - m_n = (x_i - m_{n-1}) - \frac{1}{n}(x_n - m_{n-1}) \quad (i < n)
 $$
 
-This measures how far the new observation is from the previous mean.
-
-### 3. Update the mean
-
-Move the mean toward the new observation:
-
 $$
-m_n = m_{n-1} + \frac{\delta}{n}
+\text{identity (3):}\quad x_n - m_n = \frac{n-1}{n}\,(x_n - m_{n-1})
 $$
 
-The new observation therefore changes the mean by its deviation divided by the new count.
+### Formula I
 
-### 4. Update $M_2$
-
-Now calculate the difference between the new observation and the updated mean:
+Substituting (2) and (3) into the definition of $S_n$, expanding the squares, and using $\sum_{i<n}(x_i - m_{n-1}) = 0$ gives the paper's **Formula I**:
 
 $$
-\delta_2 = x_n - m_n
+\boxed{S_n = S_{n-1} + \frac{n-1}{n}\,(x_n - m_{n-1})^2}
 $$
 
-Then update the running squared-deviation total:
+The only new information in each step is $d = x_n - m_{n-1}$, the deviation of the new value from the mean of the values **before** it.
 
-$$
-M_{2,n} = M_{2,n-1} + \delta\delta_2
-$$
+### The update, in the order the code runs it
 
-The important detail is that $\delta$ uses the old mean, while $\delta_2$ uses the updated mean.
+Start with $n = 0,\ m = 0,\ S = 0$. For each new value $x$:
 
-### 5. Calculate sample variance
+1. count it: $n \leftarrow n + 1$
+2. deviation from the old mean: $d = x - m_{n-1}$
+3. Formula I: $S_n = S_{n-1} + \frac{n-1}{n} d^2$
+4. new mean: $m_n = m_{n-1} + \frac{d}{n}$
 
-Once at least two valid observations have been processed:
+Step 4 is identity (1) written differently: $\frac{n-1}{n}m_{n-1} + \frac{x_n}{n} = m_{n-1} + \frac{x_n - m_{n-1}}{n}$. Both are equal on paper. I use the second because it keeps constant data *exactly* constant in floating point: once $m = x$, $d$ is exactly $0$, so $S$ stays exactly $0.0$. The paper's form computes $\frac{n-1}{n}m$ and $\frac{x}{n}$ separately and can be off in the last bit.
 
-$$
-s^2 = \frac{M_2}{n-1}
-$$
+After the last value: $s^2 = S/(n-1)$ and $s = \sqrt{s^2}$.
 
-### 6. Calculate sample standard deviation
-
-The sample standard deviation is the square root of the sample variance:
-
-$$
-s = \sqrt{s^2}
-$$
-
-The algorithm therefore needs only the current count, mean, and $M_2$ while processing the data. The observations do not need to be stored for the calculation.
 ![[welford (Hanna Desalegn).tldr]]
 
-This diagram shows the one-pass Welford update from a new observation to the running mean, $M_2$, sample variance, and standard deviation.
+The diagram shows one pass of the loop: count, deviation from the old mean, Formula I, new mean. Missing values branch off before the count, invalid values stop the run, and the variance is formed only after the last value.
+
+### The same update written as $\delta \cdot \delta_2$
+
+Many references (and my first version) write step 3 as $S \leftarrow S + \delta\,\delta_2$ with $\delta = x_n - m_{n-1}$ and $\delta_2 = x_n - m_n$. This is Formula I in another form. By identity (3), $\delta_2 = \frac{n-1}{n}\delta$, so
+
+$$
+\delta\,\delta_2 = \frac{n-1}{n}\,\delta^2 = \frac{n-1}{n}(x_n - m_{n-1})^2
+$$
+
+which is exactly the term Formula I adds. The test `test_delta_times_delta2_equals_formula_I` checks this in exact fractions, and `test_code_agrees_with_paper_formulas` runs the paper's formulas directly and compares them with the code.
+
 ## Example
-Consider the observations:
+
+### Hand-worked: $[2, 4, 6, 8]$ with Formula I
+
+| step | $x_n$ | $n$ | $d = x_n - m_{n-1}$ | $\frac{n-1}{n}d^2$ | $S_n$ | $m_n = m_{n-1} + d/n$ |
+|---|---|---|---|---|---|---|
+| start | | 0 | | | 0 | 0 |
+| 1 | 2 | 1 | 2 | $0 \cdot 4 = 0$ | 0 | 2 |
+| 2 | 4 | 2 | 2 | $\tfrac12 \cdot 4 = 2$ | 2 | 3 |
+| 3 | 6 | 3 | 3 | $\tfrac23 \cdot 9 = 6$ | 8 | 4 |
+| 4 | 8 | 4 | 4 | $\tfrac34 \cdot 16 = 12$ | 20 | 5 |
+
+Check against the definition: deviations from 5 are $-3, -1, 1, 3$, so $S = 9 + 1 + 1 + 9 = 20$. ✓
 
 $$
-[2,4,6,8]
+s^2 = \frac{20}{4-1} = \frac{20}{3} \approx 6.6667, \qquad s = \sqrt{20/3} \approx 2.5820
 $$
 
-We start with:
+### Second hand-worked set: $[3, 7, 8, 10]$
 
-$$
-n=0,\qquad m=0,\qquad M_2=0
-$$
+| step | $x_n$ | $d$ | $\frac{n-1}{n}d^2$ | $S_n$ | $m_n$ |
+|---|---|---|---|---|---|
+| 1 | 3 | 3 | 0 | 0 | 3 |
+| 2 | 7 | 4 | $\tfrac12 \cdot 16 = 8$ | 8 | 5 |
+| 3 | 8 | 3 | $\tfrac23 \cdot 9 = 6$ | 14 | 6 |
+| 4 | 10 | 4 | $\tfrac34 \cdot 16 = 12$ | 26 | 7 |
 
-We process one observation at a time.
+Check: deviations from 7 are $-4, 0, 1, 3$, so $S = 16 + 0 + 1 + 9 = 26$ ✓, and $s^2 = 26/3 \approx 8.6667$.
 
-### Observation 1: $x_1=2$
+### Hand vs code
 
-Increase the count:
+Output of `welford()` in [stateskol PR #6](https://github.com/Eskolx-labs/stateskol/pull/6):
 
-$$
-n=1
-$$
+| dataset | quantity | by hand | code |
+|---|---|---|---|
+| $[2,4,6,8]$ | count | 4 | 4 |
+| | mean | 5 | 5.0 |
+| | variance | $20/3 \approx 6.6667$ | 6.666666666666667 |
+| | std | $\sqrt{20/3} \approx 2.5820$ | 2.581988897471611 |
+| | dropped | 0 | 0 |
+| $[3,7,8,10]$ | mean | 7 | 7.0 |
+| | variance | $26/3 \approx 8.6667$ | 8.666666666666666 |
+| $[2,4,\text{None},6,8,\text{NaN}]$ | count / dropped | 4 / 2 | 4 / 2 |
+| | variance | $20/3$ (same as without the gaps) | 6.666666666666667 |
 
-Calculate the difference from the old mean:
+The last row shows the missing-value rule: the gaps are skipped, not filled, so the answer equals the one for $[2,4,6,8]$.
 
-$$
-\delta = 2-0 = 2
-$$
+## Boundary cases and decisions
 
-Update the mean:
+| input | result | why |
+|---|---|---|
+| empty `[]`, or only `None`/NaN | count 0; mean, variance, std = NaN | nothing to average |
+| one value `[7]` | count 1, mean 7.0; variance, std = NaN | $n - 1 = 0$, sample variance undefined |
+| constant `[5, 5, 5]` | variance = std = 0.0 exactly | every $d$ after the first is exactly 0 |
+| `None`, NaN (incl. `numpy.nan`) | dropped, counted in `dropped` | missing, never filled |
+| `bool`, `str`, complex, `Decimal`, list | `TypeError`, with the index of the bad value | not real-number data |
+| ±inf, integer too big for a float (`10**400`) | `ValueError`, with the index of the bad value | cannot be a finite float64 |
+| `data` is a `str`/`bytes`, a dict, or not iterable | `TypeError` | text/bytes are not numbers; a dict would silently give its keys |
+| numpy arrays, numpy scalars, `Fraction` | accepted, converted with `float()` | they are real numbers |
 
-$$
-m = 0+\frac{2}{1}=2
-$$
+**Why NaN and not an exception for $n < 2$?** The mean is still defined at $n = 1$, and a streaming caller with a short window should get a result, not a crash. The cost: a caller who ignores `count` can carry a NaN variance forward. The docstring states this so the caller knows to check `count`.
 
-Calculate the difference from the new mean:
+## Numerical stability
 
-$$
-\delta_2 = 2-2=0
-$$
+### Exact large-offset case
 
-Update $M_2$:
+Data $10^9 + [4, 7, 13, 16]$. By hand: mean $10^9 + 10$, deviations $-6, -3, 3, 6$, $S = 90$, $s^2 = 30$.
 
-$$
-M_2 = 0+(2)(0)=0
-$$
+| offset | naive formula | Welford | numpy |
+|---|---|---|---|
+| 0 | 30 | 30 | 30 |
+| $10^4$ | 30 | 30 | 30 |
+| $10^6$ | 30 | 30 | 30 |
+| $10^8$ | 29.333… | 30 | 30 |
+| $10^9$ | **0** | 30 | 30 |
 
-Current state:
+The naive formula subtracts two numbers near $4 \times 10^{18}$. A float64 carries about 16 significant digits, so at that size the gap between neighbouring floats is 512, much bigger than the true $S = 90$. The answer is lost entirely. Welford only ever squares deviations like 6 and 3, so it stays exact.
 
-$$
-n=1,\qquad m=2,\qquad M_2=0
-$$
+### Noisy stress case
 
-### Observation 2: $x_2=4$
+That case is easy for Welford because every value is an exact integer. A harder one: 2000 values $10^9 + \mathcal{N}(0, 1)$ (seed 1), where every value is rounded. Ground truth is exact rational arithmetic (`fractions.Fraction`):
 
-$$
-n=2
-$$
+| method | relative error vs exact |
+|---|---|
+| naive formula | $1.3 \times 10^{2}$ (off by more than 100×) |
+| **Welford** | $3.0 \times 10^{-8}$ |
+| numpy `var(ddof=1)` (two-pass) | $2.2 \times 10^{-16}$ |
 
-$$
-\delta = 4-2=2
-$$
+**What this shows:** Welford is not magic. Near $10^9$ a float64 can only store steps of about $1.2\times10^{-7}$ (`math.ulp(1e9)`). The running mean sits near $10^9$, so every deviation $d = x - m$ carries an error of about $10^{-7}$ compared to a spread of 1. The measured error, $3\times10^{-8}$, matches that. Welford keeps about 8 digits where the naive formula keeps none. numpy keeps more, but only because it reads the data twice and subtracts one fixed mean. Welford's advantage is one pass and no storage.
 
-$$
-m = 2+\frac{2}{2}=3
-$$
+## Reference comparison against numpy
 
-$$
-\delta_2 = 4-3=1
-$$
+`examples/welford_reference (Hanna Desalegn).py` compares mean, variance and std with `numpy.mean`, `numpy.var(ddof=1)` and `numpy.std(ddof=1)`, and exits with an error if any tolerance is not met.
 
-$$
-M_2 = 0+(2)(1)=2
-$$
+| data | relative-error tolerance | why |
+|---|---|---|
+| normal: both hand sets, gauss(0,1), gauss(50,10) with $n = 10^5$, uniform, exponential | $10^{-10}$ | measured $\le 7\times10^{-15}$. A real bug is much bigger: dividing by $n$ instead of $n-1$ changes the variance by about $1/n$, which is $10^{-5}$ even at $n = 10^5$. |
+| hard: $10^9 + \mathcal{N}(0,1)$ | $10^{-6}$ | the step size near $10^9$ is $1.2\times10^{-7}$, measured $3\times10^{-8}$, so $10^{-6}$ gives a safe margin. |
 
-Current state:
+The mean keeps the $10^{-10}$ tolerance even on hard data, because its relative error stays tiny.
 
-$$
-n=2,\qquad m=3,\qquad M_2=2
-$$
+My first version used one tolerance, $10^{-12}$, for everything. It only passed because its stress data were exact integers. On the noisy stress data a correct implementation fails $10^{-12}$, so the tolerance has to follow the data.
 
-### Observation 3: $x_3=6$
-
-$$
-n=3
-$$
-
-$$
-\delta = 6-3=3
-$$
-
-$$
-m = 3+\frac{3}{3}=4
-$$
-
-$$
-\delta_2 = 6-4=2
-$$
-
-$$
-M_2 = 2+(3)(2)=8
-$$
-
-Current state:
-
-$$
-n=3,\qquad m=4,\qquad M_2=8
-$$
-
-### Observation 4: $x_4=8$
-
-$$
-n=4
-$$
-
-$$
-\delta = 8-4=4
-$$
-
-$$
-m = 4+\frac{4}{4}=5
-$$
-
-$$
-\delta_2 = 8-5=3
-$$
-
-$$
-M_2 = 8+(4)(3)=20
-$$
-
-Final state:
-
-$$
-n=4,\qquad m=5,\qquad M_2=20
-$$
-
-Because we are calculating **sample variance**, we divide $M_2$ by $n-1$:
-
-$$
-s^2 = \frac{20}{4-1}
-= \frac{20}{3}
-\approx 6.6667
-$$
-
-The sample standard deviation is:
-
-$$
-s = \sqrt{\frac{20}{3}}
-\approx 2.582
-$$
-
-So the final results are:
-
-- Count: $4$
-- Mean: $5$
-- Sample variance: $\frac{20}{3}\approx6.6667$
-- Sample standard deviation: $\sqrt{\frac{20}{3}}\approx2.582$
-- Dropped observations: $0$
 ## Common Mistakes
 
-Welford's algorithm is simple, but several mistakes can produce incorrect or unstable results.
+1. **Dividing by $n$ instead of $n-1$.** That is the population variance. This implementation is always the sample variance (`ddof=1`).
+2. **Using the naive sum-of-squares formula.** It loses every digit on large-offset data (table above).
+3. **Using the new mean in Formula I.** Formula I needs $x_n - m_{n-1}$, the deviation from the mean *before* the update. Updating the mean first and then squaring $x_n - m_n$ gives a wrong $S$. (The $\delta\delta_2$ form uses one of each, which is why it is still right.)
+4. **Treating missing values as zero.** Zero is a real value. Missing values are skipped and counted.
+5. **Silently accepting bad input.** `True`, `"2"` or `b"12"` must not become numbers. The code stops at the first bad value and gives its index.
+6. **One tolerance for every dataset.** How many digits a correct method can keep depends on the data, so the tolerance must too.
 
-### 1. Using $n$ instead of $n-1$
-
-For sample variance, the denominator is:
-
-$$
-n-1
-$$
-
-Using $n$ calculates population variance instead. The implementation in this project uses sample variance with `ddof=1`.
-
-### 2. Using the naive variance formula
-
-A common formula is:
-
-$$
-s^2 =
-\frac{\sum x_i^2-\frac{(\sum x_i)^2}{n}}{n-1}
-$$
-
-This can be numerically unstable when the observations are large but their actual differences are small. The subtraction between large, nearly equal quantities can lose significant precision.
-
-Welford's method avoids this subtraction by updating the mean and $M_2$ incrementally.
-
-### 3. Using the wrong mean when updating $M_2$
-
-The two differences in the update use different means:
-
-$$
-\delta = x_n-m_{n-1}
-$$
-
-and
-
-$$
-\delta_2=x_n-m_n
-$$
-
-The first uses the old mean, while the second uses the updated mean. Using the same mean for both changes the recurrence and produces incorrect results.
-
-### 4. Treating missing values as zero
-
-A missing observation should not automatically become zero because zero is a real numerical value.
-
-In this implementation, `None` and `NaN` are treated as missing values, skipped from the calculation, and counted in `dropped`.
-
-### 5. Ignoring boundary cases
-
-Sample variance is undefined when there are fewer than two valid observations.
-
-Therefore:
-
-- Empty input returns `count = 0` and `NaN` for mean, variance, and standard deviation.
-- One valid observation returns its mean, but variance and standard deviation are `NaN`.
-- Constant observations have variance and standard deviation equal to `0`.
-
-These cases should be tested explicitly rather than relying on the normal calculation path.
-
-### 6. Accepting invalid observations silently
-
-The implementation rejects boolean values, non-numeric values, and positive or negative infinity.
-
-This prevents invalid input from producing misleading statistics.
-
-A clear error is preferable to silently converting or ignoring a value that is not defined as missing.
 ## Implementation
-The Python implementation follows the Welford recurrence described in the paper.
 
-The function keeps four pieces of state:
+The code is in [stateskol PR #6](https://github.com/Eskolx-labs/stateskol/pull/6), standard library only:
 
-- `count`: number of valid observations processed
-- `mean`: current running mean
-- `m2`: running sum of squared deviations
-- `dropped`: number of missing observations skipped
+- `src/stateskol/welford (Hanna Desalegn).py`: `welford(data)`. The update is one marked block, from `# Welford update, Formula I from Welford (1962)` to `# end of Welford update`.
+- `tests/test_welford (Hanna Desalegn).py`: both hand-worked sets, the paper's formulas run directly, identity (3) in exact fractions, every boundary case, the index of the first bad value, and both stability cases against exact arithmetic.
+- `examples/welford_demo (Hanna Desalegn).py`: runs with only the package installed (no numpy).
+- `examples/welford_reference (Hanna Desalegn).py`: the numpy comparison above.
 
-At the beginning, all four values are initialized to zero.
+The core loop:
 
-For each valid observation, the code performs the Welford update:
+```python
+n += 1
+d = x - m                  # distance from the mean of the values before x
+s += (n - 1) / n * d * d   # Formula I
+m += d / n                 # new mean, same as (n-1)/n * m + x/n in the paper
+```
 
-$$
-\delta = x - mean
-$$
+### Running the example in a clean environment
 
-$$
-mean = mean + \frac{\delta}{count}
-$$
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -e .
+python "examples/welford_demo (Hanna Desalegn).py"
+```
 
-$$
-\delta_2 = x - mean
-$$
-
-$$
-m2 = m2 + \delta\delta_2
-$$
-
-Here, `delta` is calculated using the old mean, while `delta_2` is calculated after the mean has been updated.
-
-After all observations are processed, the implementation calculates sample variance using:
-
-$$
-variance = \frac{m2}{count-1}
-$$
-
-The standard deviation is then:
-
-$$
-std = \sqrt{variance}
-$$
-
-The function does not store the complete dataset. It updates these values as observations arrive, so the input only needs to be processed once.
-
-Before applying the Welford update, the function also handles missing and invalid values according to the documented rules. `None` and `NaN` are dropped and counted, while invalid numeric types and infinite values raise errors.
-The implementation and tests for this note are in the [Welford code repository](https://github.com/hannaDesalegn/stateskol/tree/applicant/hanna-desalegn/welford).
-
-## Running the Example in a Clean Environment
-
-From a fresh clone of the code repository, create a virtual environment:
-
-    python -m venv .venv
-
-Activate the virtual environment, then install the package:
-
-    pip install -e .
-
-Run the demonstration:
-
-    python "examples/welford_demo (Hanna Desalegn).py"
-
-The package implementation uses only the Python standard library. NumPy is used only for the reference comparison and tests.
 ## Related Concepts
 
-- [[Population vs Sample]]
+- [[Population vs Sample]]: why the sample variance divides by $n-1$
+- Sibling Welford notes by other applicants (open vault PRs): [#34](https://github.com/Eskolx-labs/Eskolx-Open-Knowledge/pull/34), [#35](https://github.com/Eskolx-labs/Eskolx-Open-Knowledge/pull/35), [#36](https://github.com/Eskolx-labs/Eskolx-Open-Knowledge/pull/36), [#39](https://github.com/Eskolx-labs/Eskolx-Open-Knowledge/pull/39)
+
 ## References
 
-- Welford, B. P. (1962). *Note on a Method for Calculating Corrected Sums of Squares and Products*. Technometrics, 4(3), 419-420. [DOI](https://doi.org/10.1080/00401706.1962.10490022)
+- Welford, B. P. (1962). *Note on a Method for Calculating Corrected Sums of Squares and Products*. Technometrics, 4(3), 419–420. [doi:10.1080/00401706.1962.10490022](https://doi.org/10.1080/00401706.1962.10490022)
 - Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2022). *ReAct: Synergizing Reasoning and Acting in Language Models*. [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
-- Chan, T. F., Golub, G. H., & LeVeque, R. J. (1983). *Algorithms for Computing the Sample Variance: Analysis and Recommendations*. The American Statistician, 37(3), 242-247. [Chan, Golub & LeVeque 1983 PDF](https://math.pku.edu.cn/teachers/litj/notes/numer_anal/AmerStat_37_242_Chan_Variance.pdf)
