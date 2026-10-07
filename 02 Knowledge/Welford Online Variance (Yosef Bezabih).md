@@ -71,7 +71,7 @@ Data: `[2, 4, 4, 4, 5, 5, 7, 9]`. At each step $\delta = x_n - m_{n-1}$ (the old
 - **Forgetting `ddof` when comparing with numpy.** `np.var` defaults to the population variance (`ddof=0`).
 
 ## Implementation
-Python implementation in `stateskol`: `src/stateskol/welford (Yosef Bezabih).py` (pull request link to be added).
+   Python implementation in `stateskol`: `src/stateskol/welford (Yosef Bezabih).py` (pull request: https://github.com/Eskolx-labs/stateskol/pull/11).
 
 ```python
 count += 1
