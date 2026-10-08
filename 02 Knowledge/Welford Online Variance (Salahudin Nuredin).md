@@ -1,4 +1,4 @@
-\---
+﻿\---
 
 
 
@@ -844,7 +844,7 @@ to check numerical stability when observations are large relative to their sprea
 
 
 
-1\. B. P. Welford (1962). \*Note on a Method for Calculating Corrected Sums of Squares and Products\*. Technometrics, 4(3), 419–420. DOI: `10.1080/00401706.1962.10490022`.
+1\. B. P. Welford (1962). \*Note on a Method for Calculating Corrected Sums of Squares and Products\*. Technometrics, 4(3), 419â€“420. DOI: `10.1080/00401706.1962.10490022`.
 
 2\. Eskolx Stateskol assignment implementation: `welford\_salahudin\_nuredin.py`.
 
@@ -858,7 +858,9 @@ to check numerical stability when observations are large relative to their sprea
 
 
 
-!\[\[welford-algorithm.tldr]]
+!\[\[welford (Salahudin Nuredin).tldr]]
+
+
 
 
 
