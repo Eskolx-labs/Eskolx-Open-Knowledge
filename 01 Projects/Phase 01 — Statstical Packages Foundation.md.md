@@ -23,7 +23,7 @@ This is the first of the four major phases we have in plan. This pahse is planne
 The way it works:
 - we read a selected cannonical book
 - we convert the book to code
-- we supplment everything with research papers
+- we supply everything with research papers
 - we write notes and draw tldraw diagrams to explain everything (this is also how we know you've actually understood things even if you use AI)
 
 # The Book
@@ -45,14 +45,14 @@ There are no permanent descriptive, probability, or inference teams.
 
 # Exampe Weekly Rhythm
 
-| Day                   | Work                                                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Monday                | A 45-minute planning call. Assign pages and material, exercises from selected book, reviewers, etc.                 |
-| Tuesday and Wednesday | Read, solve, write notes, and start implementation.                                                                 |
-| Thursday              | Every contributor opens a real PR. It may still be a draft, but it must contain actual work.                        |
-| Friday                | Review, test, and cut work that cannot meet the quality gate. Tldraw canvas explation. PR and peer review deadline. |
-| Saturday              | One-to-one meetings (in-person or remote)                                                                           |
-| Sunday                | Core team decides on progress and next steps.                                                                       |
+| Day                   | Work                                                                                                                  |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Monday                | A 45-minute planning call. Assign pages and material, exercises from selected book, reviewers, etc.                   |
+| Tuesday and Wednesday | Read, solve, write notes, and start implementation.                                                                   |
+| Thursday              | Every contributor opens a real PR. It may still be a draft, but it must contain actual work.                          |
+| Friday                | Review, test, and cut work that cannot meet the quality gate. Tldraw canvas explanation. PR and peer review deadline. |
+| Saturday              | One-to-one meetings (in-person or remote)                                                                             |
+| Sunday                | Core team decides on progress and next steps.                                                                         |
 
 # Definition of done
 

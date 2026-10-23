@@ -58,5 +58,14 @@
       ],
       "key": "H"
     }
+  ],
+  "insert-template": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "A"
+    }
   ]
 }

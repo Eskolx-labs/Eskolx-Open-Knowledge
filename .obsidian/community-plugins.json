@@ -2,7 +2,7 @@
   "obsidian-git",
   "dataview",
   "templater-obsidian",
-  "quickadd",
   "tldraw",
-  "execute-code"
+  "execute-code",
+  "quickadd"
 ]

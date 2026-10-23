@@ -1,6 +1,6 @@
 ---
 type: concept
-cover: 
+cover:
 status: draft
 area: statistics
 created: 2026-09-03
