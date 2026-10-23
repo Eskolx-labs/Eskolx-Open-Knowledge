@@ -8,10 +8,10 @@ updated: 2026-10-23
 author: Robel Eyob
 tags:
   - sampling
-  - statistics
 publish-status: draft
+company: Eskolx
 ---
-
+![[90 Attachments/animations/population vs sample]]
 
 
 # What is the difference between population and sample
@@ -35,8 +35,13 @@ a researcher wants to study the employment satisfaction in a company called Esko
 ## Implementation
 Researchers use sampling methods and statistical techniques to estimate population characteristics from sample data.
 ## Related Concepts
+- [[Population]]
+- [[Sample]]
+- [[Sampling methods.md]]
+- [[Sampling Bias]]
+- [[Sampling Distribution]]
 
-- No related concepts in the vault  to be linked here.
 
 ## References
-- Elementary statistics published by Allan G. Bluman 11th edition
+- Elementary statistics published by Allan G. Bluman 11th edition.
+- Introduction to Probability and Statistics for Engineers and Scientists 6th edition.
