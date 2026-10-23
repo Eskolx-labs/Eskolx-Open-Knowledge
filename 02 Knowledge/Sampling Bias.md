@@ -6,7 +6,8 @@ area: statistics
 created: 2026-09-04
 updated: 2026-09-04
 author: Yoseph Habte
-tags: []
+tags:
+  - sampling
 publish-status: draft
 ---
 
@@ -55,7 +56,7 @@ print(f"Unbiased sample mean: {unbiased_sample.mean():.2f}")
 print(f"Biased sample mean: {biased_sample.mean():.2f}")
 ```
 ## Related Concepts
-[[Population vs Sample]], [[Sampling Distribution]], [[Random Sampling]], [[Non-Response Bias]], [[Central Limit Theorem]]
+[[02 Knowledge/Population vs Sample]], [[Sampling Distribution]], [[Random Sampling]], [[Non-Response Bias]], [[Central Limit Theorem]]
 
 ## References
 - Freedman, D., Pisani, R., & Purves, R. (2007). _Statistics_ (4th ed.). W. W. Norton & Company.

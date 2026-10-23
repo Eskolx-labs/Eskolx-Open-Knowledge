@@ -12,7 +12,7 @@
   "showFrontmatter": true,
   "livePreview": true,
   "defaultViewMode": "live",
-  "promptDelete": true,
+  "promptDelete": false,
   "trashOption": "local",
   "fileSortOrder": "alphabetical"
 }
