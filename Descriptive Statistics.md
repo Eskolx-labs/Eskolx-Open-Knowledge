@@ -1,0 +1,1 @@
+Descriptive statistics are methods used to summarize and describe the main characteristics of a dataset. Common measures include counts, averages, frequency distributions, and measures of spread that help transform raw data into meaningful information.

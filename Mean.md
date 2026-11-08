@@ -4,3 +4,6 @@ The **mean**, commonly known as the average, is one of the most widely used meas
 
 **Applications:** Descriptive statistics, data analysis, machine learning, and forecasting.
 [[Welford 1962 - Online Variance Algorithm]]
+ [[Measures of Central Tendency]]
+ [[Mean]]
+ [[Mode]]
