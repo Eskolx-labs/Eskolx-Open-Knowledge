@@ -1,0 +1,1349 @@
+{
+  "tldrawFileFormatVersion": 1,
+  "schema": {
+    "schemaVersion": 2,
+    "sequences": {
+      "com.tldraw.store": 5,
+      "com.tldraw.asset": 1,
+      "com.tldraw.camera": 1,
+      "com.tldraw.document": 2,
+      "com.tldraw.instance": 26,
+      "com.tldraw.instance_page_state": 5,
+      "com.tldraw.page": 1,
+      "com.tldraw.instance_presence": 6,
+      "com.tldraw.pointer": 1,
+      "com.tldraw.shape": 4,
+      "com.tldraw.user": 1,
+      "com.tldraw.asset.image": 6,
+      "com.tldraw.asset.video": 5,
+      "com.tldraw.asset.bookmark": 2,
+      "com.tldraw.shape.arrow": 8,
+      "com.tldraw.shape.bookmark": 2,
+      "com.tldraw.shape.draw": 5,
+      "com.tldraw.shape.embed": 4,
+      "com.tldraw.shape.frame": 1,
+      "com.tldraw.shape.geo": 12,
+      "com.tldraw.shape.group": 0,
+      "com.tldraw.shape.highlight": 4,
+      "com.tldraw.shape.image": 5,
+      "com.tldraw.shape.line": 5,
+      "com.tldraw.shape.note": 13,
+      "com.tldraw.shape.text": 4,
+      "com.tldraw.shape.video": 4,
+      "com.tldraw.binding.arrow": 1
+    }
+  },
+  "records": [
+    {
+      "gridSize": 10,
+      "name": "Spread: Welford, quantile, IQR",
+      "meta": {},
+      "id": "document:document",
+      "typeName": "document"
+    },
+    {
+      "meta": {},
+      "id": "page:page",
+      "name": "Spread",
+      "index": "a1",
+      "typeName": "page"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "text",
+      "x": 0,
+      "y": -90,
+      "props": {
+        "color": "black",
+        "size": "l",
+        "font": "draw",
+        "textAlign": "start",
+        "w": 760,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Spread of a data set (Ross 2.3.2 and 2.3.3)"
+                }
+              ]
+            }
+          ]
+        },
+        "scale": 1,
+        "autoSize": false
+      },
+      "id": "shape:s0",
+      "index": "a2K6n"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "text",
+      "x": 0,
+      "y": -20,
+      "props": {
+        "color": "black",
+        "size": "m",
+        "font": "draw",
+        "textAlign": "start",
+        "w": 480,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "1. Variance, one value at a time (Welford Formula I)"
+                }
+              ]
+            }
+          ]
+        },
+        "scale": 1,
+        "autoSize": false
+      },
+      "id": "shape:s1",
+      "index": "a3qTv"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 0,
+      "y": 40,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 300,
+        "h": 70,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "blue",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "new value x  (n = n + 1)"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s2",
+      "index": "a4Kj2"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 0,
+      "y": 160,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 300,
+        "h": 70,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "blue",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "d = x - m   (m is the OLD mean)"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s3",
+      "index": "a5ZqA"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 0,
+      "y": 280,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 300,
+        "h": 80,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "violet",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "S = S + (n-1)/n * d^2"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s4",
+      "index": "a6xLj"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 0,
+      "y": 410,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 300,
+        "h": 70,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "violet",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "m = m + d / n"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s5",
+      "index": "a7RzR"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "arrow",
+      "x": 150,
+      "y": 110,
+      "props": {
+        "kind": "arc",
+        "labelColor": "black",
+        "color": "black",
+        "fill": "none",
+        "dash": "solid",
+        "size": "s",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "font": "draw",
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": 0,
+          "y": 50
+        },
+        "bend": 0,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph"
+            }
+          ]
+        },
+        "labelPosition": 0.5,
+        "scale": 1,
+        "elbowMidPoint": 0.5
+      },
+      "id": "shape:s6",
+      "index": "a87YE"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "arrow",
+      "x": 150,
+      "y": 230,
+      "props": {
+        "kind": "arc",
+        "labelColor": "black",
+        "color": "black",
+        "fill": "none",
+        "dash": "solid",
+        "size": "s",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "font": "draw",
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": 0,
+          "y": 50
+        },
+        "bend": 0,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph"
+            }
+          ]
+        },
+        "labelPosition": 0.5,
+        "scale": 1,
+        "elbowMidPoint": 0.5
+      },
+      "id": "shape:s7",
+      "index": "a9k1b"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "arrow",
+      "x": 150,
+      "y": 360,
+      "props": {
+        "kind": "arc",
+        "labelColor": "black",
+        "color": "black",
+        "fill": "none",
+        "dash": "solid",
+        "size": "s",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "font": "draw",
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": 0,
+          "y": 50
+        },
+        "bend": 0,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph"
+            }
+          ]
+        },
+        "labelPosition": 0.5,
+        "scale": 1,
+        "elbowMidPoint": 0.5
+      },
+      "id": "shape:s8",
+      "index": "aAA7I"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "arrow",
+      "x": 310,
+      "y": 445,
+      "props": {
+        "kind": "arc",
+        "labelColor": "black",
+        "color": "grey",
+        "fill": "none",
+        "dash": "solid",
+        "size": "s",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "font": "draw",
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": 0,
+          "y": -370
+        },
+        "bend": 70,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "next value"
+                }
+              ]
+            }
+          ]
+        },
+        "labelPosition": 0.5,
+        "scale": 1,
+        "elbowMidPoint": 0.5
+      },
+      "id": "shape:s9",
+      "index": "aBVLQ"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 0,
+      "y": 530,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 300,
+        "h": 90,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "green",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "after the last value:"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "variance = S / (n - 1)"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "std = sqrt(variance)"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s10",
+      "index": "aCNMf"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "arrow",
+      "x": 150,
+      "y": 480,
+      "props": {
+        "kind": "arc",
+        "labelColor": "black",
+        "color": "black",
+        "fill": "none",
+        "dash": "solid",
+        "size": "s",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "font": "draw",
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": 0,
+          "y": 50
+        },
+        "bend": 0,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph"
+            }
+          ]
+        },
+        "labelPosition": 0.5,
+        "scale": 1,
+        "elbowMidPoint": 0.5
+      },
+      "id": "shape:s11",
+      "index": "aDZGE"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "text",
+      "x": 0,
+      "y": 650,
+      "props": {
+        "color": "black",
+        "size": "s",
+        "font": "mono",
+        "textAlign": "start",
+        "w": 420,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Hand table for 2 4 4 4 5 5 7 9"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "n  x  d      m      S"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "1  2  2      2      0"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "2  4  2      3      2"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "3  4  1      3.33   2.67"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "4  4  0.67   3.5    3"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "5  5  1.5    3.8    4.8"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "6  5  1.2    4      6"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "7  7  3      4.43   13.71"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "8  9  4.57   5      32"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "variance = 32/7 = 4.571"
+                }
+              ]
+            }
+          ]
+        },
+        "scale": 1,
+        "autoSize": false
+      },
+      "id": "shape:s12",
+      "index": "aEkFU"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "text",
+      "x": 0,
+      "y": 960,
+      "props": {
+        "color": "black",
+        "size": "s",
+        "font": "draw",
+        "textAlign": "start",
+        "w": 420,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Why: the shortcut sum(x^2) - n*mean^2 gives 0"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "for 1e9 + [4, 7, 13, 16]. Welford gives 30."
+                }
+              ]
+            }
+          ]
+        },
+        "scale": 1,
+        "autoSize": false
+      },
+      "id": "shape:s13",
+      "index": "aFsa6"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "text",
+      "x": 520,
+      "y": -20,
+      "props": {
+        "color": "black",
+        "size": "m",
+        "font": "draw",
+        "textAlign": "start",
+        "w": 420,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "2. Quantile with Ross's rule"
+                }
+              ]
+            }
+          ]
+        },
+        "scale": 1,
+        "autoSize": false
+      },
+      "id": "shape:s14",
+      "index": "aGsSf"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 560,
+      "y": 40,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 320,
+        "h": 70,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "blue",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "sort the data, k = n * p"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s15",
+      "index": "aHDNA"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 600,
+      "y": 160,
+      "props": {
+        "geo": "diamond",
+        "dash": "solid",
+        "url": "",
+        "w": 240,
+        "h": 80,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "orange",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "is k a whole number?"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s16",
+      "index": "aI8J6"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 500,
+      "y": 300,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 200,
+        "h": 90,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "green",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "yes: average positions k and k + 1"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s17",
+      "index": "aJz07"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 760,
+      "y": 300,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 200,
+        "h": 90,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "green",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "no: take position ceil(k)"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s18",
+      "index": "aKmzB"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "arrow",
+      "x": 720,
+      "y": 110,
+      "props": {
+        "kind": "arc",
+        "labelColor": "black",
+        "color": "black",
+        "fill": "none",
+        "dash": "solid",
+        "size": "s",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "font": "draw",
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": 0,
+          "y": 50
+        },
+        "bend": 0,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph"
+            }
+          ]
+        },
+        "labelPosition": 0.5,
+        "scale": 1,
+        "elbowMidPoint": 0.5
+      },
+      "id": "shape:s19",
+      "index": "aLcav"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "arrow",
+      "x": 650,
+      "y": 230,
+      "props": {
+        "kind": "arc",
+        "labelColor": "black",
+        "color": "black",
+        "fill": "none",
+        "dash": "solid",
+        "size": "s",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "font": "draw",
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": -50,
+          "y": 70
+        },
+        "bend": 0,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "yes"
+                }
+              ]
+            }
+          ]
+        },
+        "labelPosition": 0.5,
+        "scale": 1,
+        "elbowMidPoint": 0.5
+      },
+      "id": "shape:s20",
+      "index": "aMdSj"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "arrow",
+      "x": 790,
+      "y": 230,
+      "props": {
+        "kind": "arc",
+        "labelColor": "black",
+        "color": "black",
+        "fill": "none",
+        "dash": "solid",
+        "size": "s",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "font": "draw",
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": 70,
+          "y": 70
+        },
+        "bend": 0,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "no"
+                }
+              ]
+            }
+          ]
+        },
+        "labelPosition": 0.5,
+        "scale": 1,
+        "elbowMidPoint": 0.5
+      },
+      "id": "shape:s21",
+      "index": "aNC62"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "text",
+      "x": 520,
+      "y": 420,
+      "props": {
+        "color": "black",
+        "size": "s",
+        "font": "draw",
+        "textAlign": "start",
+        "w": 460,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "n = 25, p = 0.10: k = 2.5, take the 3rd"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "n = 25, p = 0.80: k = 20, average 20th and 21st"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "k is worked out in decimal, so 25 * 0.28 = 7 exactly."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "numpy (averaged_inverted_cdf) gets 7.000000000000001"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "and takes the 8th value instead."
+                }
+              ]
+            }
+          ]
+        },
+        "scale": 1,
+        "autoSize": false
+      },
+      "id": "shape:s22",
+      "index": "aOmXE"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "text",
+      "x": 520,
+      "y": 610,
+      "props": {
+        "color": "black",
+        "size": "m",
+        "font": "draw",
+        "textAlign": "start",
+        "w": 420,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "3. IQR = Q3 - Q1"
+                }
+              ]
+            }
+          ]
+        },
+        "scale": 1,
+        "autoSize": false
+      },
+      "id": "shape:s23",
+      "index": "aPugr"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "geo",
+      "x": 520,
+      "y": 670,
+      "props": {
+        "geo": "rectangle",
+        "dash": "solid",
+        "url": "",
+        "w": 440,
+        "h": 150,
+        "growY": 0,
+        "scale": 1,
+        "flipX": false,
+        "flipY": false,
+        "labelColor": "black",
+        "color": "light-violet",
+        "fill": "semi",
+        "size": "s",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Ross 2.3.i noise data, n = 36"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Q1: k = 9, (75 + 77) / 2 = 76"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "median: k = 18, 89.5      Q3: k = 27, 104.5"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "IQR = 104.5 - 76 = 28.5"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "id": "shape:s24",
+      "index": "aQSSj"
+    },
+    {
+      "parentId": "page:page",
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "typeName": "shape",
+      "type": "text",
+      "x": 520,
+      "y": 840,
+      "props": {
+        "color": "black",
+        "size": "s",
+        "font": "draw",
+        "textAlign": "start",
+        "w": 440,
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The book prints Q1 = 74.5, but its own rule"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "and numpy both give 76."
+                }
+              ]
+            }
+          ]
+        },
+        "scale": 1,
+        "autoSize": false
+      },
+      "id": "shape:s25",
+      "index": "aRp1f"
+    }
+  ]
+}
