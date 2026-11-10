@@ -14,7 +14,7 @@ tags: []
 publish-status: draft
 ---
 
-# Question — Hanna Desalegn
+# Research Question: Hanna Desalegn
 
 > [!question] Question
 > In Ethiopian clinics, how much does the measured accuracy of a diabetic retinopathy screening model change when retinal images that are too poor to grade are dropped instead of reported, and is image quality missing at random?
@@ -35,8 +35,8 @@ Screening studies often report accuracy only on the images that could be graded 
 
 - [[Population vs Sample]]
 - [[Sampling Bias]]
-- [[Rubin (1976) — Inference and Missing Data]]
+- [[Rubin (1976) — Inference and Missing Data|Rubin (1976), Inference and Missing Data]]
 
 ## References
 
-- Rubin, D. B. (1976). Inference and missing data. *Biometrika*, 63(3), 581–592.
+- Rubin, D. B. (1976). Inference and missing data. *Biometrika*, 63(3), 581-592.
