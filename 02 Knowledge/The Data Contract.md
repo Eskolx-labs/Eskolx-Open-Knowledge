@@ -64,4 +64,4 @@ Data `[4, 1, None, 9, nan, 6]`: six items, two missing (positions 2 and 4), four
 
 ## Code
 
-Implemented in `Eskolx-labs/stateskol`: _(link your code pull request here)_. Tests: `tests/test_contract.py`. Demo: `examples/data_audit_demo.py`. Reference check: `examples/reference_check_week2.py` (exact match with numpy and pandas).
+Implemented in `Eskolx-labs/stateskol`: https://github.com/Eskolx-labs/stateskol/pull/19. Tests: `tests/test_contract.py`. Demo: `examples/data_audit_demo.py`. Reference check: `examples/reference_check_week2.py` (exact match with numpy and pandas).
