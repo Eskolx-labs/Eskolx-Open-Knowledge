@@ -41,7 +41,7 @@ On 2 4 4 5 7 9 11 13 15 18, the 75th percentile is 12.5 under type 7 and 13.5 un
 
 
 ## Diagram
-(the diagram goes here)![[Quantile positions]]
+![[Quantile positions]]
 
 ## Links
 - [[Ross — Introduction to Probability and Statistics]] §2.1-2.3
