@@ -138,7 +138,7 @@ Ninety-one percent of the variance explained, by one point out of ten. Remove it
 | III — line with one outlier | 0.816287 | 5.4970 | 0.49973 | 3.0025 |
 | IV — vertical cluster | 0.816521 | 5.4990 | 0.49991 | 3.0017 |
 
-The week 4 brief states that all four share $r = 0.816$. Three of them do to six decimals; panel IV is $0.816521$, which rounds to 0.817 at three places. That is a note about rounding, not a correction of the brief: the four coefficients are indistinguishable *as summaries* — $r^2$ is 0.6665, 0.6662, 0.6663, 0.6667, and every panel fits $y = 3.00 + 0.50x$.
+The week 4 brief states that all four share $r = 0.816$. Measured on the data the four are 0.816421, 0.816237, 0.816287 and 0.816521, so all four are $0.816$ *truncated* to three decimals, while three of them *round* to 0.816 and panel IV rounds to 0.817. That is a remark about rounding, not a correction of the brief: the coefficients are indistinguishable *as summaries* — the span is 0.000285, $r^2$ runs from 0.6662 to 0.6667 and is 0.67 for all four to two decimals, and every panel fits $y = 3.00 + 0.50x$.
 
 Panel IV's real lesson is one decimal place away, and it is a refusal rather than a number. Delete the single observation at $x = 19$: the remaining ten $x$ values are all 8, so $m_{2,x} = 0$ exactly, $s_x s_y = 0$, and $r$ is undefined. A correlation of 0.8165 was made of nothing but that one point — the other ten contributed no $x$-spread at all, so they could not have entered the calculation.
 
