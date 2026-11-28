@@ -223,7 +223,7 @@ One sample under three bin rules: 72 equal bins (noise drawn as structure), Stur
 > [!warning] How these were built (rule 4 disclosure)
 > Both scenes were **generated, not hand-drawn**. A standard-library script (`make_tldr.py`, kept outside the vault because the repo has no place for executable code) writes the tldraw store JSON directly — page, instance, one `geo` per bar/dot/line segment, one `text` per caption — with every numeric label produced by the computation it is asserting. It ran on Python 3.11 with `py -3.11 make_tldr.py <vault-root>`; the record keys and the `com.tldraw.store` sequence were matched against `welford (Umer).tldr`, which is plugin-written, so the two files are structurally identical.
 >
-> To regenerate either scene: `random.Random(20261105)`, $n = 240$, $0.82\,N(40,8) + 0.18\,N(51,2.2)$, type-7 quantiles for the IQR; the four Anscombe vectors as published in Anscombe (1973). The generator refuses to write a scene whose panels contradict their own captions.
+> To regenerate either scene: `random.Random(20261105)`, $n = 240$, $0.82\,N(40,8) + 0.18\,N(51,2.2)$, type-7 quantiles for the IQR; plus the four 11-point Anscombe vectors as every standard source reproduces them. The generator refuses to write a scene whose panels contradict their own captions.
 >
 > **Rule 5 is not satisfied by me.** "Clone the vault fresh on a second machine and confirm it renders with zero manual setup" needs the Obsidian app, and a generated file is exactly the case where that check matters — the JSON validates structurally and could still open empty. This note therefore stays `publish-status: draft` until the embeds have been opened in a real vault.
 
