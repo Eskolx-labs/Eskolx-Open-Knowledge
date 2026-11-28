@@ -69,7 +69,7 @@ Three separate passes over $x$ and $y$ — one for each mean, one for each sprea
 
 $$\bar{x}_k = \bar{x}_{k-1} + \frac{x_k - \bar{x}_{k-1}}{k}, \qquad C_k = C_{k-1} + \frac{k-1}{k}(x_k - \bar{x}_{k-1})(y_k - \bar{y}_{k-1})$$
 
-This is the bivariate form of Welford's method, from [[Chan, Golub & LeVeque (1983) — Algorithms for Computing the Sample Variance]] (1983). See [[Welford Online Variance (Umer)]]. Dividing the final $C$ by $n - \text{ddof}$ gives the covariance; $m_{2,x}$ and $m_{2,y}$ from the same pass give the two variances, and $r$ needs nothing else.
+This is the bivariate form of the update in Chan, Golub & LeVeque (1983) — the paper is under *References*, there is no concept note for it in this vault. The univariate version, with the hand-worked steps, is [[Welford Online Variance (Umer)]]; that note is week 3's and still open as [Eskolx-Open-Knowledge#47](https://github.com/Eskolx-labs/Eskolx-Open-Knowledge/pull/47), so this link is dead until it merges. Dividing the final $C$ by $n - \text{ddof}$ gives the covariance; $m_{2,x}$ and $m_{2,y}$ from the same pass give the two variances, and $r$ needs nothing else.
 
 ### 3. Why not the textbook formula
 
@@ -108,14 +108,14 @@ The one-pass update's floor is **the ulp of its own running mean**, not of the c
 
 Four things a correlation gets wrong, all reproducible in the standard library.
 
-**Covariance is a unit, not a magnitude.** The same five hand-span and grip-strength measurements:
+**Covariance is a unit, not a magnitude.** Five pairs of made-up but plausible measurements — hand span in cm against grip strength in newtons: $(18, 300), (20, 350), (21, 380), (23, 420), (25, 460)$. The same five people, measured twice:
 
 | units | covariance | $r$ |
 |---|---|---|
-| cm, N | 47.250000 | 0.9466462292 |
-| m, kgf | 0.048182 | 0.9466462292 |
+| cm, N | 166.500000 | 0.9970596160 |
+| m, kgf | 0.169783 | 0.9970596160 |
 
-The covariance moved by a factor of 980.665 = 100 × 9.80665 — the conversion, not the data. $r$ did not move at all. That is the entire reason Pearson normalises: it is the only one of the two that can be compared across studies.
+The covariance moved by a factor of 980.665 = 100 × 9.80665 — the conversion, not the data. $r$ did not move at all, to the last digit printed. That is the entire reason Pearson normalises: it is the only one of the two that can be compared across studies. Both rows come out of `bivariate_online_update` in section 5 of `examples/anscombe_correlation.py` on the [stateskol#28](https://github.com/Eskolx-labs/stateskol/pull/28) branch, which asserts the ratio against $100 \times 9.80665$.
 
 **$r = 0$ with a deterministic relationship.** Nine points, $x = -4 \dots 4$, $y = x^2$:
 
@@ -127,7 +127,7 @@ Not approximately. Every $+x$ has a matching $-x$ with the same $y$, so the prod
 
 $$r = 0.90150$$
 
-Ninety-one percent of the variance explained, by one point out of ten. Remove it and the "relationship" disappears; that point is not evidence of a trend, it *is* the trend. This is [[Anscombe's quartet]]'s fourth panel in miniature.
+Eighty-one percent of the variance — $r^2 = 0.8127$ — explained by one point out of ten. Remove it and the "relationship" disappears; that point is not evidence of a trend, it *is* the trend. It is also Anscombe's fourth panel in miniature, which the table below measures.
 
 **Anscombe's quartet, actually measured.** All four datasets through one pass:
 
@@ -144,7 +144,7 @@ Panel IV's real lesson is one decimal place away, and it is a refusal rather tha
 
 One divisor trap for anyone checking these rows against a reprint. Measured on the data: $\operatorname{var}(y)$ with the $n-1$ divisor is 4.1273, 4.1276, 4.1226, 4.1232, and the corrected sums of squares $\sum(y_i - \bar{y})^2$ are 41.2727, 41.2763, 41.2262, 41.2325 — a factor of exactly 10 apart, while $\operatorname{var}(x) = 11.0000$ in all four ($\sum(x_i - \bar{x})^2 = 110$). Reprinted tables do not agree with each other about which of these to show: Wikipedia's current summary row gives mean $x$ 9, variance $x$ 11, mean $y$ 7.50, variance $y$ 4.125, $r$ 0.816, and that 4.125 is the average of the four variances above. So if `variance(y)` returns 4.127 in a clean environment, chase the divisor before you chase the code.
 
-**A correction to an earlier draft of this note.** It published panel IV as $r = 0.819083$ with covariance 5.5100 and claimed the brief was wrong by three units in the third decimal. That figure was my own arithmetic error, not a measurement; the recomputation above was run three independent ways — `numpy.corrcoef`, exact rational arithmetic through `Fraction` with a 40-digit square root, and the shipped one-pass `BivariateState` — which agree to the last digit printed. An error of that size is invisible in prose and impossible to spot in a table that looks plausible, so the numbers in this note now come from an assertion in the code that draws the diagram, and the demo prints them with the tolerance stated. If a hand-run figure and a pinned figure disagree, the hand-run one is the suspect.
+**A correction to an earlier draft of this note.** It published panel IV as $r = 0.819083$ with covariance 5.5100 and claimed the brief was wrong by three units in the third decimal. That figure was my own arithmetic error, not a measurement; the recomputation above was run three independent ways — `numpy.corrcoef`, exact rational arithmetic through `Fraction` with a 40-digit square root, and the shipped one-pass `BivariateState` — which agree to the last digit printed. An error of that size is invisible in prose and impossible to spot in a table that looks plausible, so the numbers in this note now come from an assertion in the code that draws the diagram, and the demo prints them with the tolerance stated. If a hand-run figure and a pinned figure disagree, the hand-run one is the suspect. The same sweep, run again while finalising the scenes, turned up two more recalled numbers in this note. The units table claimed covariance 47.250000 cm·N and $r$ 0.9466462292 for "the same five hand-span and grip measurements" — five measurements the note never printed, and no data reproduces those digits; the table now states the pairs and reads 166.500000 / 0.169783 with $r$ 0.9970596160. And the leverage paragraph said "ninety-one percent of the variance" for $r = 0.90150$, which is $r^2 = 0.8127$ — eighty-one. Neither was a numerical surprise: both were prose written from memory beside a table that looked plausible.
 
 The four panels, each with the least-squares line fitted to its own points, are drawn in *Diagrams* below.
 
@@ -161,7 +161,7 @@ The four panels, each with the least-squares line fitted to its own points, are 
 
 ## Implementation
 
-Pure standard library, one pass per pair, as shipped in stateskol:
+The shipped accumulator with its validation stripped, plus the one line Core C wraps:
 
 ```python
 class BivariateState:
@@ -187,6 +187,8 @@ class BivariateState:
         return self.co_moment / (self.n - ddof)
 
     def correlation(self):
+        # The one line this lane does NOT ship: Core C's pearson_r() wraps it, and
+        # it is where s_x * s_y = 0 must raise instead of returning a number.
         return self.co_moment / (self.m2_x * self.m2_y) ** 0.5
 
 
@@ -239,13 +241,13 @@ One sample under three bin rules: 72 equal bins (noise drawn as structure), Stur
 - [[Shape Estimators: Skewness and Kurtosis]] — third and fourth moments of one column
 - [[Tukey (1962) — The Future of Data Analysis]] — the argument for plotting before summarising
 - [[Rubin (1976) — Inference and Missing Data]]
-- [[Ross — Introduction to Probability and Statistics]] — §2.6, the paired specification this note implements
+- [[Ross — Introduction to Probability and Statistics]] — §2.4–2.6, the paired specification this note implements
 
 ## References
 
 - Anscombe, F. J. (1973). "Graphs in Statistical Analysis". *The American Statistician* 27(3): 14–15.
 - Chan, T. F., Golub, G. H., & LeVeque, R. J. (1983). "Algorithms for Computing the Sample Variance: Analysis and Recommendations". *The American Statistician* 37(3): 242–247.
-- Fisher, R. A. (1921). "On the 'probable error' of a coefficient of correlation deduced from a small sample". *Metron* 1: 3–32.
+- Fisher, R. A. (1921). "On the 'probable error' of a coefficient of correlation deduced from a small sample". *Metron* 1: 3–32. — listed for Act II: it is the reason a single $r$ carries an error of its own, which this note deliberately does not cover.
 - Freedman, D., & Diaconis, P. (1981). "On the Histogram as a Density Estimator: Two Views". *Probability Theory and Related Fields* 57(4): 455–476.
 - Ross, S. *Introduction to Probability and Statistics*, 6th ed., §2.4–2.6.
 - Rubin, D. B. (1976). "Inference and Missing Data". *Biometrika* 63(3): 581–592.
@@ -257,5 +259,5 @@ One sample under three bin rules: 72 equal bins (noise drawn as structure), Stur
 
 > [!todo] Still open on this note
 > - **Rule 5.** Neither scene has been opened in a fresh clone of the vault. That is the one gate item I cannot perform from here, and it is why `publish-status` stays `draft`.
-> - **Planned links.** `[[The Data Contract]]`, `[[Missing Data Mechanisms]]`, `[[Center and Spread]]`, `[[Histogram Binning and Density Estimation]]` and `[[Shape Estimators: Skewness and Kurtosis]]` belong to other lanes' rows or other weeks' notes. They stay unresolved rather than stubbed, so the owners' pull requests do not collide with placeholders.
+> - **Planned links.** `[[The Data Contract]]`, `[[Missing Data Mechanisms]]`, `[[Center and Spread]]`, `[[Histogram Binning and Density Estimation]]` and `[[Shape Estimators: Skewness and Kurtosis]]` belong to other lanes' rows or other weeks' notes. They stay unresolved rather than stubbed, so the owners' pull requests do not collide with placeholders. `[[Welford Online Variance (Umer)]]` is the one exception: that note exists, as #47, and this link resolves the moment it merges.
 > - Everything else is accounted for: each figure in the note is computed, and the one that was wrong is marked as retracted.
