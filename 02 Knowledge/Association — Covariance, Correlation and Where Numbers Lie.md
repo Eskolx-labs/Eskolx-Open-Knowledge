@@ -136,9 +136,17 @@ Ninety-one percent of the variance explained, by one point out of ten. Remove it
 | I — linear | 0.816421 | 5.5010 | 0.50009 | 3.0001 |
 | II — parabola | 0.816237 | 5.5000 | 0.50000 | 3.0009 |
 | III — line with one outlier | 0.816287 | 5.4970 | 0.49973 | 3.0025 |
-| IV — vertical cluster | 0.819083 | 5.5100 | 0.50091 | 2.9827 |
+| IV — vertical cluster | 0.816521 | 5.4990 | 0.49991 | 3.0017 |
 
-The week 4 brief states that all four share $r = 0.816$. Panels I–III do, to five decimals. Panel IV is **0.8191** — a single point at $x = 19$ moves $r$ in the third decimal, which is precisely the point of the fourth panel and is worth having straight before quoting it.
+The week 4 brief states that all four share $r = 0.816$. Three of them do to six decimals; panel IV is $0.8165$, which Anscombe's own Table 1 prints as 0.817. The brief is right at the precision it quotes and panel IV is right at the edge of it — the quartet's point was never that the four coefficients are identical digits, it is that they are *indistinguishable as summaries*. $r^2$ is 0.6665, 0.6662, 0.6663, 0.6667.
+
+Panel IV's real lesson is one decimal place away, and it is a refusal rather than a number. Delete the single observation at $x = 19$: the remaining ten $x$ values are all 8, so $m_{2,x} = 0$ exactly, $s_x s_y = 0$, and $r$ is undefined. A correlation of 0.8165 was made of nothing but that one point — the other ten contributed no $x$-spread at all, so they could not have entered the calculation.
+
+Two bookkeeping notes for anyone checking the table against Anscombe (1973). His "variance of $y$" is printed as 41.27, 41.27, 41.26, 41.27: those are the corrected sums of squares $\sum(y_i - \bar{y})^2$, and the $n-1$ variance is $4.127$ — a factor of exactly 10. His "variance of $x$" is printed as 11.00, which *is* the $n-1$ variance, since $\sum(x_i - \bar{x})^2 = 110$. The two columns use different divisors, so `variance(y)` returning 4.127 in a clean environment is not a bug to chase.
+
+**A correction to an earlier draft of this note.** It published panel IV as $r = 0.819083$ with covariance 5.5100 and claimed the brief was wrong by three units in the third decimal. That figure was my own arithmetic error, not a measurement; the recomputation above was run three independent ways — `numpy.corrcoef`, exact rational arithmetic through `Fraction` with a 40-digit square root, and the shipped one-pass `BivariateState` — which agree to the last digit printed. An error of that size is invisible in prose and impossible to spot in a table that looks plausible, so the numbers in this note now come from an assertion in the code that draws the diagram, and the demo prints them with the tolerance stated. If a hand-run figure and a pinned figure disagree, the hand-run one is the suspect.
+
+The four panels, each with the least-squares line fitted to its own points, are drawn in *Diagrams* below.
 
 ## Common Mistakes
 
@@ -196,6 +204,29 @@ Note the order inside `add`. Both deltas are taken against the **previous** mean
 
 The shipped version additionally validates every input through the contract, counts dropped pairs, refuses mismatched lengths, and raises on an undefined divisor rather than returning `inf`. See **stateskol PR #28** for the code, the 48 tests, and the tolerance table; `examples/numerics_demo.py` there runs the tables in this note in a clean environment with nothing installed.
 
+## Diagrams
+
+Both week 4 scenes. Each is a real `.tldr` file in `90 Attachments/animations/`, so it renders for anyone who clones the vault — no local tldraw settings are involved, which is rule 3 of `docs/tldraw.md`.
+
+### The geometry of correlation failure
+
+![[correlation-failure-geometry (Umer).tldr]]
+
+Four Anscombe panels, each with its own least-squares fit drawn in red, plus the parabola $y = x^2$ where $r = 0$ exactly. Every $r$, covariance, spread and fitted line printed on the panels is computed from the data vectors inside the generator and asserted against exact rational arithmetic before the file is written — none of it is transcribed from a textbook table, which is the discipline this note's own Anscombe section needed.
+
+### Binning sensitivity, and the same zero-denominator failure
+
+![[histogram-binning-sensitivity (Umer).tldr]]
+
+One sample under three bin rules: 72 equal bins (noise drawn as structure), Sturges $k = \lceil \log_2 n \rceil + 1 = 9$ (the shoulder disappears), Freedman–Diaconis $h = 2\,\mathrm{IQR}/n^{1/3} = 3.722$, $k = 14$ (both populations survive). It belongs in this note rather than only in the binning note because of the last two lines on the scene: **$\mathrm{IQR} = 0$ makes $h = 0$ and $k$ infinite, exactly as $s_x s_y = 0$ makes $r$ undefined.** A summary whose divisor vanishes on real data has to refuse. The scene also carries the counterexample where FD is the *coarser* rule, because bin rules are not ranked. See [[Histogram Binning and Density Estimation]] for Core A's treatment.
+
+> [!warning] How these were built (rule 4 disclosure)
+> Both scenes were **generated, not hand-drawn**. A standard-library script (`make_tldr.py`, kept outside the vault because the repo has no place for executable code) writes the tldraw store JSON directly — page, instance, one `geo` per bar/dot/line segment, one `text` per caption — with every numeric label produced by the computation it is asserting. It ran on Python 3.11 with `py -3.11 make_tldr.py <vault-root>`; the record keys and the `com.tldraw.store` sequence were matched against `welford (Umer).tldr`, which is plugin-written, so the two files are structurally identical.
+>
+> To regenerate either scene: `random.Random(20261105)`, $n = 240$, $0.82\,N(40,8) + 0.18\,N(51,2.2)$, type-7 quantiles for the IQR; the four Anscombe vectors as published in Anscombe (1973). The generator refuses to write a scene whose panels contradict their own captions.
+>
+> **Rule 5 is not satisfied by me.** "Clone the vault fresh on a second machine and confirm it renders with zero manual setup" needs the Obsidian app, and a generated file is exactly the case where that check matters — the JSON validates structurally and could still open empty. This note therefore stays `publish-status: draft` until the embeds have been opened in a real vault.
+
 ## Related Concepts
 
 - [[Population vs Sample]] — why `ddof` is 1 for a sample and what changes at 0
@@ -222,5 +253,9 @@ The shipped version additionally validates every input through the contract, cou
 - Code: [stateskol PR #28](https://github.com/Eskolx-labs/stateskol/pull/28) — Numerics lane, `bivariate_online_update`.
 - Cover image: [File:Anscombe's quartet 3.svg](https://commons.wikimedia.org/wiki/File:Anscombe%27s_quartet_3.svg), Schutz and Avenue, Wikimedia Commons.
 
-> [!note] Diagram still owed
-> The brief asks for a tldraw scene of the binning sensitivity and the geometry of correlation failure. A `.tldr` scene has to be authored in the vault with the tldraw plugin and verified to render, so it is not faked here: the scene goes in `90 Attachments/animations/` and gets embedded above *Example*. This note stays `publish-status: draft` until it is in.
+- Diagrams: `90 Attachments/animations/correlation-failure-geometry (Umer).tldr` and `histogram-binning-sensitivity (Umer).tldr`, both generated — see *Diagrams* for the regeneration process and the outstanding rule 5 check.
+
+> [!todo] Still open on this note
+> - **Rule 5.** Neither scene has been opened in a fresh clone of the vault. That is the one gate item I cannot perform from here, and it is why `publish-status` stays `draft`.
+> - **Planned links.** `[[The Data Contract]]`, `[[Missing Data Mechanisms]]`, `[[Center and Spread]]`, `[[Histogram Binning and Density Estimation]]` and `[[Shape Estimators: Skewness and Kurtosis]]` belong to other lanes' rows or other weeks' notes. They stay unresolved rather than stubbed, so the owners' pull requests do not collide with placeholders.
+> - Everything else is accounted for: each figure in the note is computed, and the one that was wrong is marked as retracted.
