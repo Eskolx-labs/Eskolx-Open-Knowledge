@@ -2575,7 +2575,7 @@
         "y": 470,
         "rotation": 0,
         "props": {
-          "text": "Panel IV is not 0.819 \u2014 it is 0.816521, and Anscombe prints 0.817. The real finding is a refusal: delete the single point at x = 19 and the other ten x values are all 8, so Sxx = 0 exactly and r has no denominator. One row was the whole correlation; the other ten could not enter the calculation.",
+          "text": "Panel IV is 0.816521, which rounds to 0.817 at three decimals like the other three round to 0.816. The real finding is a refusal: delete the single point at x = 19 and the other ten x values are all 8, so Sxx = 0 exactly and r has no denominator. One row was the whole correlation; the other ten could not enter the calculation.",
           "font": "draw",
           "size": "m",
           "color": "black",
